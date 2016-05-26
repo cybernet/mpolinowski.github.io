@@ -167,9 +167,9 @@ var windowScroll = function() {
           header.addClass('navbar-fixed-top fh5co-animated slideInDown');
         } else if (scrlTop <= 500) {
           if (header.hasClass('navbar-fixed-top')) {
-              header.addClass('navbar-fixed-top fh5co-animated slideOutUp');
-              setTimeout(function() {
-                  header.removeClass('navbar-fixed-top fh5co-animated slideInDown slideOutUp');
+            header.addClass('navbar-fixed-top fh5co-animated slideOutUp');
+            setTimeout(function() {
+                header.removeClass('navbar-fixed-top fh5co-animated slideInDown slideOutUp');
               }, 100);
           }
         }
@@ -185,298 +185,298 @@ var windowScroll = function() {
 var aboutAnimate = function() {
 
     if ($('#about-us').length > 0) {
-        $('#about-us .to-animate').each(function(k) {
+      $('#about-us .to-animate').each(function(k) {
 
-            var el = $(this);
+          var el = $(this);
 
-            setTimeout(function() {
-                el.addClass('fadeInUp animated');
+          setTimeout(function() {
+              el.addClass('fadeInUp animated');
             }, k * 200, 'easeInOutExpo');
 
         });
     }
 
-};
+  };
 var aboutWayPoint = function() {
 
     if ($('#about-us').length > 0) {
-        $('#about-us').waypoint(function(direction) {
+      $('#about-us').waypoint(function(direction) {
 
-            if (direction === 'down' && !$(this).hasClass('animated')) {
-
-
-                setTimeout(aboutAnimate, 200);
+          if (direction === 'down' && !$(this).hasClass('animated')) {
 
 
-                $(this.element).addClass('animated');
+            setTimeout(aboutAnimate, 200);
 
-            }
+
+            $(this.element).addClass('animated');
+
+          }
         }, {
-            offset: '95%',
+          offset: '95%',
         });
     }
 
-};
+  };
 
 // Team
 var teamAnimate = function() {
 
     if ($('#team').length > 0) {
-        $('#team .to-animate').each(function(k) {
+      $('#team .to-animate').each(function(k) {
 
-            var el = $(this);
+          var el = $(this);
 
-            setTimeout(function() {
-                el.addClass('fadeInUp animated');
+          setTimeout(function() {
+              el.addClass('fadeInUp animated');
             }, k * 200, 'easeInOutExpo');
 
         });
     }
 
-};
+  };
 var teamWayPoint = function() {
 
     if ($('#team').length > 0) {
-        $('#team').waypoint(function(direction) {
+      $('#team').waypoint(function(direction) {
 
-            if (direction === 'down' && !$(this).hasClass('animated')) {
-
-
-                setTimeout(teamAnimate, 200);
+          if (direction === 'down' && !$(this).hasClass('animated')) {
 
 
-                $(this.element).addClass('animated');
+            setTimeout(teamAnimate, 200);
 
-            }
+
+            $(this.element).addClass('animated');
+
+          }
         }, {
-            offset: '95%',
+          offset: '95%',
         });
     }
 
-};
+  };
 
 // Services
 var servicesAnimate = function() {
 
-    if ($('#fh5co-our-services').length > 0) {
-        $('#fh5co-our-services .to-animate').each(function(k) {
+    if ($('#our-services').length > 0) {
+      $('#our-services .to-animate').each(function(k) {
 
-            var el = $(this);
+          var el = $(this);
 
-            setTimeout(function() {
-                el.addClass('fadeInUp animated');
+          setTimeout(function() {
+              el.addClass('fadeInUp animated');
             }, k * 200, 'easeInOutExpo');
 
         });
     }
 
-};
-    var servicesWayPoint = function() {
+  };
+var servicesWayPoint = function() {
 
-        if ($('#fh5co-our-services').length > 0) {
-            $('#fh5co-our-services').waypoint(function(direction) {
+    if ($('#our-services').length > 0) {
+      $('#our-services').waypoint(function(direction) {
 
-                if (direction === 'down' && !$(this).hasClass('animated')) {
+          if (direction === 'down' && !$(this).hasClass('animated')) {
 
 
-                    setTimeout(servicesAnimate, 200);
+            setTimeout(servicesAnimate, 200);
 
 
-                    $(this.element).addClass('animated');
+            $(this.element).addClass('animated');
 
-                }
-            }, {
-                offset: '95%'
-            });
-        }
+          }
+        }, {
+          offset: '95%',
+        });
+    }
 
-    };
+  };
 
 
-    // Features
-    var featuresAnimate = function() {
+// Features
+var featuresAnimate = function() {
 
-        if ($('#fh5co-features').length > 0) {
-            $('#fh5co-features .to-animate').each(function(k) {
+    if ($('#am-features').length > 0) {
+      $('#am-features .to-animate').each(function(k) {
 
-                var el = $(this);
+          var el = $(this);
 
-                setTimeout(function() {
-                    el.addClass('fadeInUp animated');
-                }, k * 200, 'easeInOutExpo');
+          setTimeout(function() {
+              el.addClass('fadeInUp animated');
+            }, k * 200, 'easeInOutExpo');
 
-            });
-        }
+        });
+    }
 
-    };
-    var featuresWayPoint = function() {
+  };
+var featuresWayPoint = function() {
 
-        if ($('#fh5co-features').length > 0) {
-            $('#fh5co-features').waypoint(function(direction) {
+    if ($('#am-features').length > 0) {
+      $('#am-features').waypoint(function(direction) {
 
-                if (direction === 'down' && !$(this).hasClass('animated')) {
+          if (direction === 'down' && !$(this).hasClass('animated')) {
 
 
-                    setTimeout(function() {
-                        $('.animate-features-1').addClass('animated fadeIn');
-                    }, 100);
-                    setTimeout(function() {
-                        $('.animate-features-2').addClass('animated fadeIn');
-                    }, 200);
-                    setTimeout(featuresAnimate, 500);
-                    setTimeout(function() {
-                        $('.animate-features-3').addClass('animated fadeInUp');
-                    }, 1400);
+            setTimeout(function() {
+                $('.animate-features-1').addClass('animated fadeIn');
+              }, 100);
+            setTimeout(function() {
+                $('.animate-features-2').addClass('animated fadeIn');
+              }, 200);
+            setTimeout(featuresAnimate, 500);
+            setTimeout(function() {
+                $('.animate-features-3').addClass('animated fadeInUp');
+              }, 1400);
 
 
-                    $(this.element).addClass('animated');
+            $(this.element).addClass('animated');
 
-                }
-            }, {
-                offset: '95%'
-            });
-        }
+          }
+        }, {
+          offset: '95%',
+        });
+    }
 
-    };
+  };
 
 
-    // testimonials
-    var testimonialsAnimate = function() {
+// Testimonials
+var testimonialsAnimate = function() {
 
-        if ($('#fh5co-testimonials').length > 0) {
-            $('#fh5co-testimonials .to-animate').each(function(k) {
+    if ($('#am-testimonials').length > 0) {
+      $('#am-testimonials .to-animate').each(function(k) {
 
-                var el = $(this);
+          var el = $(this);
 
-                setTimeout(function() {
-                    el.addClass('fadeInUp animated');
-                }, k * 200, 'easeInOutExpo');
+          setTimeout(function() {
+              el.addClass('fadeInUp animated');
+            }, k * 200, 'easeInOutExpo');
 
-            });
-        }
+        });
+    }
 
-    };
-    var testimonialsWayPoint = function() {
+  };
+var testimonialsWayPoint = function() {
 
-        if ($('#fh5co-testimonials').length > 0) {
-            $('#fh5co-testimonials').waypoint(function(direction) {
+    if ($('#am-testimonials').length > 0) {
+      $('#am-testimonials').waypoint(function(direction) {
 
 
-                setTimeout(testimonialsAnimate, 200);
+          setTimeout(testimonialsAnimate, 200);
 
 
-                $(this.element).addClass('animated');
+          $(this.element).addClass('animated');
 
 
-            }, {
-                offset: '95%'
-            });
-        }
+        }, {
+          offset: '95%',
+        });
+    }
 
-    };
+  };
 
-    // Pricing
-    var pricingAnimate = function() {
+// Pricing
+var pricingAnimate = function() {
 
-        if ($('#fh5co-pricing').length > 0) {
-            $('#fh5co-pricing .to-animate').each(function(k) {
+    if ($('#am-pricing').length > 0) {
+      $('#am-pricing .to-animate').each(function(k) {
 
-                var el = $(this);
+          var el = $(this);
 
-                setTimeout(function() {
-                    el.addClass('fadeInUp animated');
-                }, k * 200, 'easeInOutExpo');
+          setTimeout(function() {
+              el.addClass('fadeInUp animated');
+            }, k * 200, 'easeInOutExpo');
 
-            });
-        }
+        });
+    }
 
-    };
-    var pricingWayPoint = function() {
+  };
+var pricingWayPoint = function() {
 
-        if ($('#fh5co-pricing').length > 0) {
-            $('#fh5co-pricing').waypoint(function(direction) {
+    if ($('#am-pricing').length > 0) {
+      $('#am-pricing').waypoint(function(direction) {
 
-                setTimeout(function() {
-                    $('.animate-pricing-1').addClass('animated fadeIn');
-                }, 200);
-                setTimeout(function() {
-                    $('.animate-pricing-2').addClass('animated fadeIn');
-                }, 300);
-                setTimeout(pricingAnimate, 700);
+          setTimeout(function() {
+              $('.animate-pricing-1').addClass('animated fadeIn');
+            }, 200);
+          setTimeout(function() {
+              $('.animate-pricing-2').addClass('animated fadeIn');
+            }, 300);
+          setTimeout(pricingAnimate, 700);
 
 
-                $(this.element).addClass('animated');
+          $(this.element).addClass('animated');
 
 
-            }, {
-                offset: '95%'
-            });
-        }
+        }, {
+          offset: '95%',
+        });
+    }
 
-    };
+  };
 
-    // Pricing
-    var pressAnimate = function() {
+// Pricing
+var pressAnimate = function() {
 
-        if ($('#fh5co-press').length > 0) {
-            $('#fh5co-press .to-animate').each(function(k) {
+    if ($('#am-press').length > 0) {
+      $('#am-press .to-animate').each(function(k) {
 
-                var el = $(this);
+          var el = $(this);
 
-                setTimeout(function() {
-                    el.addClass('fadeInUp animated');
-                }, k * 200, 'easeInOutExpo');
+          setTimeout(function() {
+              el.addClass('fadeInUp animated');
+            }, k * 200, 'easeInOutExpo');
 
-            });
-        }
+        });
+    }
 
-    };
-    var pressWayPoint = function() {
+  };
+var pressWayPoint = function() {
 
-        if ($('#fh5co-press').length > 0) {
-            $('#fh5co-press').waypoint(function(direction) {
+    if ($('#am-press').length > 0) {
+      $('#am-press').waypoint(function(direction) {
 
-                setTimeout(function() {
-                    $('.animate-press-1').addClass('animated fadeIn');
-                }, 200);
-                setTimeout(function() {
-                    $('.animate-press-2').addClass('animated fadeIn');
-                }, 300);
-                setTimeout(pressAnimate, 700);
+          setTimeout(function() {
+              $('.animate-press-1').addClass('animated fadeIn');
+            }, 200);
+          setTimeout(function() {
+              $('.animate-press-2').addClass('animated fadeIn');
+            }, 300);
+          setTimeout(pressAnimate, 700);
 
 
-                $(this.element).addClass('animated');
+          $(this.element).addClass('animated');
 
 
-            }, {
-                offset: '95%'
-            });
-        }
+        }, {
+          offset: '95%',
+        });
+    }
 
-    };
+  };
 
 
 
 
 
-    // Document on load.
-    $(function() {
+// Document on load.
+$(function() {
 
-        burgerMenu();
-        owlCrouselFeatureSlide();
-        clickMenu();
-        windowScroll();
-        navigationSection();
+    burgerMenu();
+    owlCrouselFeatureSlide();
+    clickMenu();
+    windowScroll();
+    navigationSection();
 
-        aboutWayPoint();
-        teamWayPoint();
-        servicesWayPoint();
-        featuresWayPoint();
-        testimonialsWayPoint();
-        pricingWayPoint();
-        pressWayPoint();
+    aboutWayPoint();
+    teamWayPoint();
+    servicesWayPoint();
+    featuresWayPoint();
+    testimonialsWayPoint();
+    pricingWayPoint();
+    pressWayPoint();
 
-    });
+  });
 
 
 }());
