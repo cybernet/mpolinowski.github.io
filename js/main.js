@@ -221,8 +221,8 @@ var aboutWayPoint = function() {
 // Team
 var teamAnimate = function() {
 
-    if ($('#team').length > 0) {
-      $('#team .to-animate').each(function(k) {
+    if ($('#ci-components').length > 0) {
+      $('#ci-components .to-animate').each(function(k) {
 
           var el = $(this);
 
@@ -236,8 +236,8 @@ var teamAnimate = function() {
   };
 var teamWayPoint = function() {
 
-    if ($('#team').length > 0) {
-      $('#team').waypoint(function(direction) {
+    if ($('#ci-components').length > 0) {
+      $('#ci-components').waypoint(function(direction) {
 
           if (direction === 'down' && !$(this).hasClass('animated')) {
 
