@@ -283,17 +283,17 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 
-#our-services,
+#our-commands,
 #about-us,
 #am-testimonials,
-#am-press {
+#am-projects {
   padding: 7em 0;
 }
 @media screen and (max-width: 480px) {
-  #our-services,
+  #our-commands,
   #about-us,
   #am-testimonials,
-  #am-press {
+  #am-projects {
     padding: 5em 0;
   }
 }
@@ -379,12 +379,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
 }
 
-#our-services,
-#am-press {
+#our-commands,
+#am-projects {
   background: #f4f4f4;
 }
 
-#our-services .box {
+#our-commands .box {
   padding: 30px;
   background: #fff;
   text-align: center;
@@ -393,12 +393,12 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 @media screen and (max-width: 992px) {
-  #our-services .box {
+  #our-commands .box {
     min-height: inherit;
     margin-bottom: 60px;
   }
 }
-#our-services .box .icon {
+#our-commands .box .icon {
   width: 85px;
   height: 85px;
   margin: 0 auto;
@@ -413,35 +413,35 @@ h1, h2, h3, h4, h5, h6 {
   display: table;
   text-align: center;
 }
-#our-services .box .icon > span {
+#our-commands .box .icon > span {
   display: table-cell;
   vertical-align: middle;
 }
-#our-services .box .icon > span i {
+#our-commands .box .icon > span i {
   font-size: 40px;
   color: #fff !important;
   margin: 0;
   padding: 0;
 }
-#our-services .box .icon.colored-1 {
+#our-commands .box .icon.colored-1 {
   background: #2aaf67;
 }
-#our-services .box .icon.colored-2 {
+#our-commands .box .icon.colored-2 {
   background: #00bff3;
 }
-#our-services .box .icon.colored-3 {
+#our-commands .box .icon.colored-3 {
   background: #f26522;
 }
-#our-services .box .icon.colored-4 {
+#our-commands .box .icon.colored-4 {
   background: #e52b50;
 }
-#our-services .box .icon.colored-5 {
+#our-commands .box .icon.colored-5 {
   background: #2fc5cc;
 }
-#our-services .box .icon.colored-6 {
+#our-commands .box .icon.colored-6 {
   background: #6173f4;
 }
-#our-services .box .step-number {
+#our-commands .box .step-number {
   font-size: 16px;
   display: block;
   color: #d1d1d1;
@@ -450,7 +450,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-bottom: 10px;
 }
-#our-services .box h3 {
+#our-commands .box h3 {
   margin: 0 0 20px 0;
   padding: 0;
   font-weight: 400;
@@ -487,7 +487,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 
-#am-press .am-press-item {
+#am-projects .am-projects-item {
   background: #fff;
   float: left;
   margin-bottom: 30px;
@@ -504,28 +504,28 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 @media screen and (max-width: 480px) {
-  #am-press .am-press-item {
+  #am-projects .am-projects-item {
     display: block !important;
   }
 }
-#am-press .am-press-item .am-press-text,
-#am-press .am-press-item .am-press-img {
+#am-projects .am-projects-item .am-projects-text,
+#am-projects .am-projects-item .am-projects-img {
   width: 50%;
 }
 @media screen and (max-width: 480px) {
-  #am-press .am-press-item .am-press-text,
-  #am-press .am-press-item .am-press-img {
+  #am-projects .am-projects-item .am-projects-text,
+  #am-projects .am-projects-item .am-projects-img {
     height: inherit;
     float: none !important;
     width: 100%;
     display: block !important;
   }
 }
-#am-press .am-press-item .am-press-text {
+#am-projects .am-projects-item .am-projects-text {
   float: left;
   padding: 20px;
 }
-#am-press .am-press-item .am-press-text .am-press-title {
+#am-projects .am-projects-item .am-projects-text .am-projects-title {
   margin: 0 0 20px 0;
   padding: 0 0 10px 0;
   font-weight: 400;
@@ -533,7 +533,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #444;
   position: relative;
 }
-#am-press .am-press-item .am-press-text .am-press-title .fh5co-border {
+#am-projects .am-projects-item .am-projects-text .am-projects-title .am-underscore {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -541,7 +541,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 30px;
   background: #00b8a9;
 }
-#am-press .am-press-item .am-press-img {
+#am-projects .am-projects-item .am-projects-img {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -549,7 +549,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 @media screen and (max-width: 480px) {
-  #am-press .am-press-item .am-press-img {
+  #am-projects .am-projects-item .am-projects-img {
     height: 200px;
     left: 0;
     top: 0;

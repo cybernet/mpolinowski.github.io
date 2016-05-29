@@ -5,14 +5,14 @@
 // IPad and iPod detection
 var isiPad = function() {
     return (navigator.platform.indexOf('iPad') != -1);
-  };
+};
 
 var isiPhone = function() {
     return (
         (navigator.platform.indexOf('iPhone') != -1) ||
         (navigator.platform.indexOf('iPod') != -1)
     );
-  };
+};
 
 
 
@@ -26,17 +26,17 @@ var owlCrouselFeatureSlide = function() {
         $(elem.target).find('.owl-item').eq(current).find('.to-animate').removeClass('fadeInUp animated');
         $(elem.target).find('.owl-item').eq(current).find('.to-animate-2').removeClass('fadeInUp animated');
 
-      });
+    });
     owl.on('initialized.owl.carousel changed.owl.carousel', function(elem) {
         setTimeout(function() {
             var current = elem.item.index;
             $(elem.target).find('.owl-item').eq(current).find('.to-animate').addClass('fadeInUp animated');
-          }, 700);
+        }, 700);
         setTimeout(function() {
             var current = elem.item.index;
             $(elem.target).find('.owl-item').eq(current).find('.to-animate-2').addClass('fadeInUp animated');
-          }, 900);
-      });
+        }, 900);
+    });
     owl.owlCarousel({
         items: 1,
         loop: true,
@@ -53,9 +53,9 @@ var owlCrouselFeatureSlide = function() {
             '<i class=\'icon-arrow-left2 owl-direction\'></i>',
             '<i class=\'icon-arrow-right2 owl-direction\'></i>',
         ],
-      });
+    });
 
-  };
+};
 
 
 
@@ -66,15 +66,15 @@ var contentWayPoint = function() {
 
         if (direction === 'down' && !$(this).hasClass('animated')) {
 
-          $(this.element).addClass('fadeInUp animated');
+            $(this.element).addClass('fadeInUp animated');
 
         }
 
-      }, {
+    }, {
         offset: '75%',
-      });
+    });
 
-  };
+};
 
 
 // Burger Menu
@@ -83,16 +83,16 @@ var burgerMenu = function() {
     $('body').on('click', '.js-nav-toggle', function(event) {
 
         if ($('#navbar').is(':visible')) {
-          $(this).removeClass('active');
+            $(this).removeClass('active');
         } else {
-          $(this).addClass('active');
+            $(this).addClass('active');
         }
 
         event.preventDefault();
 
-      });
+    });
 
-  };
+};
 
 
 
@@ -104,19 +104,19 @@ var clickMenu = function() {
             navbar = $('#navbar');
         $('html, body').animate({
             scrollTop: $('[data-section="' + section + '"]').offset().top,
-          }, 500);
+        }, 500);
 
         if (navbar.is(':visible')) {
-          navbar.removeClass('in');
-          navbar.attr('aria-expanded', 'false');
-          $('.js-nav-toggle').removeClass('active');
+            navbar.removeClass('in');
+            navbar.attr('aria-expanded', 'false');
+            $('.js-nav-toggle').removeClass('active');
         }
 
         event.preventDefault();
         return false;
-      });
+    });
 
-  };
+};
 
 // Reflect scrolling in navigation
 var navActive = function(section) {
@@ -125,358 +125,358 @@ var navActive = function(section) {
     $el.find('li').removeClass('active');
     $el.each(function() {
         $(this).find('a[data-nav-section="' + section + '"]').closest('li').addClass('active');
-      });
+    });
 
-  };
+};
 var navigationSection = function() {
 
     var $section = $('div[data-section]');
 
     $section.waypoint(function(direction) {
         if (direction === 'down') {
-          navActive($(this.element).data('section'));
+            navActive($(this.element).data('section'));
 
         }
-      }, {
+    }, {
         offset: '150px',
-      });
+    });
 
     $section.waypoint(function(direction) {
         if (direction === 'up') {
-          navActive($(this.element).data('section'));
+            navActive($(this.element).data('section'));
         }
-      }, {
+    }, {
         offset: function() {
             return -$(this.element).height() + 155;
-          },
-      });
+        },
+    });
 
-  };
+};
 
 
-// Window Scroll
-var windowScroll = function() {
-    var lastScrollTop = 0;
+    // Window Scroll
+    var windowScroll = function() {
+        var lastScrollTop = 0;
 
-    $(window).scroll(function(event) {
+        $(window).scroll(function(event) {
 
-        var header = $('#scrollspy'),
-            scrlTop = $(this).scrollTop();
+            var header = $('#scrollspy'),
+                scrlTop = $(this).scrollTop();
 
-        if (scrlTop > 500 && scrlTop <= 2000) {
-          header.addClass('navbar-fixed-top fh5co-animated slideInDown');
-        } else if (scrlTop <= 500) {
-          if (header.hasClass('navbar-fixed-top')) {
-            header.addClass('navbar-fixed-top fh5co-animated slideOutUp');
-            setTimeout(function() {
-                header.removeClass('navbar-fixed-top fh5co-animated slideInDown slideOutUp');
-              }, 100);
-          }
+            if (scrlTop > 500 && scrlTop <= 2000) {
+                header.addClass('navbar-fixed-top fh5co-animated slideInDown');
+            } else if (scrlTop <= 500) {
+                if (header.hasClass('navbar-fixed-top')) {
+                    header.addClass('navbar-fixed-top fh5co-animated slideOutUp');
+                    setTimeout(function() {
+                        header.removeClass('navbar-fixed-top fh5co-animated slideInDown slideOutUp');
+                    }, 100);
+                }
+            }
+
+        });
+    };
+
+
+
+    // Animations
+
+    // About Us
+    var aboutAnimate = function() {
+
+        if ($('#about-us').length > 0) {
+            $('#about-us .to-animate').each(function(k) {
+
+                var el = $(this);
+
+                setTimeout(function() {
+                    el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
+
+            });
         }
 
-      });
-  };
+    };
+    var aboutWayPoint = function() {
 
+        if ($('#about-us').length > 0) {
+            $('#about-us').waypoint(function(direction) {
 
+                if (direction === 'down' && !$(this).hasClass('animated')) {
 
-// Animations
 
-// About Us
-var aboutAnimate = function() {
+                    setTimeout(aboutAnimate, 200);
 
-    if ($('#about-us').length > 0) {
-      $('#about-us .to-animate').each(function(k) {
 
-          var el = $(this);
+                    $(this.element).addClass('animated');
 
-          setTimeout(function() {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+                }
+            }, {
+                offset: '95%',
+            });
+        }
 
-        });
-    }
+    };
 
-  };
-var aboutWayPoint = function() {
+    // Team
+    var teamAnimate = function() {
 
-    if ($('#about-us').length > 0) {
-      $('#about-us').waypoint(function(direction) {
+        if ($('#ci-components').length > 0) {
+            $('#ci-components .to-animate').each(function(k) {
 
-          if (direction === 'down' && !$(this).hasClass('animated')) {
+                var el = $(this);
 
+                setTimeout(function() {
+                    el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
 
-            setTimeout(aboutAnimate, 200);
+            });
+        }
 
+    };
+    var teamWayPoint = function() {
 
-            $(this.element).addClass('animated');
+        if ($('#ci-components').length > 0) {
+            $('#ci-components').waypoint(function(direction) {
 
-          }
-        }, {
-          offset: '95%',
-        });
-    }
+                if (direction === 'down' && !$(this).hasClass('animated')) {
 
-  };
 
-// Team
-var teamAnimate = function() {
+                    setTimeout(teamAnimate, 200);
 
-    if ($('#ci-components').length > 0) {
-      $('#ci-components .to-animate').each(function(k) {
 
-          var el = $(this);
+                    $(this.element).addClass('animated');
 
-          setTimeout(function() {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+                }
+            }, {
+                offset: '95%',
+            });
+        }
 
-        });
-    }
+    };
 
-  };
-var teamWayPoint = function() {
+    // Services
+    var servicesAnimate = function() {
 
-    if ($('#ci-components').length > 0) {
-      $('#ci-components').waypoint(function(direction) {
+        if ($('#our-commands').length > 0) {
+            $('#our-commands .to-animate').each(function(k) {
 
-          if (direction === 'down' && !$(this).hasClass('animated')) {
+                var el = $(this);
 
+                setTimeout(function() {
+                    el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
 
-            setTimeout(teamAnimate, 200);
+            });
+        }
 
+    };
+    var servicesWayPoint = function() {
 
-            $(this.element).addClass('animated');
+        if ($('#our-commands').length > 0) {
+            $('#our-commands').waypoint(function(direction) {
 
-          }
-        }, {
-          offset: '95%',
-        });
-    }
+                if (direction === 'down' && !$(this).hasClass('animated')) {
 
-  };
 
-// Services
-var servicesAnimate = function() {
+                    setTimeout(servicesAnimate, 200);
 
-    if ($('#our-services').length > 0) {
-      $('#our-services .to-animate').each(function(k) {
 
-          var el = $(this);
+                    $(this.element).addClass('animated');
 
-          setTimeout(function() {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+                }
+            }, {
+                offset: '95%',
+            });
+        }
 
-        });
-    }
+    };
 
-  };
-var servicesWayPoint = function() {
 
-    if ($('#our-services').length > 0) {
-      $('#our-services').waypoint(function(direction) {
+    // Features
+    var featuresAnimate = function() {
 
-          if (direction === 'down' && !$(this).hasClass('animated')) {
+        if ($('#am-features').length > 0) {
+            $('#am-features .to-animate').each(function(k) {
 
+                var el = $(this);
 
-            setTimeout(servicesAnimate, 200);
+                setTimeout(function() {
+                    el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
 
+            });
+        }
 
-            $(this.element).addClass('animated');
+    };
+    var featuresWayPoint = function() {
 
-          }
-        }, {
-          offset: '95%',
-        });
-    }
+        if ($('#am-features').length > 0) {
+            $('#am-features').waypoint(function(direction) {
 
-  };
+                if (direction === 'down' && !$(this).hasClass('animated')) {
 
 
-// Features
-var featuresAnimate = function() {
+                    setTimeout(function() {
+                        $('.animate-features-1').addClass('animated fadeIn');
+                    }, 100);
+                    setTimeout(function() {
+                        $('.animate-features-2').addClass('animated fadeIn');
+                    }, 200);
+                    setTimeout(featuresAnimate, 500);
+                    setTimeout(function() {
+                        $('.animate-features-3').addClass('animated fadeInUp');
+                    }, 1400);
 
-    if ($('#am-features').length > 0) {
-      $('#am-features .to-animate').each(function(k) {
 
-          var el = $(this);
+                    $(this.element).addClass('animated');
 
-          setTimeout(function() {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+                }
+            }, {
+                offset: '95%',
+            });
+        }
 
-        });
-    }
+    };
 
-  };
-var featuresWayPoint = function() {
 
-    if ($('#am-features').length > 0) {
-      $('#am-features').waypoint(function(direction) {
+    // Testimonials
+    var testimonialsAnimate = function() {
 
-          if (direction === 'down' && !$(this).hasClass('animated')) {
+        if ($('#am-testimonials').length > 0) {
+            $('#am-testimonials .to-animate').each(function(k) {
 
+                var el = $(this);
 
-            setTimeout(function() {
-                $('.animate-features-1').addClass('animated fadeIn');
-              }, 100);
-            setTimeout(function() {
-                $('.animate-features-2').addClass('animated fadeIn');
-              }, 200);
-            setTimeout(featuresAnimate, 500);
-            setTimeout(function() {
-                $('.animate-features-3').addClass('animated fadeInUp');
-              }, 1400);
+                setTimeout(function() {
+                    el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
 
+            });
+        }
 
-            $(this.element).addClass('animated');
+    };
+    var testimonialsWayPoint = function() {
 
-          }
-        }, {
-          offset: '95%',
-        });
-    }
+        if ($('#am-testimonials').length > 0) {
+            $('#am-testimonials').waypoint(function(direction) {
 
-  };
 
+                setTimeout(testimonialsAnimate, 200);
 
-// Testimonials
-var testimonialsAnimate = function() {
 
-    if ($('#am-testimonials').length > 0) {
-      $('#am-testimonials .to-animate').each(function(k) {
+                $(this.element).addClass('animated');
 
-          var el = $(this);
 
-          setTimeout(function() {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+            }, {
+                offset: '95%',
+            });
+        }
 
-        });
-    }
+    };
 
-  };
-var testimonialsWayPoint = function() {
+    // Pricing
+    var pricingAnimate = function() {
 
-    if ($('#am-testimonials').length > 0) {
-      $('#am-testimonials').waypoint(function(direction) {
+        if ($('#am-pricing').length > 0) {
+            $('#am-pricing .to-animate').each(function(k) {
 
+                var el = $(this);
 
-          setTimeout(testimonialsAnimate, 200);
+                setTimeout(function() {
+                    el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
 
+            });
+        }
 
-          $(this.element).addClass('animated');
+    };
+    var pricingWayPoint = function() {
 
+        if ($('#am-pricing').length > 0) {
+            $('#am-pricing').waypoint(function(direction) {
 
-        }, {
-          offset: '95%',
-        });
-    }
+                setTimeout(function() {
+                    $('.animate-pricing-1').addClass('animated fadeIn');
+                }, 200);
+                setTimeout(function() {
+                    $('.animate-pricing-2').addClass('animated fadeIn');
+                }, 300);
+                setTimeout(pricingAnimate, 700);
 
-  };
 
-// Pricing
-var pricingAnimate = function() {
+                $(this.element).addClass('animated');
 
-    if ($('#am-pricing').length > 0) {
-      $('#am-pricing .to-animate').each(function(k) {
 
-          var el = $(this);
+            }, {
+                offset: '95%',
+            });
+        }
 
-          setTimeout(function() {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+    };
 
-        });
-    }
+    // Pricing
+    var pressAnimate = function() {
 
-  };
-var pricingWayPoint = function() {
+        if ($('#am-projects').length > 0) {
+            $('#am-projects .to-animate').each(function(k) {
 
-    if ($('#am-pricing').length > 0) {
-      $('#am-pricing').waypoint(function(direction) {
+                var el = $(this);
 
-          setTimeout(function() {
-              $('.animate-pricing-1').addClass('animated fadeIn');
-            }, 200);
-          setTimeout(function() {
-              $('.animate-pricing-2').addClass('animated fadeIn');
-            }, 300);
-          setTimeout(pricingAnimate, 700);
+                setTimeout(function() {
+                    el.addClass('fadeInUp animated');
+                }, k * 200, 'easeInOutExpo');
 
+            });
+        }
 
-          $(this.element).addClass('animated');
+    };
+    var pressWayPoint = function() {
 
+        if ($('#am-projects').length > 0) {
+            $('#am-projects').waypoint(function(direction) {
 
-        }, {
-          offset: '95%',
-        });
-    }
+                setTimeout(function() {
+                    $('.animate-press-1').addClass('animated fadeIn');
+                }, 200);
+                setTimeout(function() {
+                    $('.animate-press-2').addClass('animated fadeIn');
+                }, 300);
+                setTimeout(pressAnimate, 700);
 
-  };
 
-// Pricing
-var pressAnimate = function() {
+                $(this.element).addClass('animated');
 
-    if ($('#am-press').length > 0) {
-      $('#am-press .to-animate').each(function(k) {
 
-          var el = $(this);
+            }, {
+                offset: '95%',
+            });
+        }
 
-          setTimeout(function() {
-              el.addClass('fadeInUp animated');
-            }, k * 200, 'easeInOutExpo');
+    };
 
-        });
-    }
 
-  };
-var pressWayPoint = function() {
 
-    if ($('#am-press').length > 0) {
-      $('#am-press').waypoint(function(direction) {
 
-          setTimeout(function() {
-              $('.animate-press-1').addClass('animated fadeIn');
-            }, 200);
-          setTimeout(function() {
-              $('.animate-press-2').addClass('animated fadeIn');
-            }, 300);
-          setTimeout(pressAnimate, 700);
 
+    // Document on load.
+    $(function() {
 
-          $(this.element).addClass('animated');
+        burgerMenu();
+        owlCrouselFeatureSlide();
+        clickMenu();
+        windowScroll();
+        navigationSection();
 
+        aboutWayPoint();
+        teamWayPoint();
+        servicesWayPoint();
+        featuresWayPoint();
+        testimonialsWayPoint();
+        pricingWayPoint();
+        pressWayPoint();
 
-        }, {
-          offset: '95%',
-        });
-    }
-
-  };
-
-
-
-
-
-// Document on load.
-$(function() {
-
-    burgerMenu();
-    owlCrouselFeatureSlide();
-    clickMenu();
-    windowScroll();
-    navigationSection();
-
-    aboutWayPoint();
-    teamWayPoint();
-    servicesWayPoint();
-    featuresWayPoint();
-    testimonialsWayPoint();
-    pricingWayPoint();
-    pressWayPoint();
-
-  });
+    });
 
 
 }());
