@@ -48,19 +48,19 @@ exports.modules = {
 	
 	var _SocialIcons2 = _interopRequireDefault(_SocialIcons);
 	
-	var _InfoMenu = __webpack_require__(667);
+	var _InfoMenu = __webpack_require__(665);
 	
 	var _InfoMenu2 = _interopRequireDefault(_InfoMenu);
 	
-	var _InfoHeader = __webpack_require__(668);
+	var _InfoHeader = __webpack_require__(666);
 	
 	var _InfoHeader2 = _interopRequireDefault(_InfoHeader);
 	
-	var _InfoText = __webpack_require__(671);
+	var _InfoText = __webpack_require__(669);
 	
 	var _InfoText2 = _interopRequireDefault(_InfoText);
 	
-	var _StackIcons = __webpack_require__(672);
+	var _StackIcons = __webpack_require__(670);
 	
 	var _StackIcons2 = _interopRequireDefault(_StackIcons);
 	
@@ -76,7 +76,7 @@ exports.modules = {
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(682);
+	__webpack_require__(679);
 	
 	var styles = function styles(theme) {
 	  var _infoBox;
@@ -233,14 +233,6 @@ exports.modules = {
 	
 	var _github2 = _interopRequireDefault(_github);
 	
-	var _facebook = __webpack_require__(665);
-	
-	var _facebook2 = _interopRequireDefault(_facebook);
-	
-	var _twitter = __webpack_require__(666);
-	
-	var _twitter2 = _interopRequireDefault(_twitter);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var styles = function styles(theme) {
@@ -273,8 +265,6 @@ exports.modules = {
 	
 	  var items = _config2.default.authorSocialLinks;
 	  var icons = {
-	    twitter: _twitter2.default,
-	    facebook: _facebook2.default,
 	    github: _github2.default
 	  };
 	
@@ -352,92 +342,6 @@ exports.modules = {
 /***/ }),
 
 /***/ 665:
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _extends() {
-	  _extends = Object.assign || function (target) {
-	    for (var i = 1; i < arguments.length; i++) {
-	      var source = arguments[i];for (var key in source) {
-	        if (Object.prototype.hasOwnProperty.call(source, key)) {
-	          target[key] = source[key];
-	        }
-	      }
-	    }return target;
-	  };return _extends.apply(this, arguments);
-	}
-	
-	var _ref =
-	/*#__PURE__*/
-	_react2.default.createElement("path", {
-	  d: "M211.9 197.4h-36.7v59.9h36.7v175.8h70.5V256.5h49.2l5.2-59.1h-54.4v-33.7c0-13.9 2.8-19.5 16.3-19.5h38.2V82.9h-48.8c-52.5 0-76.1 23.1-76.1 67.3-.1 38.6-.1 47.2-.1 47.2z"
-	});
-	
-	var SvgComponent = function SvgComponent(props) {
-	  return _react2.default.createElement("svg", _extends({
-	    viewBox: "0 0 512 512"
-	  }, props), _ref);
-	};
-	
-	exports.default = SvgComponent;
-
-/***/ }),
-
-/***/ 666:
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _extends() {
-	  _extends = Object.assign || function (target) {
-	    for (var i = 1; i < arguments.length; i++) {
-	      var source = arguments[i];for (var key in source) {
-	        if (Object.prototype.hasOwnProperty.call(source, key)) {
-	          target[key] = source[key];
-	        }
-	      }
-	    }return target;
-	  };return _extends.apply(this, arguments);
-	}
-	
-	var _ref =
-	/*#__PURE__*/
-	_react2.default.createElement("path", {
-	  d: "M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36-12.6 7.5-26.5 12.9-41.3 15.8C357.6 146 340.7 138 322 138c-42 0-72.9 39.2-63.4 79.9-54.1-2.7-102.1-28.6-134.2-68-17 29.2-8.8 67.5 20.1 86.9-10.7-.3-20.7-3.3-29.5-8.1-.7 30.2 20.9 58.4 52.2 64.6-9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2-27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6 12.9-9.1 23.9-20.5 32.6-33.6z"
-	});
-	
-	var SvgComponent = function SvgComponent(props) {
-	  return _react2.default.createElement("svg", _extends({
-	    viewBox: "0 0 512 512"
-	  }, props), _ref);
-	};
-	
-	exports.default = SvgComponent;
-
-/***/ }),
-
-/***/ 667:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -529,7 +433,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 668:
+/***/ 666:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -556,11 +460,11 @@ exports.modules = {
 	
 	var _IconButton2 = _interopRequireDefault(_IconButton);
 	
-	var _ExpandMore = __webpack_require__(669);
+	var _ExpandMore = __webpack_require__(667);
 	
 	var _ExpandMore2 = _interopRequireDefault(_ExpandMore);
 	
-	var _avatar2 = __webpack_require__(670);
+	var _avatar2 = __webpack_require__(668);
 	
 	var _avatar3 = _interopRequireDefault(_avatar2);
 	
@@ -708,7 +612,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 669:
+/***/ 667:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -750,7 +654,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 671:
+/***/ 669:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -809,7 +713,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 672:
+/***/ 670:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -828,39 +732,35 @@ exports.modules = {
 	
 	var _reactJss2 = _interopRequireDefault(_reactJss);
 	
-	var _algolia = __webpack_require__(673);
-	
-	var _algolia2 = _interopRequireDefault(_algolia);
-	
-	var _react3 = __webpack_require__(674);
+	var _react3 = __webpack_require__(671);
 	
 	var _react4 = _interopRequireDefault(_react3);
 	
-	var _graphql = __webpack_require__(675);
+	var _graphql = __webpack_require__(672);
 	
 	var _graphql2 = _interopRequireDefault(_graphql);
 	
-	var _jss = __webpack_require__(676);
+	var _jss = __webpack_require__(673);
 	
 	var _jss2 = _interopRequireDefault(_jss);
 	
-	var _materialUi = __webpack_require__(677);
+	var _materialUi = __webpack_require__(674);
 	
 	var _materialUi2 = _interopRequireDefault(_materialUi);
 	
-	var _redux = __webpack_require__(678);
+	var _redux = __webpack_require__(675);
 	
 	var _redux2 = _interopRequireDefault(_redux);
 	
-	var _gatsby = __webpack_require__(679);
+	var _gatsby = __webpack_require__(676);
 	
 	var _gatsby2 = _interopRequireDefault(_gatsby);
 	
-	var _webpack = __webpack_require__(680);
+	var _webpack = __webpack_require__(677);
 	
 	var _webpack2 = _interopRequireDefault(_webpack);
 	
-	var _babel = __webpack_require__(681);
+	var _babel = __webpack_require__(678);
 	
 	var _babel2 = _interopRequireDefault(_babel);
 	
@@ -912,7 +812,7 @@ exports.modules = {
 	  var classes = props.classes;
 	
 	
-	  var items = [{ name: "gatsby", url: "https://www.gatsbyjs.org/", comp: _gatsby2.default }, { name: "react", url: "https://reactjs.org/", comp: _react4.default }, { name: "graphql", url: "http://graphql.org/", comp: _graphql2.default }, { name: "jss", url: "http://cssinjs.org/", comp: _jss2.default }, { name: "material-ui", url: "https://material-ui-next.com/", comp: _materialUi2.default }, { name: "redux", url: "https://redux.js.org/", comp: _redux2.default }, { name: "algolia", url: "https://www.algolia.com/", comp: _algolia2.default }, { name: "webpack", url: "https://webpack.js.org/", comp: _webpack2.default }, { name: "babel", url: "https://babeljs.io/", comp: _babel2.default }, { name: "netlify", url: "https://www.netlify.com/", comp: _github2.default }];
+	  var items = [{ name: "gatsby", url: "https://www.gatsbyjs.org/", comp: _gatsby2.default }, { name: "react", url: "https://reactjs.org/", comp: _react4.default }, { name: "graphql", url: "http://graphql.org/", comp: _graphql2.default }, { name: "jss", url: "http://cssinjs.org/", comp: _jss2.default }, { name: "material-ui", url: "https://material-ui-next.com/", comp: _materialUi2.default }, { name: "redux", url: "https://redux.js.org/", comp: _redux2.default }, { name: "webpack", url: "https://webpack.js.org/", comp: _webpack2.default }, { name: "babel", url: "https://babeljs.io/", comp: _babel2.default }, { name: "github pages", url: "https://pages.github.com/", comp: _github2.default }];
 	
 	  return _react2.default.createElement(
 	    "div",
@@ -953,59 +853,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 673:
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _extends() {
-	  _extends = Object.assign || function (target) {
-	    for (var i = 1; i < arguments.length; i++) {
-	      var source = arguments[i];for (var key in source) {
-	        if (Object.prototype.hasOwnProperty.call(source, key)) {
-	          target[key] = source[key];
-	        }
-	      }
-	    }return target;
-	  };return _extends.apply(this, arguments);
-	}
-	
-	var _ref =
-	/*#__PURE__*/
-	_react2.default.createElement("g", {
-	  fill: "none",
-	  fillRule: "evenodd"
-	}, _react2.default.createElement("rect", {
-	  fill: "url(#a)",
-	  width: 94.045,
-	  height: 94.072,
-	  rx: 12.374
-	}), _react2.default.createElement("path", {
-	  d: "M48.125 23.775c-14.671 0-26.58 11.898-26.58 26.588 0 14.69 11.895 26.588 26.58 26.588 14.685 0 26.58-11.912 26.58-26.602S62.81 23.775 48.125 23.775zm0 45.307c-10.343 0-18.727-8.386-18.727-18.733 0-10.346 8.384-18.732 18.727-18.732 10.344 0 18.727 8.386 18.727 18.732 0 10.347-8.383 18.733-18.727 18.733zm0-33.6v13.955c0 .408.436.68.803.49L61.3 43.501a.548.548 0 0 0 .217-.762c-2.572-4.506-7.335-7.596-12.834-7.8a.549.549 0 0 0-.558.544zM30.76 25.246l-1.62-1.62a4.082 4.082 0 0 0-5.77 0l-1.933 1.933a4.085 4.085 0 0 0 0 5.773l1.606 1.606c.245.245.64.204.844-.068a30.572 30.572 0 0 1 3.116-3.662 29.723 29.723 0 0 1 3.689-3.131c.272-.19.3-.6.068-.83zm26.063-4.234v-3.226a4.078 4.078 0 0 0-4.083-4.084h-9.5a4.078 4.078 0 0 0-4.083 4.084v3.308c0 .368.354.626.708.531a29.562 29.562 0 0 1 8.275-1.157c2.722 0 5.403.367 7.989 1.075a.55.55 0 0 0 .694-.53z",
-	  fill: "#FFF"
-	}));
-	
-	var SvgComponent = function SvgComponent(props) {
-	  return _react2.default.createElement("svg", _extends({
-	    viewBox: "0 0 95 95"
-	  }, props), _ref);
-	};
-	
-	exports.default = SvgComponent;
-
-/***/ }),
-
-/***/ 674:
+/***/ 671:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1059,7 +907,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 675:
+/***/ 672:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1145,7 +993,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 676:
+/***/ 673:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1203,7 +1051,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 677:
+/***/ 674:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1325,7 +1173,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 678:
+/***/ 675:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1374,7 +1222,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 679:
+/***/ 676:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1418,7 +1266,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 680:
+/***/ 677:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1477,7 +1325,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 681:
+/***/ 678:
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
