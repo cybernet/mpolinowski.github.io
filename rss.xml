@@ -1,4 +1,422 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 12 May 2018 10:57:56 GMT</lastBuildDate><item><title><![CDATA[Server Rendering with React and React Router]]></title><description><![CDATA[Server side rendering a React app can provide a few different benefits including performance and SEO. The problem is with those benefits…]]></description><link>https://mpolinowski.github.io/server-side-render-react-router/</link><guid isPermaLink="false">https://mpolinowski.github.io/server-side-render-react-router/</guid><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 27 May 2018 09:27:37 GMT</lastBuildDate><item><title><![CDATA[Run your Node.js app from a Docker Container]]></title><description><![CDATA[Run your Node.js app from a Docker Container 01 Create your Node App 02 Dockerizing your Node.js application Building your image Running the…]]></description><link>https://mpolinowski.github.io/node-express-docker-container/</link><guid isPermaLink="false">https://mpolinowski.github.io/node-express-docker-container/</guid><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/photo-11626710613_fd6faa15ae_o-cc490360b9b87507dedfa02be9a3fe59-72e4a.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 36.86666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAC4jAAAuIwF4pT92AAACC0lEQVQozx2Ry28SURjF5y8gYY0FhI1dWBubSGgLtkoBgaZAGVugYKQ1th0oAwMIQ0HRLoy8kb6Qpo2IuvQRbXw07tR/wujSxE3TWNNu7vEyuy/5zj3nd77LpEXxnzcQQJjnyW6nCx+dM2IW2VwO1XoD7/Y/YInj0Ok+R3NjE6VKBeVqDbG4AHE1h43tFnlYLCGVEUkkGv3DxATheHYugHgyRR5RsdPtRnglitDCLdwMhdBoriMaj+PHz1/4+PkAr16/wddv36EfGcH5gQGU63VSpAHeuQBJpdOHTCa7euJiWchkMqJQKDBqMMJsteLi0BB0ej0u6XQ4q9GA52PI5fMolSt42unA7fFIurfv90l7dw+3OY4IyeQhQ7FPJp1O2BwOaRGaX4BWq8X65ha2n+yg8GANBhoy4/XCbLHiwuAg9MPDGDUaJUqzxUJ6xhabjfj8/t9MWsye2qemegLSS5XL5Zj2sGg8bqJYKoOLrNDq89jrPEOrvQOlUom79wr4dPAF07QZbUEm6fsrExMkXygcMck76VPzNRvcLEs4ejuVSgW7wwEDJbDZ7VjmwpJhuVpHixKf6euTDLsvXsLr88FzfYb4g0GoNZreDY+YRCr1d/yqCS4PSxbDEZzr74fT5cblsTGJdHFpGYHgDelnC/fXoFarEaHBW602ZqnhuMlE+EQCvCCQSq12/B979TUp8YIbawAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Abashiri, Hokkaido, Japan&quot;
+        title=&quot;&quot;
+        src=&quot;/static/photo-11626710613_fd6faa15ae_o-cc490360b9b87507dedfa02be9a3fe59-48538.png&quot;
+        srcset=&quot;/static/photo-11626710613_fd6faa15ae_o-cc490360b9b87507dedfa02be9a3fe59-bed0f.png 200w,
+/static/photo-11626710613_fd6faa15ae_o-cc490360b9b87507dedfa02be9a3fe59-5fd34.png 400w,
+/static/photo-11626710613_fd6faa15ae_o-cc490360b9b87507dedfa02be9a3fe59-48538.png 800w,
+/static/photo-11626710613_fd6faa15ae_o-cc490360b9b87507dedfa02be9a3fe59-b70ec.png 1200w,
+/static/photo-11626710613_fd6faa15ae_o-cc490360b9b87507dedfa02be9a3fe59-72e4a.png 1500w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#run-your-nodejs-app-from-a-docker-container&quot;&gt;Run your Node.js app from a Docker Container&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#01-create-your-node-app&quot;&gt;01 Create your Node App&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#02-dockerizing-your-nodejs-application&quot;&gt;02 Dockerizing your Node.js application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#building-your-image&quot;&gt;Building your image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#running-the-container&quot;&gt;Running the Container&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#running-the-container-with-kitematic&quot;&gt;Running the Container with Kitematic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;01-create-your-node-app&quot;&gt;&lt;a href=&quot;#01-create-your-node-app&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;01 Create your Node App&lt;/h2&gt;
+&lt;p&gt;Keeping it simple - create a folder and use &lt;a href=&quot;https://nodejs.org&quot;&gt;Node.js&lt;/a&gt; to &lt;a href=&quot;https://npmjs.com/package/cylon&quot;&gt;npm&lt;/a&gt; install &lt;a href=&quot;https://expressjs.com&quot;&gt;Express.js&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; init
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; express&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;init&lt;/strong&gt; will create a package.json file - we can add a start script to it to start our Express Webserver:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;node ./index.js&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Then configure your webserver by adding the &lt;strong&gt;index.js&lt;/strong&gt; file to the root directory:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//Load express module with `require` directive&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; express &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;token comment&quot;&gt;//Define request response in root URL (/)&lt;/span&gt;
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Hello World!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;token comment&quot;&gt;//Launch listening server on port 3000&lt;/span&gt;
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;app listening on port http://localhost:3000!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;You can test the webserver by running the npm script from your console:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; start&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;And access &lt;em&gt;&lt;a href=&quot;http://localhost:3000&quot;&gt;http://localhost:3000&lt;/a&gt;&lt;/em&gt; in your preferred web browser - you should be greeted by:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/docker_01-9485dd8d1e0136ec7642b8788bf448dc-81103.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 25.348837209302328%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAQklEQVQY063OMQoAIAiF4e5/SodyyQOYwrMgWhyrD97i8GNhZtTGICJ0EcSCLW4UM8NYU1W4+3swH65LJ4jk+4evJuoejN+wfIxxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Docker &amp; Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/docker_01-9485dd8d1e0136ec7642b8788bf448dc-48538.png&quot;
+        srcset=&quot;/static/docker_01-9485dd8d1e0136ec7642b8788bf448dc-bed0f.png 200w,
+/static/docker_01-9485dd8d1e0136ec7642b8788bf448dc-5fd34.png 400w,
+/static/docker_01-9485dd8d1e0136ec7642b8788bf448dc-48538.png 800w,
+/static/docker_01-9485dd8d1e0136ec7642b8788bf448dc-81103.png 860w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;02-dockerizing-your-nodejs-application&quot;&gt;&lt;a href=&quot;#02-dockerizing-your-nodejs-application&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;02 Dockerizing your Node.js application&lt;/h2&gt;
+&lt;p&gt;If you did not so far, first &lt;a href=&quot;https://docs.docker.com/install/&quot;&gt;install Docker&lt;/a&gt; on your computer.&lt;/p&gt;
+&lt;p&gt;The Docker container is launched on the basis of a Docker image, a template with the application details. The Docker image is created with instructions written in the Dockerfile. Let’s add &lt;strong&gt;Dockerfile&lt;/strong&gt; to the directory with our application:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-docker&quot;&gt;&lt;code class=&quot;language-docker&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; node&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;latest
+
+&lt;span class=&quot;token comment&quot;&gt;# Create app directory&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;WORKDIR&lt;/span&gt; /usr/src/app
+
+&lt;span class=&quot;token comment&quot;&gt;# Install app dependencies&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# A wildcard is used to ensure both package.json AND package-lock.json are copied&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# where available (npm@5+)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;COPY&lt;/span&gt; package*.json ./
+
+&lt;span class=&quot;token keyword&quot;&gt;RUN&lt;/span&gt; npm install
+&lt;span class=&quot;token comment&quot;&gt;# If you are building your code for production&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# RUN npm install --only=production&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Bundle app source&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;COPY&lt;/span&gt; . .
+
+&lt;span class=&quot;token keyword&quot;&gt;EXPOSE&lt;/span&gt; 8080
+&lt;span class=&quot;token keyword&quot;&gt;CMD&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;npm&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;start&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;The first thing we need to do is define from what image we want to build from. Here we will use the latest version of node available from the &lt;a href=&quot;https://hub.docker.com/&quot;&gt;Docker Hub&lt;/a&gt;: &lt;strong&gt;FROM node:latest&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Next we create a directory to hold the application code inside the image, this will be the working directory for your application: &lt;strong&gt;WORKDIR /app&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;This image comes with Node.js and NPM already installed so the next thing we need to do is to install your app dependencies using the npm binary: &lt;strong&gt;COPY package*.json ./&lt;/strong&gt;, &lt;strong&gt;RUN npm install&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that, rather than copying the entire working directory, we are only copying the package.json file.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To bundle your app’s source code inside the Docker image, use the COPY instruction: &lt;strong&gt;COPY . /app&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Your app binds to port 3000 so you’ll use the EXPOSE instruction to have it mapped by the docker daemon: &lt;strong&gt;EXPOSE 3000&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Last but not least, define the command to run your app using CMD which defines your runtime. Here we will use the basic npm start which will run node server.js to start your server: &lt;strong&gt;CMD [ “npm”, “start” ]&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Create a &lt;strong&gt;.dockerignore&lt;/strong&gt; file in the same directory as your Dockerfile with following content:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;node_modules
+npm-debug.log&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;This will prevent your local modules and debug logs from being copied onto your Docker image and possibly overwriting modules installed within your image.&lt;/p&gt;
+&lt;h3 id=&quot;building-your-image&quot;&gt;&lt;a href=&quot;#building-your-image&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Building your image&lt;/h3&gt;
+&lt;p&gt;Go to the directory that has your Dockerfile and run the following command to build the Docker image. The -t flag lets you tag your image so it’s easier to find later using the docker images command: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;docker build -t hello-world &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/docker_02-4719d8dbd28268b5419982c9a4b1c163-8732b.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 73.16219369894984%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACJklEQVQoz2Pg6W3m7W5i7mpi7G0BoZ5Whp5mpr5W5v5Wxr5WqCAy6mlh7Gpi6mrU3TKfQdEuW8k+R8YySc4qQ8kuU94qWdYyXdIsRdAgnl09kkExhFEpFA0xKIayqIYvPHCIQd0lT8+zSNejQN0lX8YqRcQkUtg4iVMrmlM7mlUjklElDBMxKIeyqEWsO3uewdC3VNk+28i3VNYmgwFoqlIYiFSGIjya15w5x2ARWKlgm2kaUC5jlc6gEMyoAtQThlUPmua1QM26QDeDkZJ9tqRFqpxthqR5qoBBgrBxopBRooBhApDNoh6BbCJCs6ZbgWVwJdBaoDpR02Rx8xQunRhcDkbXrONeCAwwdadcMdMkNqANSiEQnUwgFApGuDXLa4SoaoZo6UepaIdJKfrLKQdIKAWIK/oDkaiiP69yELdyMBswILBq1gJGlXuBGNCHBvEC+rGChvEcGhHMyqHMYMsZwAi3sz2KgEjJIRsYvUB1zGrhjNg0YNes5pxr7Fuq5pwHDGp+/ThxsxQOrWigNJNqGKMqSCmQAfY/iMsE08yqDokqjyJ9r2IVxxxZ6ww+/Tge3RgWtXBQsIGSCpgEsWEMSOJRDAF6CpRIDH1KgJGs7VEANELVKVfcLBkYYWKmyUCHAEkgW8oyDRiRkhZpQEcBY0TMLAXIkLZMXX/uPIO0ZRpQHRABFQkZJTCrhgOdBPQSMGFAEKt6JBiBGEBxiCy7ZhTQ2QCTlNGI/epzfQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Docker &amp; Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/docker_02-4719d8dbd28268b5419982c9a4b1c163-48538.png&quot;
+        srcset=&quot;/static/docker_02-4719d8dbd28268b5419982c9a4b1c163-bed0f.png 200w,
+/static/docker_02-4719d8dbd28268b5419982c9a4b1c163-5fd34.png 400w,
+/static/docker_02-4719d8dbd28268b5419982c9a4b1c163-48538.png 800w,
+/static/docker_02-4719d8dbd28268b5419982c9a4b1c163-8732b.png 857w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;You can now list the Docker image:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;docker images&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/docker_03-6f0df74de246df96f25c4a6f320d8ee3-2795d.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 9.19674039580908%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAe0lEQVQI12PgndjK1d/MPbmNa1YP54we7lnN3LM62Kd3M0xsBSLGSW0QxDChBUgyTW5nBIr3tzBOaGHobWJQsMvi1I5m14pi14hk04hi1wzh0IpgUYtQtMvi149nUAjm1Ysz8StTc8phUAqRsU7Xdi8QNErk0Y1VsssCAGhyIyf7ymk6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Docker &amp; Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/docker_03-6f0df74de246df96f25c4a6f320d8ee3-48538.png&quot;
+        srcset=&quot;/static/docker_03-6f0df74de246df96f25c4a6f320d8ee3-bed0f.png 200w,
+/static/docker_03-6f0df74de246df96f25c4a6f320d8ee3-5fd34.png 400w,
+/static/docker_03-6f0df74de246df96f25c4a6f320d8ee3-48538.png 800w,
+/static/docker_03-6f0df74de246df96f25c4a6f320d8ee3-2795d.png 859w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3 id=&quot;running-the-container&quot;&gt;&lt;a href=&quot;#running-the-container&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Running the Container&lt;/h3&gt;
+&lt;p&gt;Running your image with -d runs the container in detached mode, leaving the container running in the background. The -p flag redirects a public port to a private port inside the container. Run the image you previously built:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;docker run -p 8080:3000 hello-world&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/docker_04-29ffcc40920d1ed2ad8bfa1953d077a5-81103.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.348837209302324%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABIklEQVQY02XK30rCYBjH8Ue3kCTYFaSubZ4ktoqcmJSE4MFktH/vNiQzuou6k6iORd8l0aRCJUTCwHYYNbuZ3tcgkOBz8H1+PHCv1tpHB+1qpafWLoqKvZlryrLG8+p6qp5K19OZhf9BwaV+PL25mt5ef+DOp9/9wh0iusPE3McRxpHfnfvdiIwUCXp++5gABdnWy5M26pnjwBg/mJO+OQmMSd8YB/prYIWP+mxgzAZ2OLLCkUm8D83ZUHt7JkAuV5NKK6mccvtnib3mWqlFJAonXPl8tehxhwjyCHI2s9uI7zRA9mDLg7wLWZ3KFSqMiFjBYUVnRXRoCA4joMXpsoLLbCAilrHiPGH/YsmDgCC7XQIJxcRl0nJTTlxyYtTfgn4AM/N7L8e6NEYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Docker &amp; Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/docker_04-29ffcc40920d1ed2ad8bfa1953d077a5-48538.png&quot;
+        srcset=&quot;/static/docker_04-29ffcc40920d1ed2ad8bfa1953d077a5-bed0f.png 200w,
+/static/docker_04-29ffcc40920d1ed2ad8bfa1953d077a5-5fd34.png 400w,
+/static/docker_04-29ffcc40920d1ed2ad8bfa1953d077a5-48538.png 800w,
+/static/docker_04-29ffcc40920d1ed2ad8bfa1953d077a5-81103.png 860w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;The Container is now running and listening on Port 3000 - to access the container we have to use the exposed Port 8080 on localhost or the local IP address of the machine we running it on.&lt;/p&gt;
+&lt;h3 id=&quot;running-the-container-with-kitematic&quot;&gt;&lt;a href=&quot;#running-the-container-with-kitematic&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Running the Container with Kitematic&lt;/h3&gt;
+&lt;p&gt;Alternatively, we can use the graphical user interface &lt;a href=&quot;https://kitematic.com&quot;&gt;Kitematic&lt;/a&gt;. First install the &lt;a href=&quot;https://docker.com/toolbox&quot;&gt;Docker Toolbox&lt;/a&gt; for Windows and macOS and start Kitematic. Choose &lt;strong&gt;My Images&lt;/strong&gt; and &lt;strong&gt;Create&lt;/strong&gt; on our hello-world container:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/docker_05-9e33413ebbebb07eedbc33e74c6d92dd-81103.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 64.53488372093024%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACP0lEQVQ4y42TO2/UQBSF/b8o4VdQgugog5TUNFvQQBEkQpQSCSGIEA0VEg1S0GaBjUSWhH0QNrve+O2x52kf7oztJYmEhKXReK5nvjnn3mtPKY0agKkq5EWJqrIr0Fyhruv1qC69uzV9N8ZAaw1NZzLfx8n+PrwkTxEnabOBQJxLSKlguUobKENxWlTtrHQFqQy4UChKgTwvwOg9PltgMjqFd8Ej/J4vkGS5U/ZmmmH3OEQaJ5AEgVb4dM7w5DgFy5kDatNAS6FRlhIFnStfvMJoewce4yX8VYBSagfcGma48zkmqQVcZNDHs513uHkoAPE3JRZacOUGo6F1jfF4Bk8IgcXSp6BwG3vfM2wMCGg0pLXKCuwNV7h9QDGlmlxLg4iTOmubVDJSqcjMeHoGzybYJZc22mdvUqA3JMthCKmb2Htf4sEgwnKxpLxxV0Rr2aorOyAVYDz5BQ/to+v6kuWIFNpbm9jzMcOtjyEpFHR55QrGrwOrFti1gWmB2yc5Hh4lQF05hYYq/XJW4H4/Qu0s18gJsrbMrwEtxAI7hY9/MGx9CZGFwdry2znH3YMI4WoFRr1qH9MW5Z8KdWtv81vaVLnWa8tPTxlufAgoL9IVxe4t/9fyLuWrdxSD5zk4Nbjtu34g8HrGIIV0xcgIFJfawa5Ynl4pSjM/GjFsHJLl4AKCgK0/+9u4FulUdfmzswXa7PycUB+mhA5kRY1Nh7XA5tcE9/pp8z/TJdIVwSB3oAZWtMo6qL1EkqL5uY8/D1jcr5OzCv4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Docker &amp; Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/docker_05-9e33413ebbebb07eedbc33e74c6d92dd-48538.png&quot;
+        srcset=&quot;/static/docker_05-9e33413ebbebb07eedbc33e74c6d92dd-bed0f.png 200w,
+/static/docker_05-9e33413ebbebb07eedbc33e74c6d92dd-5fd34.png 400w,
+/static/docker_05-9e33413ebbebb07eedbc33e74c6d92dd-48538.png 800w,
+/static/docker_05-9e33413ebbebb07eedbc33e74c6d92dd-81103.png 860w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Our container is now running:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/docker_06-839f768b65c3583495b391cbbe9be0b9-81103.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 64.65116279069768%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACDElEQVQ4y53T22oTQRgH8H0CL1QQRFOb1LSWtsQm9VARGqWxqGBrNVGIgrVQvPHGF5AqiHiColdCb1TwIfoapYJiSN0c2o057SE7OzP7d2a7u5hiQ3HgD3sx+5v5vplRAIZwUALb6qCmN6A5dXDuwnVd9B4u2tSFVqpga20NyvuNBj4VTKz8MPH8m4l1TYfebOJ3vSXShG6YIMSBTYgX+S0XCiLXa+gd6DaFI3hl5XsdH9Y1vN1oYrUKLH/8jLk7eVzP5ZGZy2LmZg7Ts7cxfeMW0tdmMX9vAYVNFcShYIyDce5VIRcydBMKow20q2XAbHsFvHj9DodiwxhMTSKaOIOB8XOIjCZxbDiBI/ERjE5OoVD8tVPsrnZwgStty4Ja2UJLlCbH8isB9g8hLsDY6bNeJBpPnseJsRQmLs2gLOYHgEQDWLZAIaIv21oNhrkDPpNgtBsM0D6x02Q6A7Vc3RsMtssYC8GD/T3AqQxKlapfMu8u2fVBuYJD6b7AVPoKimrZmysPxqE8DHEYlGDLdB9gxAd/FksQ/8KwCMyO05X/AzdLoD5oifv3d/4JHo6ewuDEBQxIyM9Jccp9/in3BIPnE4BPX77BgeMx7w5GRsbDyP4dHRpD4uJlUbK6N9hyOGqEo2PbHrj65SuuZvO4u/gI2QdLYXILS5i/v4iHj5+Ie7sNIt6vIXq2G/wDe3QdEu+eaZwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Docker &amp; Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/docker_06-839f768b65c3583495b391cbbe9be0b9-48538.png&quot;
+        srcset=&quot;/static/docker_06-839f768b65c3583495b391cbbe9be0b9-bed0f.png 200w,
+/static/docker_06-839f768b65c3583495b391cbbe9be0b9-5fd34.png 400w,
+/static/docker_06-839f768b65c3583495b391cbbe9be0b9-48538.png 800w,
+/static/docker_06-839f768b65c3583495b391cbbe9be0b9-81103.png 860w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Be aware that the &lt;strong&gt;Port 3000&lt;/strong&gt; that we defined is only the internal Docker Port. You can check (and change) the exposed port under &lt;strong&gt;Settings&lt;/strong&gt; in the &lt;strong&gt;Hostname/Ports&lt;/strong&gt; tab:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/docker_07-123064a8360d7fa7786682e4889b81a8-81103.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 64.4186046511628%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABmUlEQVQ4y5VTy07DMBDM78OhSFwQX8AJiRMHbvANlVAqUYoq1KYteTSx4/ewdpISIwp0pZVlx56dndkkgMEhtETLOHZVjp3IYbSBtRZxODj3lfArnRbZBs/3D0iu0xI3bwxXc46zlGGWc0jGUNeckkFI5d8QsIMdQAbosAeU1miVwTqdI7mY5bicbjFJa0xmDRa1Cix0D2CsTxtWTYwZb7HdMyzzChUT4LRvKDl1VtzeITE6R71eAZJ3ValaXlYoihKtEAOVw+ol0MZCErgvZPv0NwQVTfacY7nKwIQkVgiXldIwxqBpqGU6H/SyfYvHQkqJxD/INjvSSnaHBFYQw5rAANfbMLLEITLFjXSVpHcS+UcfFLXSsDboJbxmrYR5XUBRgUy5Q/sOsTkR4LiSB9Kko49SGOw5MX98wvsyw/mL6Makb107GitnY8Ax5cDQC247DsKQwz0Rb9m0VBEj8x9AQc4wbeNBJoMwuvNry2NAG8bC4bsMw99hfjDjD1MQBvjUiAArZfFBonkjvLveZdczPSXDYNMIfgJUyPqpGQsyjwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Docker &amp; Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/docker_07-123064a8360d7fa7786682e4889b81a8-48538.png&quot;
+        srcset=&quot;/static/docker_07-123064a8360d7fa7786682e4889b81a8-bed0f.png 200w,
+/static/docker_07-123064a8360d7fa7786682e4889b81a8-5fd34.png 400w,
+/static/docker_07-123064a8360d7fa7786682e4889b81a8-48538.png 800w,
+/static/docker_07-123064a8360d7fa7786682e4889b81a8-81103.png 860w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;As seen above, our container is exposed on Port 32772.&lt;/p&gt;
+&lt;p&gt;And can be accessed on &lt;strong&gt;&lt;a href=&quot;http://localhost:32772&quot;&gt;http://localhost:32772&lt;/a&gt;&lt;/strong&gt; as well as on the local network IP (in this case the 192.168.1.112):&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/docker_08-627621b04a77d938547b61c6165f2c93-81103.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 35.348837209302324%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAfklEQVQoz62PSwrEIBBEPYsYTXQj4n2DWyGKXk+xhhYcJtvBgkfRX7rZeZ4gpJTgnOM4Dmit4ZyD9x7WWlzXNeu/GGO+eaUUhBBznoUQcN83Yox4nmeSc0YpBbXW6RSnlF6sHPUvJxg2i/XeQbTWtsDGGFiQlv994faXdy/8AJln51Hz6u6WAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Docker &amp; Node.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/docker_08-627621b04a77d938547b61c6165f2c93-48538.png&quot;
+        srcset=&quot;/static/docker_08-627621b04a77d938547b61c6165f2c93-bed0f.png 200w,
+/static/docker_08-627621b04a77d938547b61c6165f2c93-5fd34.png 400w,
+/static/docker_08-627621b04a77d938547b61c6165f2c93-48538.png 800w,
+/static/docker_08-627621b04a77d938547b61c6165f2c93-81103.png 860w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Further Readings&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f&quot;&gt;https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Server Rendering with React and React Router]]></title><description><![CDATA[Server side rendering a React app can provide a few different benefits including performance and SEO. The problem is with those benefits…]]></description><link>https://mpolinowski.github.io/server-side-render-react-router/</link><guid isPermaLink="false">https://mpolinowski.github.io/server-side-render-react-router/</guid><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/photo-11627973773_7295195845_o-b44cd2b6b49002ffcfaef01179bb583c-72e4a.png&quot;
