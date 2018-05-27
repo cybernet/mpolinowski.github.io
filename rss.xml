@@ -1,4 +1,206 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 27 May 2018 09:27:37 GMT</lastBuildDate><item><title><![CDATA[Run your Node.js app from a Docker Container]]></title><description><![CDATA[Run your Node.js app from a Docker Container 01 Create your Node App 02 Dockerizing your Node.js application Building your image Running the…]]></description><link>https://mpolinowski.github.io/node-express-docker-container/</link><guid isPermaLink="false">https://mpolinowski.github.io/node-express-docker-container/</guid><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 27 May 2018 15:50:50 GMT</lastBuildDate><item><title><![CDATA[Link your Node Source Code into a Docker Container]]></title><description><![CDATA[As an example, we are going to use  express-generator  to scaffold a slightly more complex ( then before )  Node.js  Web App and link this…]]></description><link>https://mpolinowski.github.io/express-generator-app-docker/</link><guid isPermaLink="false">https://mpolinowski.github.io/express-generator-app-docker/</guid><content:encoded>&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/photo-15328436920_ac881c4b7f_o-6fa82bb2b255ffcd07511cf5c34de879-72e4a.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 36.53333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAC4jAAAuIwF4pT92AAABtklEQVQY0wGrAVT+AGuDwH+UyKS0266/53GP12qJ1IGa2srU7pir3mSB0G6K1X6Y3n+b48rX9dji96W88py49Ier9o2y+Zm8+wCQjY6AgIp8gpZ9i7B4h613gqB6haWVnbels9iUq+exw+/c5PapvOzZ4vj3+fvc5vnc5/vW5f/T5f+31f8Ajox1ko59jYl8gH14b25tbm1sbm1yaWpycXiQo63LnaXBgoeggIWZkJmxgo+viZSzk5u3srbFvMXYqL7hAEdSKWNmS2FlR2ptQnRzZnFyZmNnYWVpZG1uaW5xdmRnbmlrdWtudnBzfHd6g3l+iXmAj2lzi2x2j3B6kgA+SihXXjtOVjVMVS1QVzZeYT9oaUxaXkhhYVBnZ1JZX0hbYExZXU1YXFRdYlJoa1pucGpzc3R0dnx8f4cAQ0YtQkwkVlwxXWMsTVYsSU0wTFA4YWNGZ2hOamlXXF5BYF9PWFhGUVI+X15KX2FLYWFKW1lUX15UZmdaAEpPNUxTL15iOGlsNF5lK0tVJ05SNGdpR1tiQFlfQVJYOmZnZlVURlVUOGRhQ2poRG1pWWZkXmBeW1BSRp0Wzl6SrEy9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Mustang, Nepal&quot;
+        title=&quot;&quot;
+        src=&quot;/static/photo-15328436920_ac881c4b7f_o-6fa82bb2b255ffcd07511cf5c34de879-48538.png&quot;
+        srcset=&quot;/static/photo-15328436920_ac881c4b7f_o-6fa82bb2b255ffcd07511cf5c34de879-bed0f.png 200w,
+/static/photo-15328436920_ac881c4b7f_o-6fa82bb2b255ffcd07511cf5c34de879-5fd34.png 400w,
+/static/photo-15328436920_ac881c4b7f_o-6fa82bb2b255ffcd07511cf5c34de879-48538.png 800w,
+/static/photo-15328436920_ac881c4b7f_o-6fa82bb2b255ffcd07511cf5c34de879-b70ec.png 1200w,
+/static/photo-15328436920_ac881c4b7f_o-6fa82bb2b255ffcd07511cf5c34de879-72e4a.png 1500w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;As an example, we are going to use &lt;a href=&quot;https://expressjs.com/en/starter/generator.html&quot;&gt;express-generator&lt;/a&gt; to scaffold a slightly more complex (&lt;a href=&quot;https://github.com/mpolinowski/node-express-docker-starter&quot;&gt;then before&lt;/a&gt;) &lt;a href=&quot;https://nodejs.org&quot;&gt;Node.js&lt;/a&gt; Web App and link this source code into a Docker Container Volume.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mpolinowski/express-generator-app-docker&quot;&gt;Github Repository&lt;/a&gt;&lt;/p&gt;
+&lt;!-- TOC --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#create-a-nodejs-web-app&quot;&gt;Create a Node.js Web App&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#pointing-the-container-volume-to-our-source-code&quot;&gt;Pointing the Container Volume to our Source Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /TOC --&gt;
+&lt;h2 id=&quot;create-a-nodejs-web-app&quot;&gt;&lt;a href=&quot;#create-a-nodejs-web-app&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Create a Node.js Web App&lt;/h2&gt;
+&lt;p&gt;We want to use express-generator to generate a basic Node Web App. We first need to install the generator globally on our machine:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g express express-generator&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;We then run express-generator to scaffold an app for use, using the &lt;a href=&quot;http://ejs.co&quot;&gt;EJS Templating Engine&lt;/a&gt; - check out &lt;a href=&quot;https://expressjs.com/en/starter/generator.html&quot;&gt;their website&lt;/a&gt; for more options - and put the source code into a folder named &lt;em&gt;express-generator-app-docker&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;express --view&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;ejs express-generator-app-docker&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;To install dependencies we need to enter the created directory and run &lt;em&gt;npm install&lt;/em&gt; :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; express-generator-app-docker &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;We can test our web app by running &lt;em&gt;npm start&lt;/em&gt; and accessing &lt;em&gt;&lt;a href=&quot;http://localhos:3000&quot;&gt;http://localhos:3000&lt;/a&gt;&lt;/em&gt; with a web browser:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/express-docker_01-10815b57ab01f950bd46e20e77895bb0-81103.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 32.44186046511628%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAkUlEQVQY02M4am2/XVN3m47BQTPLVk3dKAWVFGWNUFGpICGJYGECiKHdw+fGtFk3p8++MX3Wjemzb86Yc3PGbDCaQxAxRKel//n79//////+/ftPImBIT0n7+e3bjatXL54///jho39//vz9/ZtIxJCamvb3z5+3b948f/b89es3f/78IcHm+PjEvzBnQwDxmgFMrBoFP3jBkgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Express App in Docker Container&quot;
+        title=&quot;&quot;
+        src=&quot;/static/express-docker_01-10815b57ab01f950bd46e20e77895bb0-48538.png&quot;
+        srcset=&quot;/static/express-docker_01-10815b57ab01f950bd46e20e77895bb0-bed0f.png 200w,
+/static/express-docker_01-10815b57ab01f950bd46e20e77895bb0-5fd34.png 400w,
+/static/express-docker_01-10815b57ab01f950bd46e20e77895bb0-48538.png 800w,
+/static/express-docker_01-10815b57ab01f950bd46e20e77895bb0-81103.png 860w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;pointing-the-container-volume-to-our-source-code&quot;&gt;&lt;a href=&quot;#pointing-the-container-volume-to-our-source-code&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Pointing the Container Volume to our Source Code&lt;/h2&gt;
+&lt;p&gt;In our &lt;a href=&quot;https://github.com/mpolinowski/node-express-docker-starter&quot;&gt;previous test&lt;/a&gt; we already pulled the latest Node.js Docker Images from the Docker Hub:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/express-docker_02-b3e67161db91662cca9e8a0f38da14f2-5db87.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 9.228971962616823%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAfElEQVQI12PgmdDC1d/CNbmNe3YP96werpktXLPaOGf2MExsBSLGSW2Mk9uAJMOEFiDJNLkdJD6hhWlCC0NvE4OCXRandjS7ZhSHVhSQZNcIYdMMY1WPUrTL4tOPY1AI5tOPN/ErV3HMZlAKkbPO0HEv4NGN4dGNVbTLBgBqpiMjj+h8QgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Express App in Docker Container&quot;
+        title=&quot;&quot;
+        src=&quot;/static/express-docker_02-b3e67161db91662cca9e8a0f38da14f2-48538.png&quot;
+        srcset=&quot;/static/express-docker_02-b3e67161db91662cca9e8a0f38da14f2-bed0f.png 200w,
+/static/express-docker_02-b3e67161db91662cca9e8a0f38da14f2-5fd34.png 400w,
+/static/express-docker_02-b3e67161db91662cca9e8a0f38da14f2-48538.png 800w,
+/static/express-docker_02-b3e67161db91662cca9e8a0f38da14f2-5db87.png 856w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;To use this image, together with our Web App, we can run the following docker command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;docker run -p 8080:3000 -v E:/express-generator-app-docker:/app -w &lt;span class=&quot;token string&quot;&gt;&quot;/app&quot;&lt;/span&gt; node &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; start&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;This command will run the node docker image, expose the internal port 3000 (coming from our express app) to port 8080. To point to our source code, we need to create a Volume &lt;strong&gt;-v&lt;/strong&gt; from the app directory &lt;strong&gt;E:/express-generator-app-docker&lt;/strong&gt; (&lt;em&gt;adjust the absolute path according to your system setup&lt;/em&gt;) and link it to an &lt;strong&gt;/app&lt;/strong&gt; directory inside the container. To execute our code inside the container, we can add &lt;strong&gt;npm start&lt;/strong&gt; at the end of the command - &lt;em&gt;be aware&lt;/em&gt; that you have to set the working directory to the &lt;strong&gt;/app&lt;/strong&gt; directory by adding &lt;strong&gt;-w “/app”&lt;/strong&gt;, to run the start command from there!&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/express-docker_03-ae90dd0ddbe8c92029c57f7425eb6b8b-81103.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 11.511627906976745%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAbUlEQVQI12OQtEqVtU6XskwXM02WscoQNYkVN4vk04sTMEzg1onh1o3lN4jn14/n0weRvLqxjBrhXLoxfPpxXNoxDDJ26dLWKQp2WSImSRw6Ebz6cRxaMawakQyKIQzKoQxKqEg5lFElDCQORgDr7hdZCWgncQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Express App in Docker Container&quot;
+        title=&quot;&quot;
+        src=&quot;/static/express-docker_03-ae90dd0ddbe8c92029c57f7425eb6b8b-48538.png&quot;
+        srcset=&quot;/static/express-docker_03-ae90dd0ddbe8c92029c57f7425eb6b8b-bed0f.png 200w,
+/static/express-docker_03-ae90dd0ddbe8c92029c57f7425eb6b8b-5fd34.png 400w,
+/static/express-docker_03-ae90dd0ddbe8c92029c57f7425eb6b8b-48538.png 800w,
+/static/express-docker_03-ae90dd0ddbe8c92029c57f7425eb6b8b-81103.png 860w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;The App is now running from inside the docker container on Port 8080:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/express-docker_04-877cdff4569e0c5a4e80456316eaa0de-6bd5c.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.742459396751737%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7CAAAOwgEVKEqAAAAArUlEQVQY02M4bm79f7e2/v9duob/j5hZ/W/T1P0fp6T2P11V83+4mPT/UBGJ/2EikkRjhhZ37/+3Zs//f3P2vP83Zs0D07eBfJDY7TkgvABKE4cZYtIz/lMTMKSlpv3/9f37/2uXL/+/cO7s/yePHv//9+fP/7+/fv//+5t0zJCamv7/379//9+8efP/+fPn/1+/fv3/D9BAEACJk+zC+PhEuEYQ/e/vPxQ+qQAAXqiSlW8COuMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Express App in Docker Container&quot;
+        title=&quot;&quot;
+        src=&quot;/static/express-docker_04-877cdff4569e0c5a4e80456316eaa0de-48538.png&quot;
+        srcset=&quot;/static/express-docker_04-877cdff4569e0c5a4e80456316eaa0de-bed0f.png 200w,
+/static/express-docker_04-877cdff4569e0c5a4e80456316eaa0de-5fd34.png 400w,
+/static/express-docker_04-877cdff4569e0c5a4e80456316eaa0de-48538.png 800w,
+/static/express-docker_04-877cdff4569e0c5a4e80456316eaa0de-6bd5c.png 862w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;You can go into the sites source code and edit it - changes to the express app will show up in your browser when you reload the page. That means, we can now develop a Node Application on a system that doesn’t have Node.js installed on it.&lt;/p&gt;
+&lt;p&gt;The next step is actually put your source code into a container - which is, what we are going to try next!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Run your Node.js app from a Docker Container]]></title><description><![CDATA[Github Repository Run your Node.js app from a Docker Container 01 Create your Node App 02 Dockerizing your Node.js application Building your…]]></description><link>https://mpolinowski.github.io/node-express-docker-container/</link><guid isPermaLink="false">https://mpolinowski.github.io/node-express-docker-container/</guid><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/photo-11626710613_fd6faa15ae_o-cc490360b9b87507dedfa02be9a3fe59-72e4a.png&quot;
@@ -33,6 +235,7 @@
   
   &lt;/a&gt;
     &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mpolinowski/node-express-docker-starter&quot;&gt;Github Repository&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;#run-your-nodejs-app-from-a-docker-container&quot;&gt;Run your Node.js app from a Docker Container&lt;/a&gt;&lt;/p&gt;
