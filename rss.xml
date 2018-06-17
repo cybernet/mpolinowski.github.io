@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 02 Jun 2018 17:22:49 GMT</lastBuildDate><item><title><![CDATA[How to wrap your Source Code into a Docker Container]]></title><description><![CDATA[As an example, we are going to use  express-generator  to scaffold a  Node.js  Web App and wrap it’s source code into a Docker Container…]]></description><link>https://mpolinowski.github.io/express-generator-dockerrized/</link><guid isPermaLink="false">https://mpolinowski.github.io/express-generator-dockerrized/</guid><content:encoded>&lt;p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 17 Jun 2018 11:26:40 GMT</lastBuildDate><item><title><![CDATA[How to wrap your Source Code into a Docker Container]]></title><description><![CDATA[As an example, we are going to use  express-generator  to scaffold a  Node.js  Web App and wrap it’s source code into a Docker Container…]]></description><link>https://mpolinowski.github.io/express-generator-dockerrized/</link><guid isPermaLink="false">https://mpolinowski.github.io/express-generator-dockerrized/</guid><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/photo-19196703263_69f9f0df5f_o-55deb56abbe1ca5e3ff5c13a1545716e-72e4a.png&quot;
@@ -34,7 +34,7 @@
   &lt;/a&gt;
     &lt;/p&gt;
 &lt;p&gt;As an example, we are going to use &lt;a href=&quot;https://expressjs.com/en/starter/generator.html&quot;&gt;express-generator&lt;/a&gt; to scaffold a &lt;a href=&quot;https://nodejs.org&quot;&gt;Node.js&lt;/a&gt; Web App and wrap it’s source code into a Docker Container.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/mpolinowski/express-generator-app-docker&quot;&gt;Github Repository&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mpolinowski/express-generator-dockerrized&quot;&gt;Github Repository&lt;/a&gt;&lt;/p&gt;
 &lt;!-- TOC --&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#create-a-nodejs-web-app&quot;&gt;Create a Node.js Web App&lt;/a&gt;&lt;/li&gt;
@@ -104,15 +104,15 @@
 &lt;h2 id=&quot;creating-a-dockerfile-for-our-app&quot;&gt;&lt;a href=&quot;#creating-a-dockerfile-for-our-app&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Creating a Dockerfile for our App&lt;/h2&gt;
 &lt;p&gt;The &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/&quot;&gt;Dockerfile&lt;/a&gt; is a text file that contains all the commands that the &lt;a href=&quot;https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#build-context&quot;&gt;docker build&lt;/a&gt; command uses, in order, to build a our Docker image.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
-      &lt;pre class=&quot;language-dockerfile&quot;&gt;&lt;code class=&quot;language-dockerfile&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt;        node&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;latest
-&lt;span class=&quot;token keyword&quot;&gt;MAINTAINER&lt;/span&gt;  Mike Polinowski
-&lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt;         NODE_ENV=production
-&lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt;         PORT=3000
-&lt;span class=&quot;token keyword&quot;&gt;COPY&lt;/span&gt;        . /app
-&lt;span class=&quot;token keyword&quot;&gt;WORKDIR&lt;/span&gt;     /app
-&lt;span class=&quot;token keyword&quot;&gt;RUN&lt;/span&gt;         npm install
-&lt;span class=&quot;token keyword&quot;&gt;EXPOSE&lt;/span&gt;      3000
-&lt;span class=&quot;token keyword&quot;&gt;ENTRYPOINT&lt;/span&gt;  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;npm&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;pre class=&quot;language-dockerfile&quot;&gt;&lt;code class=&quot;language-dockerfile&quot;&gt;FROM        node:latest
+MAINTAINER  Mike Polinowski
+ENV         NODE_ENV=production
+ENV         PORT=3000
+COPY        . /app
+WORKDIR     /app
+RUN         npm install
+EXPOSE      3000
+ENTRYPOINT  [&amp;quot;npm&amp;quot;, &amp;quot;start&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;h3 id=&quot;from&quot;&gt;&lt;a href=&quot;#from&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;FROM&lt;/h3&gt;
 &lt;p&gt;We are using the &lt;a href=&quot;https://hub.docker.com/_/node/&quot;&gt;node&lt;/a&gt; Docker image as a base for our app. By just writing &lt;em&gt;[FROM](&lt;a href=&quot;https://docs.docker.com/develop/develop-images/dockerfile&quot;&gt;https://docs.docker.com/develop/develop-images/dockerfile&lt;/a&gt;&lt;/em&gt;best-practices/#from)_ &lt;strong&gt;node&lt;/strong&gt; we will use the @latest version of Node.js available on the &lt;a href=&quot;https://hub.docker.com&quot;&gt;Docker Hub&lt;/a&gt; - &lt;a href=&quot;https://hub.docker.com/r/library/node/tags/&quot;&gt;specify a version&lt;/a&gt; when required - e.g. &lt;code class=&quot;language-text&quot;&gt;node:latest&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;node:9.10.2&lt;/code&gt;&lt;/p&gt;
@@ -2869,6 +2869,7 @@ sudo systemctl start kibana.service&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#tls-sni-01-challenge-deactivated&quot;&gt;TLS-SNI-01 challenge Deactivated&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#troubleshooting&quot;&gt;Troubleshooting&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3432,7 +3433,160 @@ $ systemctl enable --now certbot-nginx.timer  # to use the timer&lt;/code&gt;&lt
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo certbot --authenticator webroot --webroot-path /opt/mysite-build/app --installer nginx -d my.domain.com&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
-&lt;p&gt;certbot will modify your NGINX config automatically!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Umlaute]]></title><description><![CDATA[Hacking your US keyboard Solving 1st World Problems by reading Usermanuals Hacking your US keyboard Solving 1st World Problems by reading…]]></description><link>https://mpolinowski.github.io/umlaute-on-us-keyboard/</link><guid isPermaLink="false">https://mpolinowski.github.io/umlaute-on-us-keyboard/</guid><content:encoded>&lt;p&gt;
+&lt;p&gt;certbot will modify your NGINX config automatically!&lt;/p&gt;
+&lt;h3 id=&quot;troubleshooting&quot;&gt;&lt;a href=&quot;#troubleshooting&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Troubleshooting&lt;/h3&gt;
+&lt;p&gt;You can test run the auto renewal with the following command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;certbot renew --dry-run&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;This will show you if your certificate would be renewed automatically or not. The latter looks like this:&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/certbot_01-71f63d209ff4c0e50d5b7bc949280406-672b8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 25.36945812807882%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7CAAAOwgEVKEqAAAABAklEQVQY001Q2U7EMBAL2yNJaZOmR46elO0iQPDC//+bmVktEg+W55JljzjPE2+3E/vxipN56xGjhfcePniM44BAHGJA6BxaraCLHFWZQxYZCkKeZ8geEMu+w3QdHAmkbcMYE1JKWOYJMUXMxNwzz9SbSsPIElZLVKpASYLlP1Hxc17xMSUcw4CVhD8nEulajK1Bcg7BGjQkoPn4SSDLLlDkUP85ZCGaXR4QXxTlMA2musba1PjuW7w7i4XqjXBtLTbac1TGQPCVwlhJ9MRGlXA0s0pSLSFelhlT39HBM2zTYI0eN9/j6OiPztyj1eSQnTD4fzW5q2Vxd8lxJc14x7F/AYXjdcZoSGi+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Certbot Error&quot;
+        title=&quot;&quot;
+        src=&quot;/static/certbot_01-71f63d209ff4c0e50d5b7bc949280406-48538.png&quot;
+        srcset=&quot;/static/certbot_01-71f63d209ff4c0e50d5b7bc949280406-bed0f.png 200w,
+/static/certbot_01-71f63d209ff4c0e50d5b7bc949280406-5fd34.png 400w,
+/static/certbot_01-71f63d209ff4c0e50d5b7bc949280406-48538.png 800w,
+/static/certbot_01-71f63d209ff4c0e50d5b7bc949280406-672b8.png 812w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Trying to renew or repair the certificate by typing &lt;code class=&quot;language-text&quot;&gt;certbot renew&lt;/code&gt; and choosing the problematic cert did not solve the problem - for some reason the script could not restart NGINX afterwards and caused the webserver to crash. There is a script to remove the cert:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;certbot delete&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;But this did not remove the certbot entries inside the NGINX server block - causing the webserver to crash again:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;ssl_certificate /etc/letsencrypt/live/wiki.instar.fr/fullchain.pem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# managed by Certbot&lt;/span&gt;
+ssl_certificate_key /etc/letsencrypt/live/wiki.instar.fr/privkey.pem&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# managed by Certbot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;After manually removing them and running certbot again to add a certificate:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;certbot --nginx&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/certbot_02-1e920b74b8d9daff49d832ddc000beac-c9a70.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 649px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 38.366718027734976%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABGUlEQVQY02VRi46DIBBEUHxUBQGbykOk9q7X5v7/+260OdOkm8myC8wuO5Dn/f74ecQYffDr7bauq3f+/v2Vriml6/P5a8wINM0pyyiljLH8AFExjtYuMV4ulzDPqOKsM8Z476/rLS1piQvqn89nKYe6bt75pJNSGSOEGIZB9PCqbVsphFJqmib07HtRFLyq6qpuyrJiOax4gfA855wXu72C7XBfuq6rdwJODnBeHjH5sG20jDJC2dbnbcJPEDwVD+u6HjX/yWwjZ5SXJSbcdjL6AlLgSAlovZAQQwq5D67FHiilx3FErLUWcsAlbMKfTq3cU3hirZ2sC3Fx1oY5Qm8fZu8D/gmCa23CZtE5H5cE2aAC+rVth7p/U9cZnk+AJOwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Certbot: Install Certificate&quot;
+        title=&quot;&quot;
+        src=&quot;/static/certbot_02-1e920b74b8d9daff49d832ddc000beac-c9a70.png&quot;
+        srcset=&quot;/static/certbot_02-1e920b74b8d9daff49d832ddc000beac-5312d.png 200w,
+/static/certbot_02-1e920b74b8d9daff49d832ddc000beac-7f977.png 400w,
+/static/certbot_02-1e920b74b8d9daff49d832ddc000beac-c9a70.png 649w&quot;
+        sizes=&quot;(max-width: 649px) 100vw, 649px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/certbot_03-617226789da466dbd83a723d63e5079c-36bc8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 691px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 42.2575976845152%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7DAAAOwwHHb6hkAAABNklEQVQY021R2XKDMAwkQGKuYGwDBp9gIE2T/v/3dV0mb/XsaDRIWu2K5Pj69n5ZltVahwiMoxRcEFKkaZrnVyDL8n+RPN8/+76vYXs+X+/XS0p5I6QsyjxHOTuH8/z2Sa5pmp2Iw9i8LkFr6xz2BsY4F/0wjKxjgvfIoIJ1XIgBBUo7KAKKorzdSNIPkrY0djOO2DR3NAEQzzDGhZQTpZSDqB+iI9Hf7y1jrK6bRM/aG6u0VUqva0DrcTzgf9uPcZyc87hICMFEabjNqrUBNTZfLmkSjgfKszLeLRYsyoRtN8ZoAwaPHFfoaNe2FIim/sRDc/S87Q81K5CC2FoLFgxNcsLHWSpwOevBBc+Q5p0fhxGCcTAcL2narqpqWEWs4quLqiybilQFqUpSl+eFsOoT4zv/3y8rYyLLNE1I7AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Certbot: Install Certificate&quot;
+        title=&quot;&quot;
+        src=&quot;/static/certbot_03-617226789da466dbd83a723d63e5079c-36bc8.png&quot;
+        srcset=&quot;/static/certbot_03-617226789da466dbd83a723d63e5079c-4d74d.png 200w,
+/static/certbot_03-617226789da466dbd83a723d63e5079c-d1c88.png 400w,
+/static/certbot_03-617226789da466dbd83a723d63e5079c-36bc8.png 691w&quot;
+        sizes=&quot;(max-width: 691px) 100vw, 691px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;…everything seems to be fine now (?)&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/certbot_04-b47c3aebb47aac95f39c54e0787af458-7e552.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 646px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 27.554179566563462%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA/ElEQVQY002QzY6DMAyEQ7fnLbAVUEAE8uc4iYDQIsH7v9g6XVXa7+CD7Rl5zJSSQkiqIQRrUQrpvQcDaJ1WGqzVhNKWQGzb9ufD/X5nXds+Hi3ptTFKpUV0ThqpndZIPWooYwwQBsQk6rppmrqqKjJiMcYtxmVZ3tZuXmYLMMLIHRdOWLA0ohUMOPlRBzVJwTnv+15JxdY1idcYn8Tr1XUdY+z6dc1YdskulOI8TxLTUMyCH0Nv+tv37Q/23LY1EY/j2PddSkn30FX1m3me48caFhjCUDVVnudFUZRlyep0fzXwEShfiq2c84joQ6oUNr2BPgcWLfKB/3/YL3r+MMVhcqj7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Certbot: Install Certificate&quot;
+        title=&quot;&quot;
+        src=&quot;/static/certbot_04-b47c3aebb47aac95f39c54e0787af458-7e552.png&quot;
+        srcset=&quot;/static/certbot_04-b47c3aebb47aac95f39c54e0787af458-023af.png 200w,
+/static/certbot_04-b47c3aebb47aac95f39c54e0787af458-249af.png 400w,
+/static/certbot_04-b47c3aebb47aac95f39c54e0787af458-7e552.png 646w&quot;
+        sizes=&quot;(max-width: 646px) 100vw, 646px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Umlaute]]></title><description><![CDATA[Hacking your US keyboard Solving 1st World Problems by reading Usermanuals Hacking your US keyboard Solving 1st World Problems by reading…]]></description><link>https://mpolinowski.github.io/umlaute-on-us-keyboard/</link><guid isPermaLink="false">https://mpolinowski.github.io/umlaute-on-us-keyboard/</guid><content:encoded>&lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/photo-33795787813_cf3d8edcc6_o-07b04b1484b7652ba29220f808bfc299-72e4a.png&quot;

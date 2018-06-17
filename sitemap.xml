@@ -26,7 +26,6 @@
 <url> <loc>https://mpolinowski.github.io/floating-menu-button-react-component/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/securing-elasticsearch-xpack/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/node-express-docker-container/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/express-generator-dockerrized/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/express-generator-app-docker/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/gatsby-material-ui-starter/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/random-password-generator/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -47,10 +46,11 @@
 <url> <loc>https://mpolinowski.github.io/next-start/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/using-nginx-as-proxy-for-your-nodejs-apps/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/gatsby-wiki-part-ii/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/nginx-node-security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/server-side-render-react-router/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/starters/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/express-generator-dockerrized/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/nginx-node-security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
