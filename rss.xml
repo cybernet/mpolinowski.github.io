@@ -1,4 +1,669 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 03 Feb 2019 13:54:09 GMT</lastBuildDate><item><title><![CDATA[Centos Administration]]></title><description><![CDATA[Changing your SSH login Running FirewallD Changing the SSH Port Changing the Hostname Kernel Update Troubleshooting Changing your SSH login…]]></description><link>https://mpolinowski.github.io/centos-administration/</link><guid isPermaLink="false">https://mpolinowski.github.io/centos-administration/</guid><content:encoded>&lt;p&gt;&lt;a
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 04 Feb 2019 15:32:46 GMT</lastBuildDate><item><title><![CDATA[Creating a Kubernetes Cluster]]></title><description><![CDATA[In this hands-on lab from  Linux Academy , we will install and configure a Kubernetes cluster consisting of 1 master and 2 nodes for the…]]></description><link>https://mpolinowski.github.io/creating-a-kubernetes-cluster/</link><guid isPermaLink="false">https://mpolinowski.github.io/creating-a-kubernetes-cluster/</guid><content:encoded>&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3ab587ce485b29f47f37ae231348ba9a/bc79b/photo-34219553960_350f18edbb_o.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 45.1271186440678%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAACSUlEQVQozw2RSW/TABBG/VO4ILVCXZLi1k4dZ3W8JHYcJ3GcpXHthDYuSUpbqRsUlapQqReWG+LAFa4ICcGfe/gwh9Ho07w3I9hmjGZMMa0DdGNORV/SMOcM7CmxO2TeDUh6CXuDC+LxCcPhkm6yoDtf0u4esddfMOyfMBkdE7QXCFN3kob3eD9b4hn76OUItxQSmSGdWp+p7XM2GDJuTZgnt9y/vuDV0T7Jfo+rg4DTvTHns1NG7oieEyE4VkDbSRs3ppLvoSkxsbbksDYhSCnPhyGDmoNddPCtPoEb0LE86qrG43HMdRzydpKSWwlhM0GYBYd0GxFdK2LZHPDtYMaH299MB/f4XpKSdYmsFuPmiFLJR1UaOGWbecOnr/dxah1uJi/4dPGGu6N3CL8uz7gzhrQLHUJvxPlohG2eoeb6aGpAId9Aq3ZotsL0HC1iy6Jb0enVQ/xKi/auhyMZuMUyvm4ifD+J0oGHpGhkRYts1kQVK9RlHVOScKp19FTPkmVMw2M2HDB1LcStMjW5zlz3+dibcVXXcHcVhOuxweelTdOQUiUFQ9qhkBVJKlvE+TUy6yq2WkLJNchumxTlSqpt8HynhppRuHQU/l13+HPZ5kskIYRVhZ8PCbHfRpU1vN0sjrxFWZSppmUXylRyRkpeZGstgylus7lZIrtRoimJzO1tflxl+Dt7wlfnKUIpk+MxKnKzeImeb2JnVvHkLNUUv5xT069rSGKR9XWRtfUdVlZ2eLZRJZ8unxVXeQhlAl2hl8/Rlsv8BwhhYhtmiCl2AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Shanghai, China&quot;
+        title=&quot;&quot;
+        src=&quot;/static/3ab587ce485b29f47f37ae231348ba9a/b21dd/photo-34219553960_350f18edbb_o.png&quot;
+        srcset=&quot;/static/3ab587ce485b29f47f37ae231348ba9a/2d451/photo-34219553960_350f18edbb_o.png 200w,
+/static/3ab587ce485b29f47f37ae231348ba9a/06807/photo-34219553960_350f18edbb_o.png 400w,
+/static/3ab587ce485b29f47f37ae231348ba9a/b21dd/photo-34219553960_350f18edbb_o.png 800w,
+/static/3ab587ce485b29f47f37ae231348ba9a/c9309/photo-34219553960_350f18edbb_o.png 1200w,
+/static/3ab587ce485b29f47f37ae231348ba9a/fe46d/photo-34219553960_350f18edbb_o.png 1600w,
+/static/3ab587ce485b29f47f37ae231348ba9a/6d953/photo-34219553960_350f18edbb_o.png 2400w,
+/static/3ab587ce485b29f47f37ae231348ba9a/bc79b/photo-34219553960_350f18edbb_o.png 2832w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this hands-on lab from &lt;a href=&quot;https://linuxacademy.com/cp&quot;&gt;Linux Academy&lt;/a&gt;, we will install and configure a Kubernetes cluster consisting of 1 master and 2 nodes for the pods. Once the installation and configuration are complete, we will have a 3-node Kubernetes cluster that uses Flannel as the network overlay.&lt;/p&gt;
+&lt;!-- TOC --&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#instructions&quot;&gt;Instructions&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#objectives&quot;&gt;Objectives&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#install-docker-and-kubernetes&quot;&gt;Install Docker and Kubernetes&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#prerequisites&quot;&gt;Prerequisites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#install-docker-ce&quot;&gt;Install Docker CE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#install-kubernetes&quot;&gt;Install Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#start-docker-and-kublet&quot;&gt;Start Docker and Kublet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#cluster-initialization&quot;&gt;Cluster Initialization&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#networking-details&quot;&gt;Networking details&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#check-the-cluster-state&quot;&gt;Check the cluster state.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#create-and-scale-a-deployment-using-kubectl&quot;&gt;Create and scale a deployment using kubectl&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#kubernetes-stuck-on-containercreating&quot;&gt;Kubernetes stuck on ContainerCreating&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#scaling&quot;&gt;Scaling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /TOC --&gt;
+&lt;h2 id=&quot;instructions&quot;&gt;&lt;a href=&quot;#instructions&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Instructions&lt;/h2&gt;
+&lt;p&gt;In this learning activity, we will create a Kubernetes cluster. The commands we will use for this process can be found in the task list by clicking on the orange question mark buttons.&lt;/p&gt;
+&lt;p&gt;Once you have completed the lab, leave your cluster in its final state. Do not delete the deployment:&lt;/p&gt;
+&lt;h3 id=&quot;objectives&quot;&gt;&lt;a href=&quot;#objectives&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Objectives&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Docker and Kubernetes on all servers.&lt;/li&gt;
+&lt;li&gt;Create and scale a deployment using kubectl.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;install-docker-and-kubernetes&quot;&gt;&lt;a href=&quot;#install-docker-and-kubernetes&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install Docker and Kubernetes&lt;/h2&gt;
+&lt;h3 id=&quot;prerequisites&quot;&gt;&lt;a href=&quot;#prerequisites&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Prerequisites&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;You first need to login as your root user or elevate your users privileges via sudo on your master and two minion servers:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;su&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;This next step is not recommended in production (&lt;em&gt;How do you create a SE Linux policy?&lt;/em&gt;) - but we are going to disable SE Linux on all 3 servers:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setenforce 0
+sed -i --follow-symlinks &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/g&amp;#39; /etc/sysconfig/selinux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;Now we need to enable the &lt;code class=&quot;language-text&quot;&gt;br_netfilter&lt;/code&gt; module on all servers to allow our cluster to communicate:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;modprobe br_netfilter
+&lt;span class=&quot;token keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;1&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /proc/sys/net/bridge/bridge-nf-call-iptables&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f2901ed8c58feb6fdbde92110cff0800/2df25/kubernetes_cluster_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 797px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 11.91969887076537%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAaUlEQVQI1yWMCQ6AIBADlSh44PEDlUuBBcXo/7/mqknTtE2mWW/PAS5uU+fOyuzozXrUZmcqFMKV0jMFpfBUAlXAdMCAFUcmIUNyjDd36cNemKrQ2sTxS8fKxNrEH8PHYnH5tKHIbMm8PX60Dl1FvFRPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f2901ed8c58feb6fdbde92110cff0800/2df25/kubernetes_cluster_01.png&quot;
+        srcset=&quot;/static/f2901ed8c58feb6fdbde92110cff0800/2e1d6/kubernetes_cluster_01.png 200w,
+/static/f2901ed8c58feb6fdbde92110cff0800/ab190/kubernetes_cluster_01.png 400w,
+/static/f2901ed8c58feb6fdbde92110cff0800/2df25/kubernetes_cluster_01.png 797w&quot;
+        sizes=&quot;(max-width: 797px) 100vw, 797px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Make sure that swap has been turned off:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c89d6dbaef3b03200445c9c6a153701e/2cb05/kubernetes_cluster_02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 799px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 20.52565707133917%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAhklEQVQI14WPXRKCMAyEiyBa2h5B1FJo2vDT4v3v5jLIGzPOfA+ZTXaTCNnPN+CmqhvlO5KN0bK3XD4G0fo/NMOiKN37+dpxZbk4qN1UvgImiicB0Z5lacoqZB2y4Y+irCmZsCLOxBUiWtIjPdduPDfDthsw2lDav9h2HmtxEYCI+rIpP/MXWx0Z+yQfPDEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c89d6dbaef3b03200445c9c6a153701e/2cb05/kubernetes_cluster_02.png&quot;
+        srcset=&quot;/static/c89d6dbaef3b03200445c9c6a153701e/ddfc7/kubernetes_cluster_02.png 200w,
+/static/c89d6dbaef3b03200445c9c6a153701e/b02cb/kubernetes_cluster_02.png 400w,
+/static/c89d6dbaef3b03200445c9c6a153701e/2cb05/kubernetes_cluster_02.png 799w&quot;
+        sizes=&quot;(max-width: 799px) 100vw, 799px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;Add a FirewallD Service&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Configure FirewallD for Kubernetes to work correctly. First download the k8s-master.xml and k8s-worker.xml files to &lt;code class=&quot;language-text&quot;&gt;cd /etc/firewalld/services&lt;/code&gt; on your master and minion server:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; https://raw.githubusercontent.com/mpolinowski/k8s-firewalld/master/k8s-master.xml
+
+&lt;span class=&quot;token function&quot;&gt;wget&lt;/span&gt; https://raw.githubusercontent.com/mpolinowski/k8s-firewalld/master/k8s-worker.xml
+
+firewall-cmd --reload&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;On Master Node&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;firewall-cmd --add-service&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;k8s-master --zone&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;public --permanent&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;On Minion Nodes&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;firewall-cmd --add-service&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;k8s-worker --zone&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;public --permanent&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;install-docker-ce&quot;&gt;&lt;a href=&quot;#install-docker-ce&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install Docker CE&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Ensure that all Docker dependencies are installed:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;yum &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -y yum-utils device-mapper-persistent-data lvm2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8674b77524180ba538f7f2ba939211ea/a8afd/kubernetes_cluster_03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 794px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 21.03274559193955%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAApElEQVQI10WO2w6CMBAFQcJNBZHokwISLi10S6ktJf7/j7kEwWSymZezGStmKuXmwtQFdNyrIx1DIoKa+xtBM+zuVWDnZMcKqUyEObP3dTDJMPkNd8ru8KJW1lpPpFlYPdvA2coN9EN+7twkfErFnI5zDPrUyYgpDFlyUJiKeoV/3Yp5NdgF/Y0laAG6xdpWINjmVuBhYY0X/E0w2Cl7uyD/ZU6+oSwcZw0b+vYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8674b77524180ba538f7f2ba939211ea/a8afd/kubernetes_cluster_03.png&quot;
+        srcset=&quot;/static/8674b77524180ba538f7f2ba939211ea/4de2f/kubernetes_cluster_03.png 200w,
+/static/8674b77524180ba538f7f2ba939211ea/6fd50/kubernetes_cluster_03.png 400w,
+/static/8674b77524180ba538f7f2ba939211ea/a8afd/kubernetes_cluster_03.png 794w&quot;
+        sizes=&quot;(max-width: 794px) 100vw, 794px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Now we can add the Docker repository and install it:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -y docker-ce&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1cf7f1db03d628789cd84ba8b5af1ad7/2cb05/kubernetes_cluster_04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 799px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 106.75844806007508%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAIAAADJt1n/AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACNElEQVQ4y32U6W7bMBCEZVu+b6cB+sNOLNm6SImU5KsB+v7P1W9F203QVMDA2Iic3dndYbxFVq/zy0LVc3V+zWobWx0Zdcz1sdgHqvOWtMCbZtWmvC30aW1va3sdx6Yfqn6gvF0s4EYLJol9KX+tzXVtLnN9Gidld5913lPBPnPxPdG/6QaHHPLG3l7rD8efqXqSlhJkFYqmaTmKDIrGsR0n9gu5f9DIXpkbKZb5GT5MQDtkgT/X9TAqeoHiph9qhCDnQQ61qwxWxQVQyuGRohrFBoJ/0C4F6Lw/ZKNwzrT1iUso9EPFWdN24urIYOl2G39pHkg/iRke8+GxQBW5+PUDRSBfAuUwOBakvp+GGr2cetRk1ESARKilw8Exn8QWzXwB8mdi6Z/fUSQ3uUNT3rq4/Dz/nqYVWaUFVfeYxzaiGnzuyaq2EaVgTpJSCm6jzi6B783ScmOvZPWaxmZZ7QcNOdSypNhIrl1McfGPyBb/kJEjTCKDnTdbGbllggifSWOuvUfc9I//Qu3W5j23QuL7QYO7yVrhMa3nkl0/3zvxW4ir7BXmEntkVa/xM+g1T6qFKZXZBK6GJvz8TPM8T4KVubjZ/I8sPof8o/og4kluzHWuTvI85ZFdu/u0pTKT9vDWsjizg2lWN8Or3PyQ4AdtlWVAjT1Lt8BekP11siBpmxzfp7F94Rk3j5END/FjbO6beEv8x7YxicTUQM6Tn0dGo5MbjT2dGT6P1P0z6X5e7+P0D+rQjK/G+oOTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1cf7f1db03d628789cd84ba8b5af1ad7/2cb05/kubernetes_cluster_04.png&quot;
+        srcset=&quot;/static/1cf7f1db03d628789cd84ba8b5af1ad7/ddfc7/kubernetes_cluster_04.png 200w,
+/static/1cf7f1db03d628789cd84ba8b5af1ad7/b02cb/kubernetes_cluster_04.png 400w,
+/static/1cf7f1db03d628789cd84ba8b5af1ad7/2cb05/kubernetes_cluster_04.png 799w&quot;
+        sizes=&quot;(max-width: 799px) 100vw, 799px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;install-kubernetes&quot;&gt;&lt;a href=&quot;#install-kubernetes&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install Kubernetes&lt;/h3&gt;
+&lt;p&gt;First we need to add the Kubernetes repository all servers:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOF &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; /etc/yum.repos.d/kubernetes.repo  
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;kubernetes&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  
+name&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Kubernetes  
+baseurl&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64  
+enabled&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;1  
+gpgcheck&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;0  
+repo_gpgcheck&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;0  
+gpgkey&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;https://packages.cloud.google.com/yum/doc/yum-key.gpg  
+ https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg  
+EOF&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6c87035b12fefc43f6109abedb7b3832/2cb05/kubernetes_cluster_05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 799px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 20.02503128911139%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAjklEQVQI122PUQuDIBSFBc2SuTEY662YrnRp1koGY/v//2vHehvC4fIhfpx7ydGtl+f7HF7CzrwLZReqPgCEmYWZ8AiozMS0I639D+Tr+pGPhWnPlKc3B6DKUQ1wCVSCQvu8XMfvyUc0lH1AyZ69EM3FfSSNIY3NyT7KYTlskcOKVfGbdyPfJq5Icmuz+QHj6BptjciFLwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6c87035b12fefc43f6109abedb7b3832/2cb05/kubernetes_cluster_05.png&quot;
+        srcset=&quot;/static/6c87035b12fefc43f6109abedb7b3832/ddfc7/kubernetes_cluster_05.png 200w,
+/static/6c87035b12fefc43f6109abedb7b3832/b02cb/kubernetes_cluster_05.png 400w,
+/static/6c87035b12fefc43f6109abedb7b3832/2cb05/kubernetes_cluster_05.png 799w&quot;
+        sizes=&quot;(max-width: 799px) 100vw, 799px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Now we can install Kubernetes on all servers via yum:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;yum &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -y kubelet kubeadm kubectl&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e0c274725c27642ae935e59b2fe11d4e/7d3b4/kubernetes_cluster_06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 795px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 109.0566037735849%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACUklEQVQ4y42T6XLiMBCEBQRzs1ybX4m5fMi2LNuYcOz7P9h+Y+1SkKTYrZpSSbZ6pme6pcbpYZZ/TLLDOKsXSZXHRRbZJDBpmCdBnkbWBPlirZUft/xYfYpRUi2K0yQ9sM6L0zCy3i7rbtOWH6l3iRbrV5iLoS6X5WVmT4viPM2Og8i2XJ11wkaqvUcPcQ/uBmZZnMG/1r+Ef3r4YY70QpBrmtWDqBjpshfaQVzcUv8F7w01F4I/z63wHydExTo1x0lavdDFPutsElm36WPlvVkdroIvL7La0zAu+1HBOoypWXV3qXoL1Y3/PdjbG4hJxAVFiPYm+X48n8DsB3FJ+n5oCS8wRLPJiV6QU7zX7Pk+EDr3R6sYD9OiGQrSmLfPEE8obNPuLiMvt9kTjI2JwNQdyaUY9aq6IAzNdxvazEmYo/BG0zm3HVvAyCEz49daQ9CZ5Eyalx3FNcUBiLxvodyIbEcShQC4jQqdjZZffixJITYRSWvcQvF+mHNJqDYskMfRcXvh/OeYclRuDARFvAYsowqlIOTba912m42W/f0RCvPGXnN7ph+mJZKKJKF6YumbVGAw1jz/mFnxpnMfWVvPkS4GsWXawGZWLM38XP/tew9/V5buFO39rK6MsTF2Tayq602eJ2CRijnRM6XAoDAviY38+FfDDTjIZVSBkZegeRIW8UTq57T9WKTyeK5Z7YyNgC1fkxVtG5/nzqfNCJNeiNuNGHFvGudEahnaV3ySVPL6vrzYXuAA5Mqdfx/qp7rUuhztso54yDjrqv/RyY9/A/5zklfE/RMvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e0c274725c27642ae935e59b2fe11d4e/7d3b4/kubernetes_cluster_06.png&quot;
+        srcset=&quot;/static/e0c274725c27642ae935e59b2fe11d4e/ab524/kubernetes_cluster_06.png 200w,
+/static/e0c274725c27642ae935e59b2fe11d4e/19467/kubernetes_cluster_06.png 400w,
+/static/e0c274725c27642ae935e59b2fe11d4e/7d3b4/kubernetes_cluster_06.png 795w&quot;
+        sizes=&quot;(max-width: 795px) 100vw, 795px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;start-docker-and-kublet&quot;&gt;&lt;a href=&quot;#start-docker-and-kublet&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Start Docker and Kublet&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;systemctl &lt;span class=&quot;token function&quot;&gt;enable&lt;/span&gt; docker
+systemctl &lt;span class=&quot;token function&quot;&gt;enable&lt;/span&gt; kubelet
+systemctl start docker
+systemctl start kubelet&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/722179931250471aa3c8948856aa217b/c4494/kubernetes_cluster_07.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 17.353308364544322%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAiElEQVQI1zWO2wrDIBBEkzSXJlELpe9pzc2uJkYttP//ZR2FwHCYWZjdzXrlhPkwcjDdenDyjLzQvn+7ejKl1BU06lISdHlRNRrESGmymw4P9+M6dKttzzKI8nXZm3lr5h2mnjbsQi3GNAEzQeF+fFnqtIsVOqQXLKeAO/mgiqcqBpWfQoxM5g/mxxWFoGgd3QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/722179931250471aa3c8948856aa217b/b21dd/kubernetes_cluster_07.png&quot;
+        srcset=&quot;/static/722179931250471aa3c8948856aa217b/2d451/kubernetes_cluster_07.png 200w,
+/static/722179931250471aa3c8948856aa217b/06807/kubernetes_cluster_07.png 400w,
+/static/722179931250471aa3c8948856aa217b/b21dd/kubernetes_cluster_07.png 800w,
+/static/722179931250471aa3c8948856aa217b/c4494/kubernetes_cluster_07.png 801w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;To check in what Group Docker is running, run &lt;code class=&quot;language-text&quot;&gt;docker info | grep -i cgroup&lt;/code&gt;:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b2f97b5453b34bb8ecac0959b0310fde/2cb05/kubernetes_cluster_08.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 799px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 6.132665832290362%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAIAAABR8BlyAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAMUlEQVQI12MQ09AT0jHm0zIEMrjVDThUdVmVtVmVdYAku4ouo7wGg5w6FiSrxqqkDQDVkwaBUkxRegAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b2f97b5453b34bb8ecac0959b0310fde/2cb05/kubernetes_cluster_08.png&quot;
+        srcset=&quot;/static/b2f97b5453b34bb8ecac0959b0310fde/ddfc7/kubernetes_cluster_08.png 200w,
+/static/b2f97b5453b34bb8ecac0959b0310fde/b02cb/kubernetes_cluster_08.png 400w,
+/static/b2f97b5453b34bb8ecac0959b0310fde/2cb05/kubernetes_cluster_08.png 799w&quot;
+        sizes=&quot;(max-width: 799px) 100vw, 799px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In this case it is &lt;code class=&quot;language-text&quot;&gt;cgroupfs&lt;/code&gt; - we can now make sure that Kubernetes is added to this group:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sed&lt;/span&gt; -i &lt;span class=&quot;token string&quot;&gt;&apos;s/cgroup-driver=systemd/cgroup-driver=cgroupfs/g&apos;&lt;/span&gt; /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+systemctl daemon-reload
+systemctl restart kubelet&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;cluster-initialization&quot;&gt;&lt;a href=&quot;#cluster-initialization&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cluster Initialization&lt;/h2&gt;
+&lt;p&gt;So far we did the basic setup for all our servers - now we will initialize our cluster from the &lt;strong&gt;MASTER SERVER&lt;/strong&gt; using the IP range for Flannel. Kubeadm is a tool built to provide &lt;a href=&quot;https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/&quot;&gt;kubeadm init&lt;/a&gt; and &lt;a href=&quot;https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join/&quot;&gt;kubeadm join&lt;/a&gt; as best-practice &lt;em&gt;fast paths&lt;/em&gt; for creating Kubernetes clusters. The &lt;strong&gt;init command&lt;/strong&gt; executes the following phases:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubeadm init --pod-network-cidr&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;10.244.0.0/16&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=NumCPU --&gt;
+&lt;p&gt;Your Kubernetes master has initialized successfully! You can now join any number of machines by running the following on each node as root:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dfdb2e41e6da1d38b41467e1b23bbddb/0cd32/kubernetes_cluster_09.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 30.79800498753117%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7CAAAOwgEVKEqAAAABFElEQVQY03WRTUsCURSGb2p+zoQtE1NznHHGcSY/0KWbVrUKosAKkhYG/RahXQsrCALF2gVuhX7Z2znHJq5Bi4fDnXvmOWfeUUmriZQdEgGSNYbOVNNOKGep1LNVdhGruIgfeFJVqQ6176yrDjdnnENk3RZyXluEiaqPbXq+xv+hKTK+i1W8/4UpK4Dpd5Gtt2A2ujBIangdkTNGoyNDWCYCHV0a1Rxtlg/7wg6JWbCrnfNBT4aw3KQ7jiAebfgXlqoiT7OhCpZ8DufGealCDWqvClW0NzbiHuZXoCFRXJxd4m54g/vrW3x8LrFcfeHh+RVHwxFORmNMpi+YzhZ4fJvhaf6O9vGpvJymHxnlG0UyOL/CN94Preaygn2HAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/dfdb2e41e6da1d38b41467e1b23bbddb/b21dd/kubernetes_cluster_09.png&quot;
+        srcset=&quot;/static/dfdb2e41e6da1d38b41467e1b23bbddb/2d451/kubernetes_cluster_09.png 200w,
+/static/dfdb2e41e6da1d38b41467e1b23bbddb/06807/kubernetes_cluster_09.png 400w,
+/static/dfdb2e41e6da1d38b41467e1b23bbddb/b21dd/kubernetes_cluster_09.png 800w,
+/static/dfdb2e41e6da1d38b41467e1b23bbddb/0cd32/kubernetes_cluster_09.png 802w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubeadm &lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt; X.X.X.X:6443 --token XXXXXXXXXXXXXXX --discovery-token-ca-cert-hash sha256:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Copy the &lt;code class=&quot;language-text&quot;&gt;kubeadmin join&lt;/code&gt; command that is in the output and past it into your minion server terminals:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a371daebcb3d46cd9f35833ad43dad6a/c4494/kubernetes_cluster_10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 50.56179775280899%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB/klEQVQozzWRy2sTURTGb5Imk7SZyYxpfbSpdt7vO6/MTAimAdNYUqVFRKQUqS0uQhcSUEGtFrNxISqlimv3LgQXLhSUioiPf8pvDMLH5cyc893zO/eQad2vOU3BjRcMf3D9xsHj8Wh079XRm0/ff3z8evzw2curw9v7zw+Pf/7+9uvPh89fdu4+QH1JdhjFJRXdw8dc2ObdWF7uu4MNo395LmrbK5dWtnbWd4cIGq0ubj8ZtsXzvaoRVK0wv2Tmzxmk5sZIcHaTp3FBNMmCQs5I80nn4MXR23fvh/tPGNXNNVRyWjoVtkfjp+PD1xc2t/OiWVIcwloRZ0dVMwB/f2sXVBu39tCkkXbn4w7+l1UaDK4k69eU5YswlBS3KDtZIDsEToEmUN1LpU7f6q2p3VWeJmWdooJRnbrf2r5zf+/RuLd5s6x7ZdWd+HMT7BN+ytrRjBkwGi3KNhKg+MfiTRs+lDurk4ZaFK2K7lc0ChZGpVOSTXgvnQ1anNPEgwleip5oJVC8QgQza4W4BZoxsuswfybFnZKsrDNvhQKcdlSnCeIquml0UoQKRqEoBSeetyBa4EJDCHE2s61S2/Qtw3fMwDZDR/dmMU+Wy/iLUnbCiRMG0tDIokYwBbSok4pKa1bImQFn+KwRsNkaARkAGIvASjEzKApLZsY5sf3XX16SblMw4MsEAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a371daebcb3d46cd9f35833ad43dad6a/b21dd/kubernetes_cluster_10.png&quot;
+        srcset=&quot;/static/a371daebcb3d46cd9f35833ad43dad6a/2d451/kubernetes_cluster_10.png 200w,
+/static/a371daebcb3d46cd9f35833ad43dad6a/06807/kubernetes_cluster_10.png 400w,
+/static/a371daebcb3d46cd9f35833ad43dad6a/b21dd/kubernetes_cluster_10.png 800w,
+/static/a371daebcb3d46cd9f35833ad43dad6a/c4494/kubernetes_cluster_10.png 801w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;To start using your cluster, you need to run the following as a regular user:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p &lt;span class=&quot;token variable&quot;&gt;$HOME&lt;/span&gt;/.kube
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; -i /etc/kubernetes/admin.conf &lt;span class=&quot;token variable&quot;&gt;$HOME&lt;/span&gt;/.kube/config
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;chown&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;id&lt;/span&gt; -u&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;id&lt;/span&gt; -g&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$HOME&lt;/span&gt;/.kube/config&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We will use &lt;a href=&quot;https://github.com/coreos/flannel&quot;&gt;Flannel&lt;/a&gt; as a simple and easy way to configure a layer 3 network fabric designed for Kubernetes. Flannel runs a small, single binary agent called flanneld on each host, and is responsible for allocating a subnet lease to each host out of a larger, preconfigured address space. Flannel uses either the Kubernetes API or etcd directly to store the network configuration, the allocated subnets, and any auxiliary data (such as the host’s public IP). Packets are forwarded using one of several backend mechanisms including VXLAN and various cloud integrations:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4536a0eaa84a494cdbbeafa9f2922f6a/c4494/kubernetes_cluster_11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 22.347066167290887%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAiElEQVQI13WObQuCQBCEF4wyFc2ujxUYdsfpvflS3f//Zc4Wfkt4GHZhZ3ao0OPJvkozV2ZKpTsqn6kAZSRwh6fdt2bFYmVahsp+EuFz9kzFEXOmfMo2qNs9erorusn/1O59GSIUZlSAFt2Y65DrIWk6uko2b4Hr32cRYu0jZkSIbxHU4/ht8wLnGBxyvVZblwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4536a0eaa84a494cdbbeafa9f2922f6a/b21dd/kubernetes_cluster_11.png&quot;
+        srcset=&quot;/static/4536a0eaa84a494cdbbeafa9f2922f6a/2d451/kubernetes_cluster_11.png 200w,
+/static/4536a0eaa84a494cdbbeafa9f2922f6a/06807/kubernetes_cluster_11.png 400w,
+/static/4536a0eaa84a494cdbbeafa9f2922f6a/b21dd/kubernetes_cluster_11.png 800w,
+/static/4536a0eaa84a494cdbbeafa9f2922f6a/c4494/kubernetes_cluster_11.png 801w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;networking-details&quot;&gt;&lt;a href=&quot;#networking-details&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Networking details&lt;/h3&gt;
+&lt;p&gt;Platforms like Kubernetes assume that each container (pod) has a unique, routable IP inside the cluster. The advantage of this model is that it removes the port mapping complexities that come from sharing a single host IP.&lt;/p&gt;
+&lt;p&gt;Flannel is responsible for providing a layer 3 IPv4 network between multiple nodes in a cluster. Flannel does not control how containers are networked to the host, only how the traffic is transported between hosts. However, flannel does provide a CNI plugin for Kubernetes and a guidance on integrating with Docker.&lt;/p&gt;
+&lt;h3 id=&quot;check-the-cluster-state&quot;&gt;&lt;a href=&quot;#check-the-cluster-state&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Check the cluster state.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl get pods --all-namespaces&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/df753f9b305bfa132acba984b14d0965/9771d/kubernetes_cluster_12.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 798px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 27.94486215538847%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA+klEQVQY0yVQaZOCMAztioDIrlz6aUdUjh6UtpSVw///x/YVZjKZpsk7EpKqKaImke+g7iOqEWGr/FoiTtRc5OhXMmyU9xSHh/Be3anVx0oiyJ2Sq13PfMj0nJvlaj94nJkhJXO9O42YCRp1s5+fboz5gPLwFODFmBvIzRwLm6gJtctmuci/bzGGrcbQ5qIHLwS8l/CdIIM+/JJyUwZrqufCroVZcuOyc1WyrwfHRgCkak76d8ytv/0DDI/OXQZlPqAHTfAdqw4YeHO9kmFb2C6GNagl+W3hZQc7Zdi+2RXI3GkumZ5gMmh6HG8Hgwuj0NwvtJMi45Z4/AO4Eiu8kMCM9gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/df753f9b305bfa132acba984b14d0965/9771d/kubernetes_cluster_12.png&quot;
+        srcset=&quot;/static/df753f9b305bfa132acba984b14d0965/84ded/kubernetes_cluster_12.png 200w,
+/static/df753f9b305bfa132acba984b14d0965/53cad/kubernetes_cluster_12.png 400w,
+/static/df753f9b305bfa132acba984b14d0965/9771d/kubernetes_cluster_12.png 798w&quot;
+        sizes=&quot;(max-width: 798px) 100vw, 798px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Then check your nodes from the master:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl get nodes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/82a5a3ab8ad9c987abb425c38f311356/04f61/kubernetes_cluster_13.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 11.304347826086957%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAATElEQVQI12MQ1DHl0TLi0jDgUDcQ0jY20TY20DIy1jSUVtdnVdNjkFPHh/i1jPh1TQV0TLk1DPl0TNg0DFjV9VnU9dlV9bjU9fFrBgCF8Q3RsBnR3QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/82a5a3ab8ad9c987abb425c38f311356/b21dd/kubernetes_cluster_13.png&quot;
+        srcset=&quot;/static/82a5a3ab8ad9c987abb425c38f311356/2d451/kubernetes_cluster_13.png 200w,
+/static/82a5a3ab8ad9c987abb425c38f311356/06807/kubernetes_cluster_13.png 400w,
+/static/82a5a3ab8ad9c987abb425c38f311356/b21dd/kubernetes_cluster_13.png 800w,
+/static/82a5a3ab8ad9c987abb425c38f311356/04f61/kubernetes_cluster_13.png 805w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;create-and-scale-a-deployment-using-kubectl&quot;&gt;&lt;a href=&quot;#create-and-scale-a-deployment-using-kubectl&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Create and scale a deployment using kubectl&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://kubernetes.io/docs/reference/kubectl/overview/&quot;&gt;Kubectl&lt;/a&gt; is a command line interface for running commands against Kubernetes clusters. We can run a NGINX container with the following command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl create deployment nginx --image&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can verify that the &lt;strong&gt;Pod&lt;/strong&gt; was created by Kubernetes:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl get pods&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9c2c6d56986978d6b425852b0ad9fe1c/c4494/kubernetes_cluster_14.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 10.986267166042447%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAY0lEQVQI12Pg1zER0jcX0DHl0zWV1Db21jFxUNO31zAwUtHRVNXVUtbRVNHRU9UVUdBgkFNnlFNnQEYCumZ82sa8WsY8Wkb82sYS6gYqmoZGqnosStqMyjpAxKyiyyiPqgeGABAVD4BuscFsAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9c2c6d56986978d6b425852b0ad9fe1c/b21dd/kubernetes_cluster_14.png&quot;
+        srcset=&quot;/static/9c2c6d56986978d6b425852b0ad9fe1c/2d451/kubernetes_cluster_14.png 200w,
+/static/9c2c6d56986978d6b425852b0ad9fe1c/06807/kubernetes_cluster_14.png 400w,
+/static/9c2c6d56986978d6b425852b0ad9fe1c/b21dd/kubernetes_cluster_14.png 800w,
+/static/9c2c6d56986978d6b425852b0ad9fe1c/c4494/kubernetes_cluster_14.png 801w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;kubernetes-stuck-on-containercreating&quot;&gt;&lt;a href=&quot;#kubernetes-stuck-on-containercreating&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Kubernetes stuck on ContainerCreating&lt;/h3&gt;
+&lt;p&gt;Use &lt;code class=&quot;language-text&quot;&gt;kubectl describe pods&lt;/code&gt; to list all the events associated with the pod, including pulling of images, starting of containers:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Normal - Scheduled - 13m - default-scheduler - Successfully assigned default/nginx-5c7588df-76mgw to in-centos-minion2
+
+Warning - FailedCreatePodSandBox - 13m - kubelet, in-centos-minion2  Failed create pod sandbox: rpc error: code &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Unknown desc &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; failed to &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; up sandbox container &lt;span class=&quot;token string&quot;&gt;&quot;8ab7c07633f6170dabd8df9a28680a7b9af79f10374e81df8c85dac609abc209&quot;&lt;/span&gt; network &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; pod &lt;span class=&quot;token string&quot;&gt;&quot;nginx-5c7588df-76mgw&quot;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;:&lt;/span&gt; NetworkPlugin cni failed to &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; up pod &lt;span class=&quot;token string&quot;&gt;&quot;nginx-5c7588df-76mgw_default&quot;&lt;/span&gt; network: &lt;span class=&quot;token function&quot;&gt;open&lt;/span&gt; /run/flannel/subnet.env: no such &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; or directory&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I noticed that - to use Flannel - you need to initialize &lt;code class=&quot;language-text&quot;&gt;kubeadm&lt;/code&gt; with the &lt;code class=&quot;language-text&quot;&gt;--pod-network-cidr=10.244.0.0/16&lt;/code&gt; flag. You can reset your deployment with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubeadm reset
+iptables -F &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; iptables -t nat -F &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; iptables -t mangle -F &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; iptables -X&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now back to &lt;code class=&quot;language-text&quot;&gt;kubeadm init --pod-network-cidr=10.244.0.0/16&lt;/code&gt; and rebuild the deployment - success:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0c8f56f6e5ae825238ae8904606cbf34/90d05/kubernetes_cluster_15.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 7.797029702970297%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAA7CAAAOwgEVKEqAAAAAYUlEQVQI12PgUtf/zwnEHOoG/y21jf5baBv/N9Q1+W+nafhfFYgZlLT/c6jo/meQU//PIKsGoXFhkDyfjvF/PqAh3EADWTUM/6sraf0PUgUaoKD5nxmIGeU1/rMqaxNtIAAkQTWu6LfS9wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0c8f56f6e5ae825238ae8904606cbf34/b21dd/kubernetes_cluster_15.png&quot;
+        srcset=&quot;/static/0c8f56f6e5ae825238ae8904606cbf34/2d451/kubernetes_cluster_15.png 200w,
+/static/0c8f56f6e5ae825238ae8904606cbf34/06807/kubernetes_cluster_15.png 400w,
+/static/0c8f56f6e5ae825238ae8904606cbf34/b21dd/kubernetes_cluster_15.png 800w,
+/static/0c8f56f6e5ae825238ae8904606cbf34/90d05/kubernetes_cluster_15.png 808w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;scaling&quot;&gt;&lt;a href=&quot;#scaling&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Scaling&lt;/h3&gt;
+&lt;p&gt;To scale up our web server contingent to &lt;strong&gt;4&lt;/strong&gt;, we can use the following &lt;code class=&quot;language-text&quot;&gt;kubectl&lt;/code&gt; command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl scale deployment nginx --replicas&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;4
+kubectl get pods&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0ee750f3b654d91ec11e16284718e400/90d05/kubernetes_cluster_16.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 16.46039603960396%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAIAAAAcOLh5AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAgElEQVQI122MsQ7CIBRFMVYGDaLRpQk1KUWgPuCVQNFFR///k6RzTU7OdM8l3OVzKEdIzM8C8tfPbzt97BQMSuVk/1DVEujNkDWnUGrPIR/GyGwUY+yxtBrpAI3BrQQi7qT7V1Y4pAs+r/jiLlHld8ozl5thafY61AvS6c0y1Wt+by8VvDinCogAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Creating a Kubernetes Cluster&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0ee750f3b654d91ec11e16284718e400/b21dd/kubernetes_cluster_16.png&quot;
+        srcset=&quot;/static/0ee750f3b654d91ec11e16284718e400/2d451/kubernetes_cluster_16.png 200w,
+/static/0ee750f3b654d91ec11e16284718e400/06807/kubernetes_cluster_16.png 400w,
+/static/0ee750f3b654d91ec11e16284718e400/b21dd/kubernetes_cluster_16.png 800w,
+/static/0ee750f3b654d91ec11e16284718e400/90d05/kubernetes_cluster_16.png 808w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Centos Administration]]></title><description><![CDATA[Changing your SSH login Running FirewallD Changing the SSH Port Changing the Hostname Kernel Update Troubleshooting Changing your SSH login…]]></description><link>https://mpolinowski.github.io/centos-administration/</link><guid isPermaLink="false">https://mpolinowski.github.io/centos-administration/</guid><content:encoded>&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/cc2560d4e1994db8591f8774de873b60/b721b/photo-19196703263_69f9f0df5f_o.png&quot;
     style=&quot;display: block&quot;
@@ -8545,7 +9210,7 @@ docker rm c165&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;/span&gt;
   &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;You can go into the sites source code and edit it - changes to the express app will show up in your browser when you reload the page. That means, we can now develop a Node Application on a system that doesn’t have Node.js installed on it.&lt;/p&gt;
-&lt;p&gt;The next step is actually put your source code into a container - which is, what we are going to try next!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Run your Node.js app from a Docker Container]]></title><description><![CDATA[Github Repository Run your Node.js app from a Docker Container 01 Create your Node App 02 Dockerizing your Node.js application Building your…]]></description><link>https://mpolinowski.github.io/node-express-docker-container/</link><guid isPermaLink="false">https://mpolinowski.github.io/node-express-docker-container/</guid><content:encoded>&lt;p&gt;&lt;a
+&lt;p&gt;The next step is actually put your source code into a container - which is, what we are going to try next!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Run your Node.js app from a Docker Container]]></title><description><![CDATA[Github Repository 01 Create your Node App 02 Dockerizing your Node.js application Building your image Running the Container Running the…]]></description><link>https://mpolinowski.github.io/node-express-docker-container/</link><guid isPermaLink="false">https://mpolinowski.github.io/node-express-docker-container/</guid><content:encoded>&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/cc490360b9b87507dedfa02be9a3fe59/b721b/photo-11626710613_fd6faa15ae_o.png&quot;
     style=&quot;display: block&quot;
@@ -8577,11 +9242,10 @@ docker rm c165&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/mpolinowski/node-express-docker-starter&quot;&gt;Github Repository&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;#run-your-nodejs-app-from-a-docker-container&quot;&gt;Run your Node.js app from a Docker Container&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#01-create-your-node-app&quot;&gt;01 Create your Node App&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#02-dockerizing-your-nodejs-application&quot;&gt;02 Dockerizing your Node.js application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;#02-dockerizing-your-nodejs-application&quot;&gt;02 Dockerizing your Node.js application&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#building-your-image&quot;&gt;Building your image&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#running-the-container&quot;&gt;Running the Container&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#running-the-container-with-kitematic&quot;&gt;Running the Container with Kitematic&lt;/a&gt;&lt;/li&gt;
