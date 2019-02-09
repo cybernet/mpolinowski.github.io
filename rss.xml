@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 09 Feb 2019 12:05:40 GMT</lastBuildDate><item><title><![CDATA[Kubernetes and Microservices]]></title><description><![CDATA[Kubernetes + Compose = Kompose Use Kompose]]></description><link>https://mpolinowski.github.io/kubernetes-and-microservices/</link><guid isPermaLink="false">https://mpolinowski.github.io/kubernetes-and-microservices/</guid><content:encoded>&lt;p&gt;&lt;a
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mike Polinowski :: Developer Blog]]></title><description><![CDATA[Mike Polinowski :: A Developer Blog and Personal Technology Playground]]></description><link>https://mpolinowski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 09 Feb 2019 18:19:28 GMT</lastBuildDate><item><title><![CDATA[Kubernetes and Microservices]]></title><description><![CDATA[Domain Driven Design and boundedContext Deploying the Queue Deploying the Position Simulator How to Debug a failed Deployment Deploying the…]]></description><link>https://mpolinowski.github.io/kubernetes-and-microservices/</link><guid isPermaLink="false">https://mpolinowski.github.io/kubernetes-and-microservices/</guid><content:encoded>&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/250f352f8408a5aa47641f30724d572e/283d3/photo-34364880182_fe2d33582b_o.jpg&quot;
     style=&quot;display: block&quot;
@@ -32,50 +32,651 @@
 &lt;!-- TOC --&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;#kubernetes--compose--kompose&quot;&gt;Kubernetes + Compose = Kompose&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#domain-driven-design-and-boundedcontext&quot;&gt;Domain Driven Design and boundedContext&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#use-kompose&quot;&gt;Use Kompose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#deploying-the-queue&quot;&gt;Deploying the Queue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#deploying-the-position-simulator&quot;&gt;Deploying the Position Simulator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#how-to-debug-a-failed-deployment&quot;&gt;How to Debug a failed Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#deploying-the-position-tracker&quot;&gt;Deploying the Position Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#deploying-the-api-gateway&quot;&gt;Deploying the API Gateway&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#deploying-the-angular-frontend&quot;&gt;Deploying the Angular Frontend&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- /TOC --&gt;
-&lt;!-- 
-
-
-## Kubernetes + Compose = Kompose
-
-[Kompose](http://kompose.io) is a conversion tool for Docker Compose to container orchestrators such as Kubernetes (or OpenShift).
-
-* Simplify your development process with Docker Compose and then deploy your containers to a production cluster
-* [Convert](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/) your _docker-compose.yaml_ with one simple command `kompose convert`
-* Immediately bring up your cluster with `kompose up`
-* Bring it back down with `kompose down`
-
-
-Kompose is in EPEL CentOS repository. If you don’t have EPEL repository already installed and enabled you can do it by running `yum install epel-release`:
-
-
-```bash
-yum -y install kompose
-```
-
-
-### Use Kompose
-
-In just a few steps, we’ll take you from Docker Compose to Kubernetes. All you need is an existing `docker-compose.yml` file:
-
-
-1. Go to the directory containing your _docker-compose.yml_ file. Run the `kompose up` command to deploy to Kubernetes directly.
-2. Or convert the _docker-compose.yml_ file to files that you can use with `kubectl`, run `kompose convert`:
-
-
----
-
-![Creating a Kubernetes Cluster](./kubernetes_cluster_x1.png)
-
----
-
---&gt;</content:encoded></item><item><title><![CDATA[Creating a Kubernetes Cluster]]></title><description><![CDATA[In this hands-on lab from  Linux Academy , we will install and configure a Kubernetes cluster consisting of 1 master and 2 nodes for the…]]></description><link>https://mpolinowski.github.io/creating-a-kubernetes-cluster/</link><guid isPermaLink="false">https://mpolinowski.github.io/creating-a-kubernetes-cluster/</guid><content:encoded>&lt;p&gt;&lt;a
+&lt;h2 id=&quot;domain-driven-design-and-boundedcontext&quot;&gt;&lt;a href=&quot;#domain-driven-design-and-boundedcontext&quot; aria-label=&quot;domain driven design and boundedcontext permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Domain Driven Design and boundedContext&lt;/h2&gt;
+&lt;p&gt;A Microservice architecture is an implementation of the &lt;a href=&quot;https://martinfowler.com/tags/domain%20driven%20design.html&quot;&gt;Domain Drive Design&lt;/a&gt; principle and &lt;a href=&quot;https://martinfowler.com/bliki/BoundedContext.html&quot;&gt;bounded Context&lt;/a&gt; is a central pattern in Domain-Driven Design. It is the focus of DDD’s strategic design section which is all about dealing with large models and teams. DDD deals with large models by dividing them into different Bounded Contexts and being explicit about their interrelationships.&lt;/p&gt;
+&lt;p&gt;The idea behind the principle is to break architectures into small, &lt;strong&gt;cohesive components&lt;/strong&gt; that only fullfil one job (&lt;strong&gt;single responsibility principle&lt;/strong&gt;) for one other component (&lt;strong&gt;loosely coupled&lt;/strong&gt;). E.g. instead of having one big Integration Database that is build with a single schema and serves all parts of your monolithic application we will add a small, exclusive database to every component that needs data storage.&lt;/p&gt;
+&lt;p&gt;We are going to continue to build the web application we &lt;a href=&quot;https://mpolinowski.github.io/creating-a-kubernetes-cluster/&quot;&gt;started to build earlier&lt;/a&gt; - with an ActiveMQ Message broker in the backend and an Angular web frontend that will show us the position of our car fleet on a map. The architecture will consist of 5 pods:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Position Simulator -&amp;gt; ActiveMQ -&amp;gt; Position Tracker &amp;lt;- API Gateway &amp;lt;- NGINX Reverse Proxy &amp;lt;-&amp;gt; Web Browser&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The necessary Docker images can be found on &lt;a href=&quot;https://hub.docker.com/u/richardchesterwood&quot;&gt;DockerHUB&lt;/a&gt; - their corresponding source code can be found on &lt;a href=&quot;https://github.com/DickChesterwood/k8s-fleetman&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;https://hub.docker.com/r/richardchesterwood/k8s-fleetman-position-simulator&quot;&gt;Position Simulator&lt;/a&gt; will simulate the GPS signal from our cars, reporting in their position every 10s.&lt;/li&gt;
+&lt;li&gt;The Position Simulator is then send to our &lt;a href=&quot;https://hub.docker.com/r/richardchesterwood/k8s-fleetman-queue&quot;&gt;ActiveMQ&lt;/a&gt; service we already deployed earlier.&lt;/li&gt;
+&lt;li&gt;This Queue server / Message Broker then forwards the information it received to the &lt;a href=&quot;https://hub.docker.com/r/richardchesterwood/k8s-fleetman-position-tracker&quot;&gt;Position Tracker&lt;/a&gt; that is storing the information as well as doing some basic calculations on it, like estimating the average speed the car is traveling with.&lt;/li&gt;
+&lt;li&gt;To prevent the frontend code to directly contact this backend part of our application, we will add an &lt;a href=&quot;https://hub.docker.com/r/richardchesterwood/k8s-fleetman-api-gateway&quot;&gt;API Gateway&lt;/a&gt; that will serve as an interface between front- and backend. This way changes in the backend will never directly affect the frontend, or vice versa - see &lt;a href=&quot;https://microservices.io/patterns/apigateway.html&quot;&gt;API Gateway Pattern&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The final container will run our &lt;a href=&quot;https://hub.docker.com/r/richardchesterwood/k8s-fleetman-webapp-angular&quot;&gt;Web Application Frontend&lt;/a&gt; with the help of an NGINX reverse proxy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;deploying-the-queue&quot;&gt;&lt;a href=&quot;#deploying-the-queue&quot; aria-label=&quot;deploying the queue permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Deploying the Queue&lt;/h3&gt;
+&lt;p&gt;We want to start with a fresh cluster - if you already &lt;a href=&quot;https://mpolinowski.github.io/creating-a-kubernetes-cluster/&quot;&gt;followed the earlier steps&lt;/a&gt;, just enter the directory that contains all your configuration files (services.yaml, pods.yaml, networking-tests.yaml) and force delete everything that was build from them on your cluster:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl delete -f &lt;span class=&quot;token keyword&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;rm&lt;/span&gt; networking-tests.yaml
+&lt;span class=&quot;token function&quot;&gt;mv&lt;/span&gt; pods.yaml workloads.yaml
+&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; workloads.yaml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We are also deleting an unnecessary file from the previous step and renaming another - just if you are following along. We can now add the queue server to the &lt;code class=&quot;language-text&quot;&gt;workloads.yaml&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; apps/v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deployment
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the ReplicaSet instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; queue
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;matchLabels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# the ReplicaSet manages all Pods&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# where the label = app: queue&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; queue
+  &lt;span class=&quot;token comment&quot;&gt;# only 1 Pod should exist atm - if it&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# crashes, a new pod will be spawned.&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;replicas&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; queue
+    &lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; queue
+        &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; richardchesterwood/k8s&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;queue&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;release1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Secondly, we need to apply a service that exposes our Queue container, which is done in the &lt;code class=&quot;language-text&quot;&gt;services.yaml&lt;/code&gt; file (if you still have the webapp service from the previous step - just leave it in for now):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Service
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the Service instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;queue
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; admin&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;console
+      &lt;span class=&quot;token key atrule&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8161&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;targetPort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8161&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# The nodePort is available from outside of the&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# cluster when is set to NodePort. It&apos;s value has&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# to be &gt; 30000&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;nodePort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30010&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; endpoint
+      &lt;span class=&quot;token key atrule&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;61616&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;targetPort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;61616&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# Define which pods are going to&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# be represented by this service&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# The service makes an network&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# endpoint for our app&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; queue
+  &lt;span class=&quot;token comment&quot;&gt;# Setting the Service type to ClusterIP makes the&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# service only available from inside the cluster&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# To expose a port use NodePort instead&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; NodePort&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The Queue service is going to expose the port &lt;strong&gt;8161&lt;/strong&gt; for the administration console (this should be removed once the app goes into production!) and makes it accessible over the port &lt;strong&gt;30010&lt;/strong&gt; from outside of the Kubernetes cluster. Additionally we need to expose the port &lt;strong&gt;61616&lt;/strong&gt; that ActiveMQ is using to broker messages.&lt;/p&gt;
+&lt;p&gt;You can now start both the pod as well as the service with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl apply -f workloads.yaml
+kubectl apply -f services.yaml
+kubectl get all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bd63052b39fdc44323e580ffe4dd7b91/60964/kubernetes_microservices_01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 26.724137931034488%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA3klEQVQY002O3U6EMBgFCxEoWyrGZWNUZKEt/YdSwPj+b+ZXE43JXJybORlE7UFMJHoDsAyNiY/uoP7s9BZVWNUmmUP9jD7kLwoNEg0KvTFEzV7LgOcVi6USHi7y0cBjrULGXWX3jNknHVsZLsxemAMqZh+4R68TInZv/EmXz9rEUobn7QuOWn9CAlEBKvK77pdzcMeVuSuz3WQb8FVI8ruOL8LfmOsmc2MWT6YQvuCuFEvJPZZrNppU2//PVuhuUnZrItWBzCtVoZEQ78vUnwC54B5GPupsUH/8yBrkb2vwIsYTFdT6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/bd63052b39fdc44323e580ffe4dd7b91/b21dd/kubernetes_microservices_01.png&quot;
+        srcset=&quot;/static/bd63052b39fdc44323e580ffe4dd7b91/2d451/kubernetes_microservices_01.png 200w,
+/static/bd63052b39fdc44323e580ffe4dd7b91/06807/kubernetes_microservices_01.png 400w,
+/static/bd63052b39fdc44323e580ffe4dd7b91/b21dd/kubernetes_microservices_01.png 800w,
+/static/bd63052b39fdc44323e580ffe4dd7b91/60964/kubernetes_microservices_01.png 812w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The Admin panel should now be accessible over the IP address of your Kubernetes master server with the port &lt;strong&gt;30010&lt;/strong&gt;:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a5feb4ba5ebf09f41f97271ad02b3231/60964/kubernetes_microservices_02.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 42.98029556650247%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABuklEQVQoz32Q3U/aUBTA79+4xAWdsqmp4Pa47VUf/HhwiSwKQ5ZpXK0KCFaJiZOthhcYjFpKAYeILmyBugJFitJbSnt3HcnUbNkvv5ycnI+Hc8DomH2VXGO5VDQWT3IpPi2khayQyfHpDM7vKQi4jcX5q3nHCGEDelc3kdnVu5iOppkIqVBttVqdv9CgZhomBiFkGIau6+BmB5nhxc2dCbf/hSM0uURYhx9Y+sQLEQ/1RntRFqtZP1MqFrgMXyieQg2CcrZ4HE9RMy7ns0nP89mVl3OeacfC1Fw+wUun3ytfz8X8Nxx/FkpnR7lEiEkdRj8fRLhIvCk3QIzcY31hNvDpiD5kg0wyyPB05Hgvym0xSW+Y9X384xfvQXxjP0Ht89uR3IdYrXwBpMu6pMg1RRZlqdqU60qj1mygf9E1DbFSOS+eSVIVH6KqKui0Iby8hs02VNr4H+i/XCtX9Ub95guGASEEtIvcda7t/Dbk2dh9Q/lfr/gcy975dwHne/rtOu2hegbdZMBN4sr2ErXlWi2XfoDRx8NPbXY7YRsnxuwEMU7YngxarQOD2KH+R0OWO/bfOvDQcpLP/wIrd6PliyArVAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a5feb4ba5ebf09f41f97271ad02b3231/b21dd/kubernetes_microservices_02.png&quot;
+        srcset=&quot;/static/a5feb4ba5ebf09f41f97271ad02b3231/2d451/kubernetes_microservices_02.png 200w,
+/static/a5feb4ba5ebf09f41f97271ad02b3231/06807/kubernetes_microservices_02.png 400w,
+/static/a5feb4ba5ebf09f41f97271ad02b3231/b21dd/kubernetes_microservices_02.png 800w,
+/static/a5feb4ba5ebf09f41f97271ad02b3231/60964/kubernetes_microservices_02.png 812w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;deploying-the-position-simulator&quot;&gt;&lt;a href=&quot;#deploying-the-position-simulator&quot; aria-label=&quot;deploying the position simulator permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Deploying the Position Simulator&lt;/h3&gt;
+&lt;p&gt;We can now add the Position Simulator to the &lt;code class=&quot;language-text&quot;&gt;workloads.yaml&lt;/code&gt; file - directly under the configuration of our queue server, divided by &lt;code class=&quot;language-text&quot;&gt;---&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; apps/v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deployment
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the ReplicaSet instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;simulator
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;matchLabels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;simulator
+  &lt;span class=&quot;token comment&quot;&gt;# only 1 Pod should exist atm - if it&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# crashes, a new pod will be spawned.&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;replicas&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;simulator
+    &lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;simulator
+        &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; richardchesterwood/k8s&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;simulator&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;release1
+        &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SPRING_PROFILES_ACTIVE
+          &lt;span class=&quot;token key atrule&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; production&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;microservice&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The configuration for deployment is similar to the ActiveMQ config. We only need to add a &lt;strong&gt;Environment Variable&lt;/strong&gt; that sets the service to &lt;em&gt;Production Settings&lt;/em&gt; - &lt;code class=&quot;language-text&quot;&gt;SPRING_PROFILES_ACTIVE: production-microservice&lt;/code&gt; (the service can be started with different profiles, depending if you are in a development or production environment).&lt;/p&gt;
+&lt;p&gt;We can apply the new workloads configuration, check for the name of the new container (it will be called &lt;code class=&quot;language-text&quot;&gt;position-simulator&lt;/code&gt; + an deployment ID + an replicationSet ID) and check if it is build correctly:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl apply -f workloads.yaml
+kubectl get all
+kubectl describe pod position-simulator-68bfc8d6fb-8vxkt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c1c1a341c54e5cb17428e7b35dd5a3a0/76a8f/kubernetes_microservices_03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 19.509202453987733%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAuklEQVQI1y1P2Q6CMBAsHuUQKMQ3FUGOHrZdKpf+/5e5iMlmMpnZncwSvwPa2kOtD/WTNmb/ULtKkbsghUAr6MArJSqIG9lV8jfKuzYkszPTEzNzJFyix5BDyPsjplSKdjaQjmIEh0j0qAer+x+/5CSHNzNTooegs7FaEYuEwqEdtyYXfcYhwW2xXkbSYQoiBlE8zmDJYUn1eJLu7D7pc4jVi6Foxka9bma6w1K01is4/rKV98qVkEv9BS1ZHKzzZr5qAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c1c1a341c54e5cb17428e7b35dd5a3a0/b21dd/kubernetes_microservices_03.png&quot;
+        srcset=&quot;/static/c1c1a341c54e5cb17428e7b35dd5a3a0/2d451/kubernetes_microservices_03.png 200w,
+/static/c1c1a341c54e5cb17428e7b35dd5a3a0/06807/kubernetes_microservices_03.png 400w,
+/static/c1c1a341c54e5cb17428e7b35dd5a3a0/b21dd/kubernetes_microservices_03.png 800w,
+/static/c1c1a341c54e5cb17428e7b35dd5a3a0/76a8f/kubernetes_microservices_03.png 815w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This service does not need to be accessed from outside of the Kubernetes cluster - so &lt;strong&gt;we do not need to create a service&lt;/strong&gt; for it.&lt;/p&gt;
+&lt;p&gt;We can test the deployment by accessing the IP Address followed by the port &lt;strong&gt;30010&lt;/strong&gt;, click on &lt;em&gt;Managing ActiveMQ Broker&lt;/em&gt;, sign in with &lt;strong&gt;admin, admin&lt;/strong&gt; and click on &lt;strong&gt;Queues&lt;/strong&gt;:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e73b03c00cd38d492a1a69fd3f90a7c9/9f07b/kubernetes_microservices_07.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 44.27860696517413%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACR0lEQVQoz5WS3UvTYRiG91eUaGm66dyHmiWiK2MzFTNL+7DMOu+gSFALTMqDohOpk3JBUc0CoW+ihMTNzZg6nQYhWpHklLY13abbmrg1d/X6K6LTXri476OL53l4ZcFgEH8ggN/vJxz9gT+8QsPxJrTaArR529GIVOZqyFVpUanzJDa6RpvPiHOctXiM5eVlQqEQAeGRJZNJfsbjrJNkzjHFiOk1jQ1N6HaVoTfspWyPgaLiEvLyC/+RihTdbHpB5PsSrnkXrjkXkXAYWWJ9XZIthgI8v2mi62Qr1ZU1aMR0GxMqsnMl5AolWXKl6Coys7LJzlHxxGji69Q0Ex/eMzbhJLAcROabXcDW/ZSh28/ou97D4ytG9lfUULCjGLW2UAjUQiSEIjMyMklLTWNbVo4Qanl4rZvR+28YvveK8d63fHw3iWwtkcDj9uJdcOP3LuKZ/0Z5eSWbNqeRniFny9ZMtqTLSUlJpbj8GIdOd6HILUChVNP/sg/flwUx5WdCS0EiIbFy3OPBOzPNvMeN2+thTtzj0uVOzpw9R2vbBVpa22hpO09zczNXu4wYH/XT3tFJ+8UOJh1OPs3M4PP52DhddHVVCO8+INnTy2osQTQYIroS4X9ePBb72xNiW5lzbIKju/dxqqKeJsNBThgO0KivlThcWkXtTv1vivTUlVZSr6uirqRCol5XyZGyaomqfB13btxCtvF37CPDjDpGGZbSIXXHmAO73c6gdZAB84CExWLBZrNhFdj+YLVZsQ0NYbaYmZ2d5RfkYfAv1K0DTgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e73b03c00cd38d492a1a69fd3f90a7c9/b21dd/kubernetes_microservices_07.png&quot;
+        srcset=&quot;/static/e73b03c00cd38d492a1a69fd3f90a7c9/2d451/kubernetes_microservices_07.png 200w,
+/static/e73b03c00cd38d492a1a69fd3f90a7c9/06807/kubernetes_microservices_07.png 400w,
+/static/e73b03c00cd38d492a1a69fd3f90a7c9/b21dd/kubernetes_microservices_07.png 800w,
+/static/e73b03c00cd38d492a1a69fd3f90a7c9/9f07b/kubernetes_microservices_07.png 804w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/44b9478322c304d795aaa838e9f32b07/60964/kubernetes_microservices_08.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 41.50246305418719%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABvklEQVQY0z1RTW/TQBD1j+LCgSM3zki9wYmfwJ0DEgcOlQoHEKCqPaBK0KJEiDZyoUi0cdKksRM7CYlje73e2I7r76/1x5oNSIyenp5mNPNGM0xVVjjPSUNcYFoLgKRVbLrX3d5Z58wyLVKTAhdlUZRlmfpRYjhpFAdBkCZ56CGmJqSqqrDGrVeHL+4/2dt5evD42aMHD+/cu8txXNM0tEoIoUKbyr39ljjmOxfnvCiGAWI8ZEtsnz9hW7sfDp6//vjyzafd9539z1/fHfW+nK+uhN8/h+K3y9Hx98Exy52w3NHpqH0hnHbRUmISLwALXX97aLdZx3AcGWrCfDWcBpq1WejmTDXnKhIVNJG1m9n0R395ya/6EygqG0NmqroyzLUXBnVDqN4yqSuyFWSLZrvx36ACAeg6LqGXaJrQRwzN6kAXhPGkxw/YrjSWRr8G4z5Pme/e8FfDyYifSVOeGzobx4Zrz75N/bCuG/8WUue6sOxMASnQMTSwgTBEmQ5zoBdrM4szB7o4xVmUYIwtYLimk8cptfbdf80qwPNlJiuVDikIHaGoparVEFVJEF23yzjCcU6/ZSzV9UL73/wHiBCiUM5Nda8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/44b9478322c304d795aaa838e9f32b07/b21dd/kubernetes_microservices_08.png&quot;
+        srcset=&quot;/static/44b9478322c304d795aaa838e9f32b07/2d451/kubernetes_microservices_08.png 200w,
+/static/44b9478322c304d795aaa838e9f32b07/06807/kubernetes_microservices_08.png 400w,
+/static/44b9478322c304d795aaa838e9f32b07/b21dd/kubernetes_microservices_08.png 800w,
+/static/44b9478322c304d795aaa838e9f32b07/60964/kubernetes_microservices_08.png 812w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;You should see a rising number of pending messages, telling you that our &lt;strong&gt;Position Simulator&lt;/strong&gt; is successfully sending GPS coordinates to the message broker.&lt;/p&gt;
+&lt;h3 id=&quot;how-to-debug-a-failed-deployment&quot;&gt;&lt;a href=&quot;#how-to-debug-a-failed-deployment&quot; aria-label=&quot;how to debug a failed deployment permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How to Debug a failed Deployment&lt;/h3&gt;
+&lt;p&gt;As we have seen above the deployment work and the Position Simulator is up and running - but how would we debug a container that cannot be started for some reason? We can create this circumstance by adding a typo in the environment variable inside the config file we created above, e.g. &lt;code class=&quot;language-text&quot;&gt;SPRING_PROFILES_ACTIVE: production-microservice-typo&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl apply -f workloads.yaml
+kubectl get all
+kubectl describe pod position-simulator-77dcb74d75-dt27n&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b5b9c0a953e353d429b9ce39bc4f595b/25912/kubernetes_microservices_04.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 17.892156862745097%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAt0lEQVQI1yWM7Q6CMAxFp6AT+RBM/KcYGGMb7dgcIO//ZhZMTpqbtucyLse4gZOAqBmixrCnZK+eQtwCq/XhrVmtCC7tuUMKtNlRjMjMJzOhGr/ZEK7Kk0NPqQmp9tTISXhvQtI7up4FXpRL+jGhqRy7uzUfpr9c2oXCxh5of8Olciv9xdJy7S/mE3f20EIk8CiQleOSwybzzpY4FwRMBcyV2+qopfTrA6YwBAch4Gy11wJ1hyjtDzlkHm8KJu+lAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b5b9c0a953e353d429b9ce39bc4f595b/b21dd/kubernetes_microservices_04.png&quot;
+        srcset=&quot;/static/b5b9c0a953e353d429b9ce39bc4f595b/2d451/kubernetes_microservices_04.png 200w,
+/static/b5b9c0a953e353d429b9ce39bc4f595b/06807/kubernetes_microservices_04.png 400w,
+/static/b5b9c0a953e353d429b9ce39bc4f595b/b21dd/kubernetes_microservices_04.png 800w,
+/static/b5b9c0a953e353d429b9ce39bc4f595b/25912/kubernetes_microservices_04.png 816w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;We can now see that the deployment is failing and Kubernetes is trying to restart the container in a loop (&lt;strong&gt;CrashLoopBackOff&lt;/strong&gt;). To check what is going wrong, we can call the Kubernetes logs for the failing container:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl logs position-simulator-77dcb74d75-dt27n&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And the developer of the application should be able to spot the typo inside the selected profile for you:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a677b2fa4cd3cb6a416fdf76c1b0e5f8/76a8f/kubernetes_microservices_05.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 47.60736196319018%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABZklEQVQoz31S2W6DMBB0GlpuSBpVqnqRQGyMTw5D/v/POoao6lOk1cp4Pbszs5CI6per8tEg64iakBp8bhk34VX/5bWqn86cVJy8V+S5UU/nLqhlUAsc9hexv3Tkmz2Kn/YOzrohRfA+bvukHSJm0H6H8gPklj1YjGk3epJUx7xPeB+1dgcuDbhI8Ar/MccN2K0CTfDVkDc9n8R07IaytQWzOdVJo9JGFa0FhZgZtAM1n/kAF6Aubm3Ch7BiZDSLlc6IUYvRyqljmlMtmOnkBC7AZN2Yi7GQU+p5DRiLjrl0YUXJwSwHcyuVK/V8NAveAQBLUwEjBojySDGVas74kMtxMyjzYEZO9na0SyndUc+vOKOXng/a+XZqLpRbx6K18yXl7o/tLblwAj6o5QIZ7d2mEMQgbNWGFfTbNBCJmUVgnUGj9p81QQ2WYkP+x7gqFFYz1eqwl7e5DSEx9VuMmPUPqN5/1L+8Ykish4WUAwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a677b2fa4cd3cb6a416fdf76c1b0e5f8/b21dd/kubernetes_microservices_05.png&quot;
+        srcset=&quot;/static/a677b2fa4cd3cb6a416fdf76c1b0e5f8/2d451/kubernetes_microservices_05.png 200w,
+/static/a677b2fa4cd3cb6a416fdf76c1b0e5f8/06807/kubernetes_microservices_05.png 400w,
+/static/a677b2fa4cd3cb6a416fdf76c1b0e5f8/b21dd/kubernetes_microservices_05.png 800w,
+/static/a677b2fa4cd3cb6a416fdf76c1b0e5f8/76a8f/kubernetes_microservices_05.png 815w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Fixing the &lt;em&gt;typo&lt;/em&gt; and re-applying the configuration should show you that the “loop-crashing” container is now being discarded and replaced by a working version:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl apply -f workloads.yaml
+kubectl get all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c327a28b3451e54d92e6f16ba0d636bb/9f07b/kubernetes_microservices_06.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 9.577114427860696%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAb0lEQVQI10XLuw6CMBQA0CYYINYCjiaixr57bwul1IEZ//+XYILkrIcwl6iJ1EZqxhbnHYPUYFrc9Pd5tVFyqGUoBVbCFx9LXvp0D7nF3PncwHw1Y61CybEQ+JReDb+HHnqBjAN565ubLl8gvTryBt6DD24DYegTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c327a28b3451e54d92e6f16ba0d636bb/b21dd/kubernetes_microservices_06.png&quot;
+        srcset=&quot;/static/c327a28b3451e54d92e6f16ba0d636bb/2d451/kubernetes_microservices_06.png 200w,
+/static/c327a28b3451e54d92e6f16ba0d636bb/06807/kubernetes_microservices_06.png 400w,
+/static/c327a28b3451e54d92e6f16ba0d636bb/b21dd/kubernetes_microservices_06.png 800w,
+/static/c327a28b3451e54d92e6f16ba0d636bb/9f07b/kubernetes_microservices_06.png 804w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;deploying-the-position-tracker&quot;&gt;&lt;a href=&quot;#deploying-the-position-tracker&quot; aria-label=&quot;deploying the position tracker permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Deploying the Position Tracker&lt;/h3&gt;
+&lt;p&gt;Now we need to start up the position tracker who’s job it is take out the message that are send by our position simulator and are currently piling up in our ActiveMQ Server. The position tracked does some calculation on those messages and exposes his results through an REST interface to the API gateway.&lt;/p&gt;
+&lt;p&gt;We can now add the &lt;strong&gt;Position Tracker&lt;/strong&gt; to the &lt;code class=&quot;language-text&quot;&gt;workloads.yaml&lt;/code&gt; file - directly under the configuration of our position simulator, divided by &lt;code class=&quot;language-text&quot;&gt;---&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; apps/v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deployment
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the ReplicaSet instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;matchLabels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker
+  &lt;span class=&quot;token comment&quot;&gt;# only 1 Pod should exist atm - if it&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# crashes, a new pod will be spawned.&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;replicas&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker
+    &lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker
+        &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; richardchesterwood/k8s&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;release1
+        &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SPRING_PROFILES_ACTIVE
+          &lt;span class=&quot;token key atrule&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; production&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;microservice&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We can now deploy the position tracker and then take a look at our message queue. We should be able to see that the tracker is working and messages are getting de-queued:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;kubectl apply -f workloads.yaml&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/16f808f5508fdd96fc8d8cd6ddfc4694/60964/kubernetes_microservices_09.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 42.11822660098522%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsElEQVQY02VRy27TQBT119FdBQKJbT8BIbasEQvU7lqpEgsEldpNeSgtaZOWlkDckvqRsetHHoQkdp06iePxjMeeGccMlWDD0TnS1b260r3nSBnJGGcZIh7o+tf9wBrcdH4dVav1eh0jzMWMMkaFGLpdYG+WIgRjiBDKskxaliVhecd1Nx4+Xb//ZHvt+cbjZ/dWVlYfPUAYlWW5vIMonIu2/OYjMPSj05oC9JxSyf7Ssk4uG3uHOy82d15u7b7a/rT5rv72w+HrPbMmdxuqc3YFKg1t/7S1fyK/r8m7Va1yrh18nY4DyTN7PxVrBLqhO7p1hxN7YDfVcbsb9X3f6PmmYH+suUPV6TTb7rnSaai9C2OoOfF0LkVx5E1u+LIo/2J5x/9BC+YPRrNwVvBCPJLnuZRACBTdsW31uGlqwLhUwXcFNFVDVvWzH+ZV2wKmZVyDlj4Nw9ALZkGYxqjgnBAiUUoxRAlMFuEcJ8IjhGGSEAJtN6p8XsR4HkSiiRIhFE2mcL7IMCmK4s+ySIITxkhOGf3nLeWcpylHOAvHEHyjIo8kFQh6IxFkhlJxt1j+DRNco2mlW+0EAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/16f808f5508fdd96fc8d8cd6ddfc4694/b21dd/kubernetes_microservices_09.png&quot;
+        srcset=&quot;/static/16f808f5508fdd96fc8d8cd6ddfc4694/2d451/kubernetes_microservices_09.png 200w,
+/static/16f808f5508fdd96fc8d8cd6ddfc4694/06807/kubernetes_microservices_09.png 400w,
+/static/16f808f5508fdd96fc8d8cd6ddfc4694/b21dd/kubernetes_microservices_09.png 800w,
+/static/16f808f5508fdd96fc8d8cd6ddfc4694/60964/kubernetes_microservices_09.png 812w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;We can now add a service for the position tracker to expose the REST interface directly on port &lt;strong&gt;8080&lt;/strong&gt; (&lt;em&gt;optional - only for testing&lt;/em&gt;). For this we need to add the following lines to our &lt;code class=&quot;language-text&quot;&gt;services.yaml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Service
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the Service instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; rest&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;interface
+      &lt;span class=&quot;token key atrule&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;targetPort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# The nodePort is available from outside of the&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# cluster when is set to NodePort. It&apos;s value has&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# to be &gt; 30000&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;nodePort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30020&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker
+  &lt;span class=&quot;token comment&quot;&gt;# Setting the Service type to ClusterIP makes the&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# service only available from inside the cluster&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# To expose a port use NodePort instead&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; NodePort&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now apply the changes &lt;code class=&quot;language-text&quot;&gt;kubectl apply -f services.yaml&lt;/code&gt; and open the REST interface on your Master server IP address with the port &lt;strong&gt;30020&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;http://195.201.148.210:30020/vehicles/City%20Truck&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You should be able to see the current location and speed of the vehicle with the designation &lt;strong&gt;City Truck&lt;/strong&gt;:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1d9e3bff8329df2211e9be7c9e711b96/60964/kubernetes_microservices_10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 21.305418719211822%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAuUlEQVQI132L2w6CMBiDeTjwHUQcLuIpeIzxbQVR0f2bOhcHGSgwd2GMV35pmqZpreEkNJpM5+Nw3usHttOyHaeDev3hGAcjPBh5Pm57yPV8t+u7HuogjHCwXG9mi5VFAQ7J/pyezifCKBV3wTknlAL5YEoKRsAYAwAhRJ7nUkqllFVIBTE5xPs0OQIxE8qvvMhU9aqautFaN43xb9D1D9ZTlZcdM88o3m6jKIkTllJ5e5RZUVe1/ssbweXApop3QaMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1d9e3bff8329df2211e9be7c9e711b96/b21dd/kubernetes_microservices_10.png&quot;
+        srcset=&quot;/static/1d9e3bff8329df2211e9be7c9e711b96/2d451/kubernetes_microservices_10.png 200w,
+/static/1d9e3bff8329df2211e9be7c9e711b96/06807/kubernetes_microservices_10.png 400w,
+/static/1d9e3bff8329df2211e9be7c9e711b96/b21dd/kubernetes_microservices_10.png 800w,
+/static/1d9e3bff8329df2211e9be7c9e711b96/60964/kubernetes_microservices_10.png 812w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Since it would be dangerous to expose the REST API directly to the internet, we will remove the NodePort and have the API be available only from inside our cluster on port 8080:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Service
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the Service instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; rest&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;interface
+      &lt;span class=&quot;token key atrule&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;targetPort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; position&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;tracker
+  &lt;span class=&quot;token comment&quot;&gt;# Setting the Service type to ClusterIP makes the&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# service only available from inside the cluster&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# To expose a port use NodePort instead&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ClusterIP&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;deploying-the-api-gateway&quot;&gt;&lt;a href=&quot;#deploying-the-api-gateway&quot; aria-label=&quot;deploying the api gateway permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Deploying the API Gateway&lt;/h3&gt;
+&lt;p&gt;We can now add the &lt;strong&gt;API Gateway&lt;/strong&gt; to the &lt;code class=&quot;language-text&quot;&gt;workloads.yaml&lt;/code&gt; file - directly under the configuration of our position tracker, divided by &lt;code class=&quot;language-text&quot;&gt;---&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; apps/v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deployment
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the ReplicaSet instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gateway
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;matchLabels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gateway
+  &lt;span class=&quot;token comment&quot;&gt;# only 1 Pod should exist atm - if it&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# crashes, a new pod will be spawned.&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;replicas&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gateway
+    &lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gateway
+        &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; richardchesterwood/k8s&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;api&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gateway&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;release1
+        &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SPRING_PROFILES_ACTIVE
+          &lt;span class=&quot;token key atrule&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; production&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;microservice&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We can now deploy the gateway with &lt;code class=&quot;language-text&quot;&gt;kubectl apply -f workloads.yaml&lt;/code&gt;. And then expose the port &lt;strong&gt;8080&lt;/strong&gt; to the Kubernetes cluster in &lt;code class=&quot;language-text&quot;&gt;services.yaml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Service
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the Service instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;api&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gateway
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; rest&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;interface
+      &lt;span class=&quot;token key atrule&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;targetPort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;gateway
+  &lt;span class=&quot;token comment&quot;&gt;# Setting the Service type to ClusterIP makes the&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# service only available from inside the cluster&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# To expose a port use NodePort instead&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; ClusterIP&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;deploying-the-angular-frontend&quot;&gt;&lt;a href=&quot;#deploying-the-angular-frontend&quot; aria-label=&quot;deploying the angular frontend permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Deploying the Angular Frontend&lt;/h3&gt;
+&lt;p&gt;We can now add the &lt;strong&gt;Web APP&lt;/strong&gt; to the &lt;code class=&quot;language-text&quot;&gt;workloads.yaml&lt;/code&gt; file - directly under the configuration of our position tracker, divided by &lt;code class=&quot;language-text&quot;&gt;---&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; apps/v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Deployment
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the ReplicaSet instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; webapp
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;matchLabels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; webapp
+  &lt;span class=&quot;token comment&quot;&gt;# only 1 Pod should exist atm - if it&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# crashes, a new pod will be spawned.&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;replicas&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; webapp
+    &lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; webapp
+        &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; richardchesterwood/k8s&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;webapp&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;angular&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;release1
+        &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SPRING_PROFILES_ACTIVE
+          &lt;span class=&quot;token key atrule&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; production&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;microservice&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We can now deploy the frontend with &lt;code class=&quot;language-text&quot;&gt;kubectl apply -f workloads.yaml&lt;/code&gt;. And then expose the port &lt;strong&gt;80&lt;/strong&gt; to the Kubernetes cluster in &lt;code class=&quot;language-text&quot;&gt;services.yaml&lt;/code&gt;, as well as adding the public port (NodePort) &lt;strong&gt;30080&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yaml&quot;&gt;&lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; v1
+&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Service
+&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Unique key of the Service instance&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; fleetman&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;webapp
+&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# Accept traffic sent to port 80&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; http
+      &lt;span class=&quot;token key atrule&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;targetPort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# The nodePort is available from outside of the&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# cluster when is set to NodePort. It&apos;s value has&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;# to be &gt; 30000&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;nodePort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30080&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# Define which pods are going to&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# be represented by this service&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# The service makes an network&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# endpoint for our app&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; webapp
+  &lt;span class=&quot;token comment&quot;&gt;# Setting the Service type to ClusterIP makes the&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# service only available from inside the cluster&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# To expose a port use NodePort instead&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; NodePort&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Your complete Microservice deployment should now look something like this:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ff553fffe62b42391529e3e63c32176e/25912/kubernetes_microservices_11.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 60.90686274509803%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABmklEQVQoz22S3Y6CMBCFqwiIf+iKNy7KItCWUgotbMTNvv9z7SlcmDUmEzIpc2a+OS05VP2KtwFtECvWrku9LFTA20gYI4xkTUmVk1WLW0Wu7BkJJ+cbOap7pIdjOxz1I9KPfd2vWOPntZvLj+YeCjNPuJfJNW/Jhb6Kd9xshFlzjd8Ba/BjduXOV+mkAhQ+VbOEYSzavZkcis4rahdgqfByOUs4kiVtrJhraHCIvmi3KTVyO39COKdWjJ2nsX5Rg3BxE8idm8Dylj+TCFTj0MvrOaBGrtlnRsKyG7GtVdaVC3XthhpF8M+3UHJJlRXTZisMhgPTzWsnzgkqEGgJ2gkJMgxEe9QhR7hjUxxO3Z/YO9H5hfJGNnydtFykFUahDth2bKGWmP/2qiI1nPrfyAwn8xNKuz+oQDv/4ijCbiSm6BWAPC5exVuux0eicL2wmlyYRU04AsNhHvRoN13Eq/gg+x2i6rZVt5Pdvv5GIIcL9p7GdcAMq61tMf0n3lf99LZOBt8BYS3kGsvPEwbbUGofWS7h9vORjeI/6j9Q2iAA8R4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;A Kubernetes Cluster &amp; Microservices&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ff553fffe62b42391529e3e63c32176e/b21dd/kubernetes_microservices_11.png&quot;
+        srcset=&quot;/static/ff553fffe62b42391529e3e63c32176e/2d451/kubernetes_microservices_11.png 200w,
+/static/ff553fffe62b42391529e3e63c32176e/06807/kubernetes_microservices_11.png 400w,
+/static/ff553fffe62b42391529e3e63c32176e/b21dd/kubernetes_microservices_11.png 800w,
+/static/ff553fffe62b42391529e3e63c32176e/25912/kubernetes_microservices_11.png 816w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;And you should be able to access the web interface on port &lt;strong&gt;30080&lt;/strong&gt; on your master server IP address:&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;/kubernetes_microservices_12-d61b7852ef6d025a1dedb4fa7616327d.gif&quot; alt=&quot;A Kubernetes Cluster &amp;#x26; Microservices&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Creating a Kubernetes Cluster]]></title><description><![CDATA[In this hands-on lab from  Linux Academy , we will install and configure a Kubernetes cluster consisting of 1 master and 2 nodes for the…]]></description><link>https://mpolinowski.github.io/creating-a-kubernetes-cluster/</link><guid isPermaLink="false">https://mpolinowski.github.io/creating-a-kubernetes-cluster/</guid><content:encoded>&lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/3ab587ce485b29f47f37ae231348ba9a/bc79b/photo-34219553960_350f18edbb_o.png&quot;
     style=&quot;display: block&quot;
@@ -1303,7 +1904,7 @@ kubectl get pods --show-labels&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9e5d3656a75049a5dd67f2ec11b46c0b/143e7/kubernetes_cluster_26a.png&quot;
+    href=&quot;/static/1d376eb3d12b1270d7da20625d5d8ab5/60964/kubernetes_cluster_26a.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1314,18 +1915,18 @@ kubectl get pods --show-labels&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 43.9223697650664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABxElEQVQoz2VPW2sTURDev+SDDz4JtmgFG6k2jW2wpv4BwYf+Ah+KCKIvom1zqZdfoWBNyGVzNulms+ecOXPOXrK7iVoRk0awFRLPPghih49v5hvmm2GMCxcvPXi4/bJYfvZo58XO4+Lrt/vlg1elym7pYK9Y2Sv9g2Jld79cefPuydPnlxeu3rh5y8hu3FvfvJ/NF9byhdzGlparuXzhzt21lezi9cyVpeUU11JeWMroYnklt7q+mbmd+3j4yYjiBKWKooRxEKgAwDLNZq3aqh62m3WzWU+50bAI6RBiWZbZNmuNFmk1gTFjPJ78SEPn8dnZ7+/fjuNBqCRoTgbhKIkjX/ooQk/qcpQMQ4WCMy0RhTGd/jyZnkwmk1+np/P5fBgPlOCCusgZcupLoaEQPBTAKOqWbUnuSuCcUWP+N2azmebjLyNt9mU6JjjltC85VUDBdZC7juxytxfojX0b3HPmz8NEIQaeJwVKAVLoswKBa0jQEjybQOuDPKoD8HOXE+W5JBR2CF2kHe4Q5RKfd33WCUQP7XrUrznW+16nKvXP/5m/xp7HjgKwA+GE6EbSEU47UdbQ73nQp6QmGPUQBO/qx/4ACTWkY/y+up4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 43.96551724137931%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABwklEQVQoz11QW2sTQRjdv+SDD77ZKo0PXai2KbVq1V8gCP4EEUVB35SmJk1Q/A/ig+2abPea7Fx2Ljuzt2xDiTSbPOQhhOqsIFiHM4czcM53Ge3K1WtPnj770Dx89/zF+5evm53PB63OfqvdaHUazfbBHzT+8v7Hw/anL6/evL1+s6ZvbGr13b2dB4+3dh9uV3i0eXdvq1L36hv1G7f0lZq+qrC2vlpT0FfW9PXb23d27is+Oja0fFgwLrJ8SChlPKKUOpZ1YhydGN9ts2v1uhWbPdexPdfxPN+yLKNnOpaJINTK6ex8Uk4m5XQ6WywW5z/HeZZGnGZpXGTpaJhlkkvOUhkVeT4qilQwGiL1JCHWprOZipVlOZ/Pl8tlniYsxCECFEOKYESJAidh5UWAUAx8m2GgPBAA7dflMz4bCUbiiHOClUOVUEJQTFGgBIh8AgeJ4DEc4OBS+ELd0empiHgsq3jEqPoDwRmntGrOmBpZDlxifhP9Hsbon/BFFR4XQiInZf2M+hx7JLAEtJPQS4iXsgEPukP4A7pfgWeQMPy/81kRS9JPWJDQIGUgF4gDt5BeEQPJILSP1S6SkYj4JES/AQwPo3UIM+0XAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
     &gt;&lt;/span&gt;
     &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
         alt=&quot;Creating a Kubernetes Cluster&quot;
         title=&quot;&quot;
-        src=&quot;/static/9e5d3656a75049a5dd67f2ec11b46c0b/b21dd/kubernetes_cluster_26a.png&quot;
-        srcset=&quot;/static/9e5d3656a75049a5dd67f2ec11b46c0b/2d451/kubernetes_cluster_26a.png 200w,
-/static/9e5d3656a75049a5dd67f2ec11b46c0b/06807/kubernetes_cluster_26a.png 400w,
-/static/9e5d3656a75049a5dd67f2ec11b46c0b/b21dd/kubernetes_cluster_26a.png 800w,
-/static/9e5d3656a75049a5dd67f2ec11b46c0b/143e7/kubernetes_cluster_26a.png 979w&quot;
+        src=&quot;/static/1d376eb3d12b1270d7da20625d5d8ab5/b21dd/kubernetes_cluster_26a.png&quot;
+        srcset=&quot;/static/1d376eb3d12b1270d7da20625d5d8ab5/2d451/kubernetes_cluster_26a.png 200w,
+/static/1d376eb3d12b1270d7da20625d5d8ab5/06807/kubernetes_cluster_26a.png 400w,
+/static/1d376eb3d12b1270d7da20625d5d8ab5/b21dd/kubernetes_cluster_26a.png 800w,
+/static/1d376eb3d12b1270d7da20625d5d8ab5/60964/kubernetes_cluster_26a.png 812w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
   &lt;/span&gt;
@@ -1538,7 +2139,7 @@ kubectl get all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/599fb8b388d1c918ebdabcf7d057fd6e/4628f/kubernetes_cluster_31a.png&quot;
+    href=&quot;/static/a5feb4ba5ebf09f41f97271ad02b3231/60964/kubernetes_cluster_31a.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1549,18 +2150,18 @@ kubectl get all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
       class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 42.98874104401228%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABvUlEQVQoz32Q30/aUBiGz9+4ZBe7WeZSCoRsSyjucsuybMTETKL4A3WSgagMxGDCRI0hYeiktJxW3UjWyVBn1GIpSFcopT37NhcvtmVvnjz5zjnvufnQAEXPhSNsicsXtoslni/jsiBicY/HAo/xH3B8GcCi6B8avkfRyDRNm9iW2Yf0ej1CSLfb1TSt93cMg1i2ZdvQsSwLLhD8MQlZH42tPgslBgPpJ5PU3YFbd27LdRlK9q/qtZVT+VMyd/RF4sSyVD3sGgY6q3ytsML8i+CY52nI93KW8U/7A4HnQxJ3cFk9Pf98dCEdA/LhSVWolDI5nNv5sJnH+WJTUVEhvMouZNn4OpvYKL79CU5ufUy/5+Ib7OIau5i9obiQ3YlmdiPvhOXcfqZQPzlDSltt6O2G1qq3Gur3VlNvq9oV+VdgNfL5Ra1aU5QGHDudDjL0jq629aamtzSr3yf/zZXalC/r1zPsFS2Pv1kJRlPBCDg9FVuZiMYDc0sjr5dezSbgaSaWmv5NciqamIykQvNAPBj+VjtGjx48fOwb9HkZH8MwXi/Y4/a4nS4X7XQ6aJpywHCDG+wAuxz3KUmSfgCEXKYUXp8k/wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+      style=&quot;padding-bottom: 42.98029556650247%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABuklEQVQoz32Q3U/aUBTA79+4xAWdsqmp4Pa47VUf/HhwiSwKQ5ZpXK0KCFaJiZOthhcYjFpKAYeILmyBugJFitJbSnt3HcnUbNkvv5ycnI+Hc8DomH2VXGO5VDQWT3IpPi2khayQyfHpDM7vKQi4jcX5q3nHCGEDelc3kdnVu5iOppkIqVBttVqdv9CgZhomBiFkGIau6+BmB5nhxc2dCbf/hSM0uURYhx9Y+sQLEQ/1RntRFqtZP1MqFrgMXyieQg2CcrZ4HE9RMy7ns0nP89mVl3OeacfC1Fw+wUun3ytfz8X8Nxx/FkpnR7lEiEkdRj8fRLhIvCk3QIzcY31hNvDpiD5kg0wyyPB05Hgvym0xSW+Y9X384xfvQXxjP0Ht89uR3IdYrXwBpMu6pMg1RRZlqdqU60qj1mygf9E1DbFSOS+eSVIVH6KqKui0Iby8hs02VNr4H+i/XCtX9Ub95guGASEEtIvcda7t/Dbk2dh9Q/lfr/gcy975dwHne/rtOu2hegbdZMBN4sr2ErXlWi2XfoDRx8NPbXY7YRsnxuwEMU7YngxarQOD2KH+R0OWO/bfOvDQcpLP/wIrd6PliyArVAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
     &gt;&lt;/span&gt;
     &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px transparent;&quot;
         alt=&quot;Creating a Kubernetes Cluster&quot;
         title=&quot;&quot;
-        src=&quot;/static/599fb8b388d1c918ebdabcf7d057fd6e/b21dd/kubernetes_cluster_31a.png&quot;
-        srcset=&quot;/static/599fb8b388d1c918ebdabcf7d057fd6e/2d451/kubernetes_cluster_31a.png 200w,
-/static/599fb8b388d1c918ebdabcf7d057fd6e/06807/kubernetes_cluster_31a.png 400w,
-/static/599fb8b388d1c918ebdabcf7d057fd6e/b21dd/kubernetes_cluster_31a.png 800w,
-/static/599fb8b388d1c918ebdabcf7d057fd6e/4628f/kubernetes_cluster_31a.png 977w&quot;
+        src=&quot;/static/a5feb4ba5ebf09f41f97271ad02b3231/b21dd/kubernetes_cluster_31a.png&quot;
+        srcset=&quot;/static/a5feb4ba5ebf09f41f97271ad02b3231/2d451/kubernetes_cluster_31a.png 200w,
+/static/a5feb4ba5ebf09f41f97271ad02b3231/06807/kubernetes_cluster_31a.png 400w,
+/static/a5feb4ba5ebf09f41f97271ad02b3231/b21dd/kubernetes_cluster_31a.png 800w,
+/static/a5feb4ba5ebf09f41f97271ad02b3231/60964/kubernetes_cluster_31a.png 812w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
   &lt;/span&gt;
