@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{664:function(t,e,n){"use strict";n.r(e);var a=n(1),i=n.n(a),r=n(692),s=n.n(r);e.default=function(){return i.a.createElement(s.a,null,i.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/java-script-and-getting-started-with-ap-is-and-ajax"}))}}}]);
+//# sourceMappingURL=component---src-pages-javascript-apis-and-ajax-jsx-180630c1a8068cadae4a.js.map
