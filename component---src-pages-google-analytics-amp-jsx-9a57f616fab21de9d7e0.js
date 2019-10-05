@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{661:function(e,t,n){"use strict";n.r(t);var a=n(1),o=n.n(a),i=n(692),r=n.n(i);t.default=function(){return o.a.createElement(r.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/google-analytics"}))}}}]);
-//# sourceMappingURL=component---src-pages-google-analytics-amp-jsx-9a57f616fab21de9d7e0.js.map

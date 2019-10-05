@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{673:function(e,n,t){"use strict";t.r(n);var a=t(1),r=t.n(a),i=t(692),o=t.n(i);n.default=function(){return r.a.createElement(o.a,null,r.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/creating-a-dashboard-displaying-cryptocurrency-data-using-node-red"}))}}}]);
-//# sourceMappingURL=component---src-pages-nodered-cryptocurrency-dashboard-jsx-a1c0b1444171d341e093.js.map

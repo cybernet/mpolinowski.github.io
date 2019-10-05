@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{683:function(e,t,n){"use strict";n.r(t);var a=n(1),i=n.n(a),r=n(676),o=n.n(r);t.default=function(){return i.a.createElement(o.a,null,i.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/proxima-centauri"}))}}}]);
+//# sourceMappingURL=component---src-pages-developing-software-in-china-jsx-28bd0562960889fd64d0.js.map

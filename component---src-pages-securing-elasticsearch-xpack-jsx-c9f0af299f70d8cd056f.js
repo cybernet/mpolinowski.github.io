@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[41],{687:function(e,t,n){"use strict";n.r(t);var a=n(1),i=n.n(a),c=n(692),r=n.n(c);t.default=function(){return i.a.createElement(r.a,null,i.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/securing-elasticsearch-with-x-pack"}))}}}]);
-//# sourceMappingURL=component---src-pages-securing-elasticsearch-xpack-jsx-c9f0af299f70d8cd056f.js.map

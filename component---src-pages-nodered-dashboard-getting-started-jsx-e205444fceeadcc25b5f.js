@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[28],{694:function(e,n,t){"use strict";t.r(n);var a=t(1),r=t.n(a),i=t(712),o=t.n(i);n.default=function(){return r.a.createElement(o.a,null,r.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/creating-node-red-admin-panel-using-node-red-dashboard"}))}}}]);
+//# sourceMappingURL=component---src-pages-nodered-dashboard-getting-started-jsx-e205444fceeadcc25b5f.js.map

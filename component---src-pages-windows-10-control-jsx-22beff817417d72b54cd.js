@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[43],{720:function(n,t,e){"use strict";e.r(t);var o=e(1),i=e.n(o),r=e(676),a=e.n(r);t.default=function(){return i.a.createElement(a.a,null,i.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/windows-control"}))}}}]);
+//# sourceMappingURL=component---src-pages-windows-10-control-jsx-22beff817417d72b54cd.js.map

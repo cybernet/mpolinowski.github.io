@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[45],{691:function(e,n,t){"use strict";t.r(n);var i=t(1),o=t.n(i),r=t(692),s=t.n(r);n.default=function(){return o.a.createElement(s.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/zigbee-sensors-in-fhem"}))}}}]);
-//# sourceMappingURL=component---src-pages-zigbee-2-mqtt-xiaomi-fhem-jsx-c3a4d7bf8f67d7a971a2.js.map

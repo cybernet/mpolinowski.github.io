@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{689:function(t,e,n){"use strict";n.r(e);var a=n(1),o=n.n(a),i=n(676),r=n.n(i);e.default=function(){return o.a.createElement(r.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/gatsby-js-with-bootstrap-4"}))}}}]);
+//# sourceMappingURL=component---src-pages-gatsby-reactstrap-jsx-861bce61c685ea1d85ff.js.map
