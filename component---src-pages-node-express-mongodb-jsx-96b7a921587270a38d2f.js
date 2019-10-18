@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{691:function(e,n,t){"use strict";t.r(n);var o=t(1),i=t.n(o),r=t(712),a=t.n(r);n.default=function(){return i.a.createElement(a.a,null,i.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/node-express-with-mongo-db"}))}}}]);
-//# sourceMappingURL=component---src-pages-node-express-mongodb-jsx-96b7a921587270a38d2f.js.map

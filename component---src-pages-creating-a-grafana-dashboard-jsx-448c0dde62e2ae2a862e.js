@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{682:function(n,e,t){"use strict";t.r(e);var a=t(1),r=t.n(a),o=t(676),s=t.n(o);e.default=function(){return r.a.createElement(s.a,null,r.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/sensors-data-and-grafana"}))}}}]);
-//# sourceMappingURL=component---src-pages-creating-a-grafana-dashboard-jsx-448c0dde62e2ae2a862e.js.map

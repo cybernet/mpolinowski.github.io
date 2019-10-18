@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{670:function(e,t,n){"use strict";n.r(t);var a=n(1),o=n.n(a),i=n(712),r=n.n(i);t.default=function(){return o.a.createElement(r.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/food-caloric-table-app"}))}}}]);
-//# sourceMappingURL=component---src-pages-caloric-burn-jsx-00578bee88fa79625041.js.map

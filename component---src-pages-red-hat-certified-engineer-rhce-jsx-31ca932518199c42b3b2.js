@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{714:function(e,t,n){"use strict";n.r(t);var r=n(1),i=n.n(r),a=n(676),c=n.n(a);t.default=function(){return i.a.createElement(c.a,null,i.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/red-hat-certified-engineer-rhce-exam"}))}}}]);
-//# sourceMappingURL=component---src-pages-red-hat-certified-engineer-rhce-jsx-31ca932518199c42b3b2.js.map

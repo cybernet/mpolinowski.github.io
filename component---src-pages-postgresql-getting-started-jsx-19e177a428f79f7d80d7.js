@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{700:function(t,e,n){"use strict";n.r(e);var i=n(1),o=n.n(i),r=n(712),s=n.n(r);e.default=function(){return o.a.createElement(s.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/getting-started-with-postgre-sql-in-windows-10"}))}}}]);
-//# sourceMappingURL=component---src-pages-postgresql-getting-started-jsx-19e177a428f79f7d80d7.js.map

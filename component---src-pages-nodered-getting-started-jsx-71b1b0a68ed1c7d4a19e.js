@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[28],{705:function(t,e,n){"use strict";n.r(e);var i=n(1),o=n.n(i),r=n(676),a=n.n(r);e.default=function(){return o.a.createElement(a.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/getting-started-with-node-red-windows-10-edition"}))}}}]);
-//# sourceMappingURL=component---src-pages-nodered-getting-started-jsx-71b1b0a68ed1c7d4a19e.js.map

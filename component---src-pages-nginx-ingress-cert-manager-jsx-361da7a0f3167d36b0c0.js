@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[21],{698:function(e,n,t){"use strict";t.r(n);var i=t(1),r=t.n(i),a=t(676),o=t.n(a);n.default=function(){return r.a.createElement(o.a,null,r.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/nginx-ingress-with-cert-manager"}))}}}]);
-//# sourceMappingURL=component---src-pages-nginx-ingress-cert-manager-jsx-361da7a0f3167d36b0c0.js.map
