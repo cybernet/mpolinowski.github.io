@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{696:function(e,n,t){"use strict";t.r(n);var i=t(1),a=t.n(i),r=t(676),c=t.n(r);n.default=function(){return a.a.createElement(c.a,null,a.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/machine-learning-with-sci-kit-learn"}))}}}]);
-//# sourceMappingURL=component---src-pages-machine-learning-with-python-jsx-028c8f1332cd826284d8.js.map
