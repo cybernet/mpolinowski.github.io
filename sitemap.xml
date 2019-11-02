@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://mpolinowski.github.io/working-with-tmux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/migrating-from-v-bulletin-5-to-discourse-on-cent-os-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/installing-discourse-on-centos-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/downloading-docker-images-for-offline-use</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/windows-server-2019-docker-daemon</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -17,14 +19,14 @@
 <url> <loc>https://mpolinowski.github.io/kubernetes-traefik-ingress</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-the-chinese-way</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-nginx-ingress</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/kubernetes-bare-metal-ingress</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-nginx-https-service</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/kubernetes-bare-metal-ingress</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-cluster-monitoring-logging</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-and-microservices</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/creating-a-kubernetes-cluster</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/centos-administration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/sensors-data-and-grafana</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/zigbee-sensors-in-fhem</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/sensors-data-and-grafana</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/managing-containers-in-kubernetes</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/creating-node-red-admin-panel-using-node-red-dashboard</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/red-hat-certified-specialist-in-containerized-application-development</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
