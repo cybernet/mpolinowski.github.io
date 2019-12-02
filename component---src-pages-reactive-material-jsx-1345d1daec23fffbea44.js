@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{LCQt:function(t,e,n){"use strict";n.r(e);var a=n("q1tI"),r=n.n(a),i=n("TJpk"),p=n.n(i);e.default=function(){return r.a.createElement(p.a,null,r.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/create-react-app-and-material-ui"}))}}}]);
+//# sourceMappingURL=component---src-pages-reactive-material-jsx-1345d1daec23fffbea44.js.map

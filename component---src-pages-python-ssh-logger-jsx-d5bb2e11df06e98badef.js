@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{EfMP:function(t,e,n){"use strict";n.r(e);var o=n("q1tI"),r=n.n(o),a=n("TJpk"),i=n.n(a);e.default=function(){return r.a.createElement(i.a,null,r.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/python-network-logger"}))}}}]);
-//# sourceMappingURL=component---src-pages-python-ssh-logger-jsx-d5bb2e11df06e98badef.js.map
