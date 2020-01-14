@@ -57,14 +57,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "dc142bb430f83c9b3575d6b5cb509f3b"
+    "revision": "909e508efebfe7a23899e1f88807b982"
   },
   {
     "url": "component---src-pages-categories-jsx-4e130c9b60e3d32fb5ef.js"
   },
   {
     "url": "page-data/categories/page-data.json",
-    "revision": "2f3cf9b248b3735bc3c7dfdfdf4ac36b"
+    "revision": "e6628bc2878b9162803be3a4475e7b44"
   },
   {
     "url": "component---src-pages-curriculum-vitae-jsx-27d52cf5db3235b84f91.js"
