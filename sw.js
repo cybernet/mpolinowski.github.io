@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-3e792971e074ce46ae99.js"
+    "url": "webpack-runtime-f484a387bd2586da4f06.js"
   },
   {
     "url": "styles.f57237ef82cef6804fb1.css"
@@ -39,32 +39,32 @@ self.__precacheManifest = [
     "url": "commons-04e05faeacb7372d1f0f.js"
   },
   {
-    "url": "app-0687075b0368a4b4c994.js"
+    "url": "app-d99c5c28fabc922cc2bd.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-9466aa3099e85210abfb.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "33d2908d1b0389ec2c1958fb846e5dba"
+    "revision": "0b3b578a46ecb808570d4818a4576d24"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
     "revision": "c355c8040c47a63bfb3360e4b7cb6553"
   },
   {
-    "url": "component---src-pages-index-jsx-26d8ddcef4927f964d3a.js"
+    "url": "component---src-pages-index-jsx-08c3e270e185f31f0b2c.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "ea37cec8aa19aae1967ffca2a197accd"
+    "revision": "718ba92d9325a113f97839b5a9f4d72b"
   },
   {
-    "url": "component---src-pages-categories-jsx-c1ddeaa379436921bee1.js"
+    "url": "component---src-pages-categories-jsx-4f086d65bf8302abcf00.js"
   },
   {
     "url": "page-data/categories/page-data.json",
-    "revision": "6d06b414f77221280c1efe5cf8a609d3"
+    "revision": "50eb8eab75b1a40bb766d736cad16b0b"
   },
   {
     "url": "component---src-pages-curriculum-vitae-jsx-070e838e003e168a550f.js"
@@ -168,7 +168,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-0687075b0368a4b4c994.js`))) {
+  if (!resources || !(await caches.match(`/app-d99c5c28fabc922cc2bd.js`))) {
     return await fetch(event.request)
   }
 
