@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://mpolinowski.github.io/creating-magento-2-modules</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/working-with-sql-dumps</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/updating-a-magento-project-from-php-v-7-0-to-v-7-2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/magento-2-manual-theme-installation</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -32,8 +33,8 @@
 <url> <loc>https://mpolinowski.github.io/developing-an-app-for-the-homey-smarthome-gateway</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/setting-up-an-okd-cluster</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/red-hat-open-shift-3-container-platform</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/ifttt-ip-camera</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/ifttt-alarmserver-for-ip-cameras</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/ifttt-ip-camera</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/loxone-miniserver</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/zoneminder-dockerized</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/shinobi-video-surveillance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -42,15 +43,15 @@
 <url> <loc>https://mpolinowski.github.io/kubernetes-traefik-ingress</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-the-chinese-way</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-nginx-ingress</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/kubernetes-nginx-https-service</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-bare-metal-ingress</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/kubernetes-nginx-https-service</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-cluster-monitoring-logging</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/kubernetes-and-microservices</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/creating-a-kubernetes-cluster</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/centos-administration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/centos-network-configuration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/zigbee-sensors-in-fhem</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/sensors-data-and-grafana</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/zigbee-sensors-in-fhem</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/managing-containers-in-kubernetes</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/open-hab-2-and-mqtt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/node-red-and-mqtt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -110,7 +111,9 @@
 <url> <loc>https://mpolinowski.github.io/java-script-and-getting-started-with-ap-is-and-ajax</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/react-live-code-example</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/markdown-cheatsheet</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/categories/magento</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/sql</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/categories/windows</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/linux</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/elasticsearch</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/nginx</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -119,7 +122,6 @@
 <url> <loc>https://mpolinowski.github.io/categories/smarthome</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/io-t</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/node-red</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/categories/windows</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/machine-learning</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/categories/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
