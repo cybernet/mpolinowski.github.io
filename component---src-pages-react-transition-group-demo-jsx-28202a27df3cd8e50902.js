@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{NKDd:function(t,e,n){"use strict";n.r(e);var r=n("q1tI"),a=n.n(r),i=n("TJpk"),o=n.n(i);e.default=function(){return a.a.createElement(o.a,null,a.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/react-transition-group"}))}}}]);
-//# sourceMappingURL=component---src-pages-react-transition-group-demo-jsx-28202a27df3cd8e50902.js.map
