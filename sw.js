@@ -27,51 +27,51 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-43fbb49af1991ac68ea1.js"
+    "url": "webpack-runtime-dbf55b88e846a3548617.js"
   },
   {
     "url": "styles.f57237ef82cef6804fb1.css"
   },
   {
-    "url": "styles-b491271d3d427f9b3668.js"
+    "url": "styles-81292c50e854cbff0132.js"
   },
   {
-    "url": "commons-b95734f627fb72f963eb.js"
+    "url": "commons-1c64481580004a86d13b.js"
   },
   {
-    "url": "app-88f16edfddf49004b5f2.js"
-  },
-  {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-481f03a4f5dd641d42b7.js"
+    "url": "app-af9da76b48ae7baf0242.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "83b593a01f9ff67af59f14d3c512c268"
+    "revision": "2aa88c40014c0f9af641f19eaf994290"
+  },
+  {
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-2ff006ca365609437d6c.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "c355c8040c47a63bfb3360e4b7cb6553"
+    "revision": "43232b01cc861c0701a3ece4bd67720b"
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a8f5534e5e78fe115fdbe0eb6d7cc64c"
+    "revision": "17ccadffe102a6f1d0e25f3d6b4710f9"
   },
   {
-    "url": "component---src-pages-index-jsx-baf568453cb598d3625a.js"
+    "url": "component---src-pages-index-jsx-52373af0b2505593f5f3.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "cabf4b53508941cfc778d867efc42916"
+    "revision": "bba8e784196a28c0621eeeefcb685578"
   },
   {
-    "url": "component---src-pages-categories-jsx-8f2ede00afae6d4bee40.js"
+    "url": "component---src-pages-categories-jsx-8240495c084b65e7f480.js"
   },
   {
     "url": "page-data/categories/page-data.json",
-    "revision": "ed63a27f8ba8bca73660b4d06b7f7218"
+    "revision": "39ac0a01e9790fd526bd261452381f39"
   },
   {
-    "url": "component---src-pages-curriculum-vitae-jsx-674cd7bfc21536ca4c6d.js"
+    "url": "component---src-pages-curriculum-vitae-jsx-0a1e06edc1e5194aa5cd.js"
   },
   {
     "url": "page-data/curriculum-vitae/page-data.json",
@@ -172,7 +172,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-88f16edfddf49004b5f2.js`))) {
+  if (!resources || !(await caches.match(`/app-af9da76b48ae7baf0242.js`))) {
     return await fetch(event.request)
   }
 
