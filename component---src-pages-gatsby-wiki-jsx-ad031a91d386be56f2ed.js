@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{B2jN:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),o=n.n(a),s=n("TJpk"),i=n.n(s);t.default=function(){return o.a.createElement(i.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/gatsby-js-knowledgebase"}))}}}]);
-//# sourceMappingURL=component---src-pages-gatsby-wiki-jsx-ad031a91d386be56f2ed.js.map
