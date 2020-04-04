@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[21],{LvZs:function(e,t,n){"use strict";n.r(t);var i=n("q1tI"),o=n.n(i),r=n("TJpk"),u=n.n(r);t.default=function(){return o.a.createElement(u.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/kubernetes-cluster-monitoring-logging"}))}}}]);
-//# sourceMappingURL=component---src-pages-kubernetes-cluster-logging-jsx-1e235a9b014857df3331.js.map
