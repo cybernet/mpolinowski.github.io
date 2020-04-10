@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{VwfE:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),i=n.n(a),r=n("TJpk"),c=n.n(r);t.default=function(){return i.a.createElement(c.a,null,i.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/elasticsearch-and-kibana"}))}}}]);
+//# sourceMappingURL=component---src-pages-elasticsearch-kibana-jsx-e1490bb0efc82d53da16.js.map
