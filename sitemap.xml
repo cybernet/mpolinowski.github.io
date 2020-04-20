@@ -31,6 +31,7 @@
 <url> <loc>https://mpolinowski.github.io/mqtt-android-dashboards</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/debugging-mqtt-sensor-networks</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/building-a-mqtt-interface</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/user-login-with-facebook-for-discourse</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/user-login-with-twitter-for-discourse</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/user-login-with-github-for-discourse</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/user-login-with-google-o-auth-2-for-discourse</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -49,8 +50,8 @@
 <url> <loc>https://mpolinowski.github.io/developing-an-app-for-the-homey-smarthome-gateway</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/setting-up-an-okd-cluster</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/red-hat-open-shift-3-container-platform</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/ifttt-alarmserver-for-ip-cameras</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/ifttt-ip-camera</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/ifttt-alarmserver-for-ip-cameras</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/loxone-miniserver</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/zoneminder-dockerized</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/shinobi-video-surveillance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -66,13 +67,13 @@
 <url> <loc>https://mpolinowski.github.io/creating-a-kubernetes-cluster</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/centos-administration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/centos-network-configuration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/sensors-data-and-grafana</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/zigbee-sensors-in-fhem</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/sensors-data-and-grafana</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/managing-containers-in-kubernetes</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/open-hab-2-and-mqtt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/node-red-and-mqtt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/home-assistant-and-mqtt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/node-red-on-android</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/home-assistant-and-mqtt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/node-red-sql-logging-datastreams</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/node-red-dashboard-and-videostreams</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/webhooks-with-url-queries</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
