@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[35],{Pr8f:function(t,e,n){"use strict";n.r(e);var a=n("q1tI"),o=n.n(a),i=n("TJpk"),r=n.n(i);e.default=function(){return o.a.createElement(r.a,null,o.a.createElement("meta",{"http-equiv":"refresh",content:"0;url=https://mpolinowski.github.io/home-automation-and-ip-cameras"}))}}}]);
-//# sourceMappingURL=component---src-pages-openhab-2-mqtt-nodered-jsx-eb5fe8cd969861ef0c86.js.map

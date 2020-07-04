@@ -27,29 +27,29 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-2ce99414baa9960c703e.js"
+    "url": "webpack-runtime-94fb8ba3eb0c2d9cab07.js"
   },
   {
-    "url": "framework-24d88432aa8e0e18d618.js"
+    "url": "framework-e33312e4f4b8b26017af.js"
   },
   {
     "url": "styles.f57237ef82cef6804fb1.css"
   },
   {
-    "url": "styles-9fc49e5df84acd298940.js"
+    "url": "styles-eb5de80714c921cc43bd.js"
   },
   {
-    "url": "f0e45107-83fd81d176d6677ab3e3.js"
+    "url": "f0e45107-40f81e8e121c2ad48f86.js"
   },
   {
-    "url": "app-4c2b2eb47b6441919948.js"
+    "url": "app-71a819c703500cf2d848.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "e5e425fb71b19ae0ba0991660a728472"
+    "revision": "9c9f5f1e687d279d17e7561d7b0a5b07"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-112458cba6cabcf2ceb0.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-658c390e74dfc2f905e5.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -57,33 +57,33 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "3a5c002d5913cda3a162e7eb243a5b5d"
+    "revision": "9d396acaa65fdfc3660cdea464255e0f"
   },
   {
-    "url": "06dbc3fd440ffb3b7e87968ef70753ee33ed0199-35ba733db6753ddab79c.js"
+    "url": "06dbc3fd440ffb3b7e87968ef70753ee33ed0199-d16d6778062e6ab947af.js"
   },
   {
-    "url": "55833060a7dc772843df4d2d5e500f6929bab04a-4a919f2e723a64e54afb.js"
+    "url": "55833060a7dc772843df4d2d5e500f6929bab04a-005b82585ae2885eb19c.js"
   },
   {
-    "url": "component---src-pages-index-jsx-6f2a4eedb306e896a7d5.js"
+    "url": "component---src-pages-index-jsx-04595c201f4c105ba153.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "859ce05492dd0c254f9dab259516449a"
+    "revision": "0d95c034ebbaa1d37360cd0700c321bf"
   },
   {
-    "url": "component---src-pages-categories-jsx-a7bae2a17c3586819272.js"
+    "url": "component---src-pages-categories-jsx-1b2e686fb109cf94ebf7.js"
   },
   {
     "url": "page-data/categories/page-data.json",
-    "revision": "1d7586f125ecd8509df3e26aa2b4c451"
+    "revision": "70b889c71e32edc175f5cc811c7d4748"
   },
   {
-    "url": "1bfc9850-7cc64b41488604178a51.js"
+    "url": "1bfc9850-6e20ea7a1f1498e33d65.js"
   },
   {
-    "url": "component---src-pages-curriculum-vitae-jsx-6ed97eefa45f3c4229e0.js"
+    "url": "component---src-pages-curriculum-vitae-jsx-aa2145850d0c46e52d12.js"
   },
   {
     "url": "page-data/curriculum-vitae/page-data.json",
@@ -91,19 +91,19 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "8366bc75e3ca2a546891ce954ec96328"
+    "revision": "77a8a840761ebe1e3672271323599adb"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, new workbox.strategies.CacheFirst(), 'GET');
 workbox.routing.registerRoute(/^https?:.*\page-data\/.*\/page-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\/page-data\/app-data\.json/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, new workbox.strategies.StaleWhileRevalidate(), 'GET');
 
 /* global importScripts, workbox, idbKeyval */
-
-importScripts(`idb-keyval-iife.min.js`)
+importScripts(`idb-keyval-3.2.0-iife.min.js`)
 
 const { NavigationRoute } = workbox.routing
 
@@ -184,7 +184,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-4c2b2eb47b6441919948.js`))) {
+  if (!resources || !(await caches.match(`/app-71a819c703500cf2d848.js`))) {
     return await fetch(event.request)
   }
 
