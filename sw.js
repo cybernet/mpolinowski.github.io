@@ -70,14 +70,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "0d95c034ebbaa1d37360cd0700c321bf"
+    "revision": "2f7e741a7f273ea427c9aac6cf2c04aa"
   },
   {
     "url": "component---src-pages-categories-jsx-1b2e686fb109cf94ebf7.js"
   },
   {
     "url": "page-data/categories/page-data.json",
-    "revision": "70b889c71e32edc175f5cc811c7d4748"
+    "revision": "c0aedc3d9518c5240d174bb79e403bb6"
   },
   {
     "url": "1bfc9850-6e20ea7a1f1498e33d65.js"
