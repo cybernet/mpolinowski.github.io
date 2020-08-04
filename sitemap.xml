@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://mpolinowski.github.io/salt-pillars-formulas</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/salt-state</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/salty-dev-ops</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/install-salt-on-ubuntu-server-20-04</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -12,8 +13,8 @@
 <url> <loc>https://mpolinowski.github.io/getting-to-know-neo-4-j</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/running-gitlab-as-docker-registry</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/running-gitlab-in-podman-on-cent-os-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/installing-firewall-d-on-cent-os-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/cent-os-8-cockpit-web-console</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/installing-firewall-d-on-cent-os-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/podman-homebridge-to-mqtt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/building-an-rtmp-streaming-server-with-podman</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/adding-homekit-to-your-node-red-container-in-podman</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -21,8 +22,8 @@
 <url> <loc>https://mpolinowski.github.io/podman-cheat-sheet</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/installing-motion-eye-on-cent-os-8-with-podman</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/installing-io-broker-on-cent-os-8-with-podman</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/installing-oh-my-zsh-on-cent-os-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/cent-os-8-network-configuration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/installing-oh-my-zsh-on-cent-os-8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/magento-2-ui-components</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/creating-magento-2-console-commands</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/creating-magento-2-cron-jobs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -64,8 +65,8 @@
 <url> <loc>https://mpolinowski.github.io/developing-an-app-for-the-homey-smarthome-gateway</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/setting-up-an-okd-cluster</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/red-hat-open-shift-3-container-platform</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://mpolinowski.github.io/ifttt-ip-camera</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/ifttt-alarmserver-for-ip-cameras</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mpolinowski.github.io/ifttt-ip-camera</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/loxone-miniserver</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/zoneminder-dockerized</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mpolinowski.github.io/shinobi-video-surveillance</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>

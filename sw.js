@@ -46,7 +46,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "5d017361e6fac95c0e114ebc1c7fa208"
+    "revision": "8cf0c27c752aa8f3bc6b76d03b0b7ca3"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b81c43cf3b4ef9854106.js"
@@ -73,7 +73,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "451a096e95e5721b938359248317ede7"
+    "revision": "1e976fac3b00514215ba3457d38c216c"
   },
   {
     "url": "static/d/2658404678.json"
@@ -83,7 +83,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/categories/page-data.json",
-    "revision": "11072a118cf260b6b85c0ddd31c5b28c"
+    "revision": "f82d4e75e865117e5d66cb9e07ddf2b4"
   },
   {
     "url": "1bfc9850-3b57ed44e4244a02424e.js"
